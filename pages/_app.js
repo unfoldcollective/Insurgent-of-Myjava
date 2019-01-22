@@ -8,7 +8,7 @@ import withRedux from 'next-redux-wrapper';
 import { initStore } from '../store';
 import { DATA } from '../constants';
 
-class Million extends App {
+class Insurgent extends App {
   static async getInitialProps({ Component, ctx }) {
     const baseUrl = ctx.req
       ? `${ctx.req.protocol}://${ctx.req.get('Host')}`
@@ -44,4 +44,4 @@ class Million extends App {
   }
 }
 
-export default withRedux(initStore)(Million);
+export default withRedux(initStore)(Insurgent);

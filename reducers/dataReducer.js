@@ -3,7 +3,7 @@ import { DATA } from '../constants';
 const initialState = {
   loaded: false,
   language: 'en',
-  data: null
+  content: null
 };
 
 export default (state = initialState, action) => {
@@ -12,7 +12,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         loaded: true,
-        data: action.payload
+        content: action.payload
       };
     }
 
