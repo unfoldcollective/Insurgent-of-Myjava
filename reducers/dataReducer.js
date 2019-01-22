@@ -2,17 +2,24 @@ import { DATA } from '../constants';
 
 const initialState = {
   loaded: false,
-  language: 'en',
+  lang: 'en',
   content: null
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case DATA.DATA_LOADED: {
+    case DATA.LOADED: {
       return {
         ...state,
         loaded: true,
         content: action.payload
+      };
+    }
+
+    case DATA.SWITCHED_LANGUAGE: {
+      return {
+        ...state,
+        lang: ['en', 'sk'].includes(action.payload) ? action.payload : 'sk'
       };
     }
 

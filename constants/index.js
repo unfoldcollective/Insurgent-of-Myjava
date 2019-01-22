@@ -5,5 +5,6 @@ export const CANVAS = {
 };
 
 export const DATA = {
-  DATA_LOADED: 'DATA_LOADED'
+  LOADED: 'LOADED',
+  SWITCHED_LANGUAGE: 'WSWITCHED_LANGUAGE'
 };

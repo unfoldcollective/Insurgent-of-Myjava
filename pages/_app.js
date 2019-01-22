@@ -20,7 +20,7 @@ class Insurgent extends App {
       const data = await fetch(`${baseUrl}/data`);
 
       ctx.store.dispatch({
-        type: DATA.DATA_LOADED,
+        type: DATA.LOADED,
         payload: await data.json()
       });
     }
