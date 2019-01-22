@@ -2,6 +2,13 @@
 
 Touch screen application to create your own insurgent for the Slovak uprising of 1848
 
+## Start development
+
+For now:
+
+- Run `npm install`
+- Run `npm run dev`
+
 ## URLS
 
 - `/`: Main index.
