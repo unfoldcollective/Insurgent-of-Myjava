@@ -3,3 +3,7 @@ export const CANVAS = {
   STEP_RETREATED: 'STEP_RETREATED',
   STEP_RESETED: 'STEP_RESETED'
 };
+
+export const DATA = {
+  DATA_LOADED: 'DATA_LOADED'
+};

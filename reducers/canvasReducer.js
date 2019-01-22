@@ -17,7 +17,7 @@ export default (state = initialState, action) => {
       const step = step - 1;
       return {
         ...state,
-        step: step > -1 ? step : 0
+        step: step < 0 ? 0 : step
       };
     }
     case CANVAS.STEP_RESETED: {

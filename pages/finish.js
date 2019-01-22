@@ -4,6 +4,8 @@ import Link from 'next/link';
 //Component
 class Index extends React.Component {
   static getInitialProps({ query: { id } }) {
+    //Redirect if already signed:
+    //https://github.com/zeit/next.js/wiki/Redirecting-in-%60getInitialProps%60
     return { insurgentId: id };
   }
 

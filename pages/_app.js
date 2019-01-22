@@ -1,3 +1,4 @@
+import 'isomorphic-unfetch';
 import React from 'react';
 import App, { Container } from 'next/app';
 
@@ -5,11 +6,24 @@ import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
 
 import { initStore } from '../store';
+import { DATA } from '../constants';
 
 class Million extends App {
   static async getInitialProps({ Component, ctx }) {
-    // we can dispatch from here too
-    //ctx.store.dispatch({type: 'FOO', payload: 'foo'});
+    const baseUrl = ctx.req
+      ? `${ctx.req.protocol}://${ctx.req.get('Host')}`
+      : '';
+
+    const state = ctx.store.getState();
+
+    if (!state.data.loaded) {
+      const data = await fetch(`${baseUrl}/data`);
+
+      ctx.store.dispatch({
+        type: DATA.DATA_LOADED,
+        payload: await data.json()
+      });
+    }
 
     const pageProps = Component.getInitialProps
       ? await Component.getInitialProps(ctx)
