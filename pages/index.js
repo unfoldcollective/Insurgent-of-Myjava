@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { _s } from '../utils';
-import { switchLanguage } from '../actions';
+import { switchLanguage, resetCanvas } from '../actions';
 
 function mapStateToProps(state) {
   const { data } = state;
@@ -14,11 +14,15 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ switchLanguage }, dispatch);
+  return bindActionCreators({ switchLanguage, resetCanvas }, dispatch);
 }
 
 //Component
 class Index extends React.Component {
+  componentDidMount() {
+    this.props.resetCanvas();
+  }
+
   render() {
     const { data } = this.props;
 

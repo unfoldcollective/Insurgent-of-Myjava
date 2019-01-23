@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { advanceStep } from '../../actions';
 
-import { _s } from '../../utils';
+import { Full } from '../layouts';
 
 function mapStateToProps(state) {
   const { data, canvas } = state;
@@ -13,16 +14,19 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({}, dispatch);
+  return bindActionCreators({ advanceStep }, dispatch);
 }
 
 //Component
 class Context extends React.Component {
   render() {
     return (
-      <>
-        <h1>Context</h1>
-      </>
+      <Full>
+        <section className="content">
+          <p dangerouslySetInnerHTML={this.props.text} />
+          <button onClick={() => this.props.advanceStep()}>Continue</button>
+        </section>
+      </Full>
     );
   }
 }

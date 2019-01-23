@@ -8,6 +8,6 @@ export const retreatStep = () => dispatch => {
   return dispatch({ type: CANVAS.STEP_RETREATED });
 };
 
-export const resetStep = () => dispatch => {
-  return dispatch({ type: CANVAS.STEP_RESETED });
+export const resetCanvas = () => dispatch => {
+  return dispatch({ type: CANVAS.RESET });
 };

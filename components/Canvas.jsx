@@ -3,24 +3,18 @@ import Error from 'next/error';
 
 import { connect } from 'react-redux';
 
+import { _s } from '../utils';
+
 import Step from './Step.jsx';
 import { Context, Insurgent, Outfit, Weapon, Accesories } from './steps';
 
 function mapStateToProps(state) {
-  const { canvas } = state;
+  const { canvas, data } = state;
   return {
-    canvas
+    canvas,
+    data
   };
 }
-
-const stepComponents = {
-  0: <Context />,
-  1: <Insurgent />,
-  2: <Outfit />,
-  3: <Context />,
-  4: <Weapon />,
-  5: <Accesories />
-};
 
 class Canvas extends Component {
   constructor() {
@@ -29,6 +23,16 @@ class Canvas extends Component {
 
   render() {
     const { step } = this.props.canvas;
+
+    const stepComponents = {
+      0: <Context text={_s('CONTEXT_1', this.props.data, true)} />,
+      1: <Insurgent />,
+      2: <Outfit />,
+      3: <Context text={_s('CONTEXT_2', this.props.data, true)} />,
+      4: <Weapon />,
+      5: <Accesories />
+    };
+
     return <Step>{stepComponents[step] || <Error statusCode={500} />}</Step>;
   }
 }

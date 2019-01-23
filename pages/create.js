@@ -9,11 +9,6 @@ class Create extends React.Component {
     return (
       <main>
         <Canvas />
-        <p>
-          <Link href="/">
-            <a>Start</a>
-          </Link>
-        </p>
       </main>
     );
   }

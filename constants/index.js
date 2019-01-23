@@ -1,7 +1,7 @@
 export const CANVAS = {
   STEP_ADVANCED: 'STEP_ADVANCED',
   STEP_RETREATED: 'STEP_RETREATED',
-  STEP_RESETED: 'STEP_RESETED'
+  RESET: 'RESET'
 };
 
 export const DATA = {

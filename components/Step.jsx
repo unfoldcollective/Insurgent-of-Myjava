@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { advanceStep, retreatStep, resetStep } from '../actions';
+import { advanceStep, retreatStep } from '../actions';
 
 import { _s } from '../utils';
 
@@ -22,8 +22,10 @@ class Step extends React.Component {
   render() {
     const { step, totalSteps } = this.props.canvas;
     return (
-      <section>
-        <h1>Step: {step}</h1>
+      <>
+        <h1>
+          Step: {step} / {totalSteps}
+        </h1>
         <nav>
           <ul>
             <li>
@@ -45,8 +47,10 @@ class Step extends React.Component {
             </li>
           </ul>
         </nav>
+
+        {/* children */}
         {this.props.children}
-      </section>
+      </>
     );
   }
 }
