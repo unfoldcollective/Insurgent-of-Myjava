@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
+import Error from 'next/error';
+
 import { connect } from 'react-redux';
 
-import { advanceStep, retreatStep, resetStep } from '../actions';
+import Step from './Step.jsx';
+import { Context, Insurgent, Outfit, Weapon, Accesories } from './steps';
 
 function mapStateToProps(state) {
   const { canvas } = state;
@@ -11,9 +13,14 @@ function mapStateToProps(state) {
   };
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ advanceStep, retreatStep, resetStep }, dispatch);
-}
+const stepComponents = {
+  0: <Context />,
+  1: <Insurgent />,
+  2: <Outfit />,
+  3: <Context />,
+  4: <Weapon />,
+  5: <Accesories />
+};
 
 class Canvas extends Component {
   constructor() {
@@ -21,17 +28,9 @@ class Canvas extends Component {
   }
 
   render() {
-    return (
-      <section>
-        <header>
-          <h1>Insurgent canvas</h1>
-        </header>
-      </section>
-    );
+    const { step } = this.props.canvas;
+    return <Step>{stepComponents[step] || <Error statusCode={500} />}</Step>;
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Canvas);
+export default connect(mapStateToProps)(Canvas);

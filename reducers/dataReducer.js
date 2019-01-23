@@ -17,9 +17,13 @@ export default (state = initialState, action) => {
     }
 
     case DATA.SWITCHED_LANGUAGE: {
+      const lang = ['en', 'sk'].includes(action.payload)
+        ? action.payload
+        : 'sk';
+
       return {
         ...state,
-        lang: ['en', 'sk'].includes(action.payload) ? action.payload : 'sk'
+        lang
       };
     }
 
