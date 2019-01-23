@@ -1,0 +1,86 @@
+# General text strings
+strings:
+  TITLE:
+    sk: Insurgent Composer (sk)
+    en: Insurgent Composer
+  SUBTITLE:
+    sk: A web app to create insurgents (sk)
+    en: A web app to create insurgents
+  INTRO: #markdown allowed
+    sk: >
+      SK _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
+    en: >
+      EN Lorem ipsum dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
+  CONTEXT_1: #markdown allowed
+    sk: >
+      SK CTX1 _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
+    en: >
+      EN CTX1 Lorem ipsum dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
+  CONTEXT_2: #markdown allowed
+    sk: >
+      SK CTX2 _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
+    en: >
+      EN CTX2 Lorem ipsum dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac. 
+
+# Character information
+characters:
+  - name:
+      sk: Character name 1 (sk)
+      en: Character name 1
+    image: c1.png
+    description: #markdown allowed
+      sk: Character description 1 (sk)
+      en: Character description 1
+  - name:
+      sk: Character name 2 (sk)
+      en: Character name 2
+    image: c2.png
+    description: #markdown allowed
+      sk: Character description 2 (sk)
+      en: Character description 2
+  - name:
+      sk: Character name 3 (sk)
+      en: Character name 3
+    image: c3.png
+    description: #markdown allowed
+      sk: Character description 3 (sk)
+      en: Character description 3
+
+# Pieces of clothes
+clothes:
+  head:
+    - h1.png
+    - h2.png
+  torso:
+    - t1.png
+    - t2.png
+  legs:
+    - l1.png
+    - l2.png
+  feet:
+    - f1.png
+    - f2.png
+
+# List of weapons
+weapons:
+  - name:
+      sk: Weapon name 1 (sk)
+      en: Weapon name 1
+    image: w1.png
+    description: #markdown allowed
+      sk: Weapon description 1 (sk)
+      en: Weapon description 1
+  - name:
+      sk: Weapon name 2 (sk)
+      en: Weapon name 2
+    image: w2.png
+    description: #markdown allowed
+      sk: Weapon description 2 (sk)
+      en: Weapon description 2
+  - name:
+      sk: Weapon name 3 (sk)
+      en: Weapon name 3
+    image: w3.png
+    description: #markdown allowed
+      sk: Weapon description 3 (sk)
+      en: Weapon description 3

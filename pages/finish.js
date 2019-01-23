@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 //Component
-class Index extends React.Component {
+class Finish extends React.Component {
   static getInitialProps({ query: { id } }) {
     //Redirect if already signed:
     //https://github.com/zeit/next.js/wiki/Redirecting-in-%60getInitialProps%60
@@ -26,4 +26,4 @@ class Index extends React.Component {
   }
 }
 
-export default Index;
+export default Finish;

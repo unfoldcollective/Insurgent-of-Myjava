@@ -18,7 +18,7 @@ app.prepare().then(() => {
   server.get('/data', async (req, res) => {
     try {
       const data = await readFile(
-        path.join(__dirname, 'data/strings.yml'),
+        path.join(__dirname, 'data/content.yml'),
         'utf-8'
       );
       return res.json(yaml.safeLoad(data));

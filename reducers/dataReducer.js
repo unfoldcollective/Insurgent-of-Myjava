@@ -2,7 +2,7 @@ import { DATA } from '../constants';
 
 const initialState = {
   loaded: false,
-  lang: 'en',
+  lang: 'sk',
   content: null
 };
 

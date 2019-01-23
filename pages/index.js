@@ -25,14 +25,24 @@ class Index extends React.Component {
     return (
       <main>
         <header>
-          <h1>{_s('TITLE', data)}</h1>
-          <h2>{_s('SUBTITLE', data)}</h2>
           <button onClick={() => this.props.switchLanguage('en')}>en</button>
           <button onClick={() => this.props.switchLanguage('sk')}>sk</button>
+          <h1>{_s('TITLE', data)}</h1>
+          <h2>{_s('SUBTITLE', data)}</h2>
+          <p dangerouslySetInnerHTML={_s('INTRO', data, true)} />
           <nav>
-            <Link href="/create">
-              <a>Create insurgent</a>
-            </Link>
+            <ul>
+              <li>
+                <Link href="/create">
+                  <a>Create insurgent</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/gallery">
+                  <a>Gallery</a>
+                </Link>
+              </li>
+            </ul>
           </nav>
         </header>
       </main>
