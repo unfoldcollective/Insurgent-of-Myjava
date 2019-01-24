@@ -23,3 +23,14 @@ export const activateHelp = () => dispatch => {
 export const deactivateHelp = () => dispatch => {
   return dispatch({ type: CANVAS.HELP_DEACTIVATED });
 };
+
+export const selectCharacter = index => (dispatch, getState) => {
+  const {
+    data: {
+      content: { characters }
+    }
+  } = getState();
+
+  if (index < characters.length && index > -1)
+    return dispatch({ type: CANVAS.CHARACTER_SELECTED, payload: index });
+};

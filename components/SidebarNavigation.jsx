@@ -14,6 +14,13 @@ const SidebarNavigation = ({ advanceStep, activateHelp }) => {
         <li>
           <button onClick={() => activateHelp()}>Help</button>
         </li>
+
+        <style jsx>{`
+          ul {
+            list-style: none;
+            display: flex;
+          }
+        `}</style>
       </ul>
     </>
   );

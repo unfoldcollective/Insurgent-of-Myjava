@@ -14,8 +14,8 @@ function mapDispatchToProps(dispatch) {
 class Sidebar extends React.Component {
   render() {
     return (
-      <article>
-        <section className="sidebar-content">{this.props.children}</section>
+      <article className="sidebar-content">
+        <section className="sidebar-main">{this.props.children}</section>
 
         <section className="sidebar-navigation">
           <SidebarNavigation
@@ -23,6 +23,24 @@ class Sidebar extends React.Component {
             activateHelp={this.props.activateHelp}
           />
         </section>
+
+        <style jsx>{`
+          article.sidebar-content {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+          }
+
+          section.sidebar-main {
+            flex-grow: 1;
+            padding: 1rem;
+          }
+
+          section.sidebar-navigation {
+            padding: 1rem;
+            display: flex;
+          }
+        `}</style>
       </article>
     );
   }

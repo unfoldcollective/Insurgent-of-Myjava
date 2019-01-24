@@ -16,6 +16,8 @@ const Main = ({ children }) => {
 
         body {
           overflow: hidden;
+          width: 100vw;
+          height: 100vh;
         }
       `}</style>
     </main>

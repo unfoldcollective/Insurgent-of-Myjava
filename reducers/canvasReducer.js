@@ -1,14 +1,14 @@
 import { CANVAS } from '../constants';
 
 const initialState = {
-  step: 0,
+  step: 1,
   totalSteps: 5,
   helpMode: false,
   insurgent: {
-    character: null,
+    character: 0,
     clothes: [],
     weapon: {
-      model: null,
+      model: 0,
       extras: []
     }
   }
@@ -50,6 +50,15 @@ export default (state = initialState, action) => {
       return {
         ...state,
         helpMode: false
+      };
+    }
+    case CANVAS.CHARACTER_SELECTED: {
+      return {
+        ...state,
+        insurgent: {
+          ...state.insurgent,
+          character: action.payload
+        }
       };
     }
 

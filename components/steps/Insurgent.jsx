@@ -2,9 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import { selectCharacter } from '../../actions';
+
 import { WithSidebar } from '../layouts';
 import Step from '../Step.jsx';
 import Sidebar from '../Sidebar.jsx';
+import Carousel from '../Carousel.jsx';
 
 function mapStateToProps(state) {
   const { data, canvas } = state;
@@ -15,7 +18,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({}, dispatch);
+  return bindActionCreators({ selectCharacter }, dispatch);
 }
 
 //Component
@@ -25,7 +28,11 @@ class Insurgent extends React.Component {
     return (
       <WithSidebar sidebar={InsurgentSidebar}>
         <Step>
-          <h1>Insurgent</h1>
+          <Carousel
+            items={this.props.data.content.characters}
+            current={this.props.canvas.insurgent.character}
+            select={this.props.selectCharacter}
+          />
         </Step>
       </WithSidebar>
     );

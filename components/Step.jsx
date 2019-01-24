@@ -21,21 +21,33 @@ class Step extends React.Component {
     const steps = [];
     for (let index = 0; index <= this.props.canvas.totalSteps; index++) {
       steps.push(
-        <button key={index} onClick={() => this.props.changeStep(index)}>
+        <button
+          className={index === this.props.canvas.step ? 'current' : null}
+          key={`step_${index}`}
+          onClick={() => this.props.changeStep(index)}
+        >
           {index}
+
+          <style jsx>{`
+            button {
+              margin: 0 0.5rem;
+              padding: 0.5rem;
+              border: none;
+            }
+
+            button.current {
+              background: coral;
+            }
+          `}</style>
         </button>
       );
     }
     return steps;
   }
   render() {
-    const { step, totalSteps } = this.props.canvas;
     return (
       <div className="step">
         <header className="step-header">
-          <h1>
-            Step: {step} / {totalSteps}
-          </h1>
           <nav>{this.listSteps()}</nav>
         </header>
 
@@ -43,8 +55,11 @@ class Step extends React.Component {
         {this.props.children}
 
         <style jsx>{`
-          .step-header {
-            background: lightgreen;
+          div.step {
+            height: 100vh;
+          }
+
+          header.step-header {
             position: absolute;
             bottom: 0;
             width: 100%;
@@ -52,6 +67,7 @@ class Step extends React.Component {
             flex-direction: column;
             align-items: center;
             padding: 1rem;
+            z-index: 1;
           }
         `}</style>
       </div>

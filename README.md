@@ -22,7 +22,7 @@ For now:
   - Updated context cutscene
   - Choose weapon
   - Accesorize weapon
-- `/finish/:id`: Result + Share (if already signed )
+- `/finish/:id`: Result + Share (if already signed redirect to start)
   - Generate screen
   - Show final result
   - Sign and share
