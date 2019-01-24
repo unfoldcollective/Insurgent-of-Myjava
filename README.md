@@ -15,7 +15,7 @@ For now:
   - Change language
   - Start Canvas
   - Go to Gallery
-- `/canvas`: Main Canvas
+- `/create`: Main Canvas
   - Context cutscene
   - Choose character
   - Choose outfit
