@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { _s } from '../../utils';
+import { WithSidebar } from '../layouts';
+import Step from '../Step.jsx';
 
 function mapStateToProps(state) {
   const { data, canvas } = state;
@@ -19,10 +20,14 @@ function mapDispatchToProps(dispatch) {
 //Component
 class Weapon extends React.Component {
   render() {
+    const Sidebar = <div>this is the weapon sidebar!</div>;
+
     return (
-      <>
-        <h1>Weapon</h1>
-      </>
+      <WithSidebar sidebar={Sidebar}>
+        <Step>
+          <h1>Weapon</h1>
+        </Step>
+      </WithSidebar>
     );
   }
 }

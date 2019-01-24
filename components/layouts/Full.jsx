@@ -2,18 +2,19 @@ import React from 'react';
 
 const Full = ({ children }) => {
   return (
-    <div className="container">
+    <div className="full-layout">
       <section className="content">{children}</section>
 
       <style jsx>{`
-        div.container {
+        div.full-layout {
           display: flex;
           justify-content: center;
-          align-items: center;
+          height: 100vh;
         }
 
         section.content {
-          color: red;
+          background: lightblue;
+          flex-grow: 1;
         }
       `}</style>
     </div>

@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 
 import { _s } from '../utils';
 
-import Step from './Step.jsx';
 import { Context, Insurgent, Outfit, Weapon, Accesories } from './steps';
 
 function mapStateToProps(state) {
@@ -33,7 +32,7 @@ class Canvas extends Component {
       5: <Accesories />
     };
 
-    return <Step>{stepComponents[step] || <Error statusCode={500} />}</Step>;
+    return stepComponents[step] || <Error statusCode={500} />;
   }
 }
 

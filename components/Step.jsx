@@ -22,7 +22,7 @@ class Step extends React.Component {
   render() {
     const { step, totalSteps } = this.props.canvas;
     return (
-      <>
+      <div className="step">
         <h1>
           Step: {step} / {totalSteps}
         </h1>
@@ -50,7 +50,7 @@ class Step extends React.Component {
 
         {/* children */}
         {this.props.children}
-      </>
+      </div>
     );
   }
 }

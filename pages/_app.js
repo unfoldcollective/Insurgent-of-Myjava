@@ -5,6 +5,8 @@ import App, { Container } from 'next/app';
 import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
 
+import Main from '../components/Main.jsx';
+
 import { initStore } from '../store';
 import { DATA } from '../constants';
 
@@ -37,7 +39,9 @@ class Insurgent extends App {
     return (
       <Container>
         <Provider store={store}>
-          <Component {...pageProps} />
+          <Main>
+            <Component {...pageProps} />
+          </Main>
         </Provider>
       </Container>
     );
