@@ -15,6 +15,7 @@ const WithSidebar = ({ sidebar, children }) => {
         section.content {
           flex-basis: 75%;
           background: lightblue;
+          position: relative;
         }
 
         aside.sidebar {

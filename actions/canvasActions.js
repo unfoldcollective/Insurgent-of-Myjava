@@ -15,3 +15,11 @@ export const changeStep = step => dispatch => {
 export const resetCanvas = () => dispatch => {
   return dispatch({ type: CANVAS.RESET });
 };
+
+export const activateHelp = () => dispatch => {
+  return dispatch({ type: CANVAS.HELP_ACTIVATED });
+};
+
+export const deactivateHelp = () => dispatch => {
+  return dispatch({ type: CANVAS.HELP_DEACTIVATED });
+};

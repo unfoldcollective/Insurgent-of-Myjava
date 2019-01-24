@@ -20,7 +20,7 @@ export default (state = initialState, action) => {
       const step = state.step + 1;
       return {
         ...state,
-        step
+        step: step > state.totalSteps ? state.totalSteps : step
       };
     }
     case CANVAS.STEP_RETREATED: {
@@ -32,7 +32,6 @@ export default (state = initialState, action) => {
     }
     case CANVAS.STEP_CHANGED: {
       const step = action.payload;
-      console.log(step);
       return {
         ...state,
         step: step <= state.totalSteps && step >= 0 ? step : 0
@@ -40,6 +39,18 @@ export default (state = initialState, action) => {
     }
     case CANVAS.RESET: {
       return initialState;
+    }
+    case CANVAS.HELP_ACTIVATED: {
+      return {
+        ...state,
+        helpMode: true
+      };
+    }
+    case CANVAS.HELP_DEACTIVATED: {
+      return {
+        ...state,
+        helpMode: false
+      };
     }
 
     default:

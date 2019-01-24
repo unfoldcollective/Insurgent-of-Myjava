@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import { WithSidebar } from '../layouts';
 import Step from '../Step.jsx';
+import Sidebar from '../Sidebar.jsx';
 
 function mapStateToProps(state) {
   const { data, canvas } = state;
@@ -20,9 +21,9 @@ function mapDispatchToProps(dispatch) {
 //Component
 class Insurgent extends React.Component {
   render() {
-    const Sidebar = <div>this is the insurgent sidebar!</div>;
+    const InsurgentSidebar = <Sidebar>this is the insurgent sidebar!</Sidebar>;
     return (
-      <WithSidebar sidebar={Sidebar}>
+      <WithSidebar sidebar={InsurgentSidebar}>
         <Step>
           <h1>Insurgent</h1>
         </Step>
