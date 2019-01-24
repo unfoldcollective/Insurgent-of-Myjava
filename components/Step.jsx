@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { advanceStep, retreatStep } from '../actions';
+import { advanceStep, retreatStep, changeStep } from '../actions';
 
 import { _s } from '../utils';
 
@@ -14,11 +14,22 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ advanceStep, retreatStep }, dispatch);
+  return bindActionCreators({ advanceStep, retreatStep, changeStep }, dispatch);
 }
 
 //Component
 class Step extends React.Component {
+  listSteps() {
+    const steps = [];
+    for (let index = 0; index <= this.props.canvas.totalSteps; index++) {
+      steps.push(
+        <button key={index} onClick={() => this.props.changeStep(index)}>
+          {index}
+        </button>
+      );
+    }
+    return steps;
+  }
   render() {
     const { step, totalSteps } = this.props.canvas;
     return (
@@ -26,27 +37,7 @@ class Step extends React.Component {
         <h1>
           Step: {step} / {totalSteps}
         </h1>
-        <nav>
-          <ul>
-            <li>
-              {step > 0 ? (
-                <button onClick={() => this.props.retreatStep()}>
-                  Previous
-                </button>
-              ) : (
-                'nope'
-              )}
-            </li>
-
-            <li>
-              {step < totalSteps ? (
-                <button onClick={() => this.props.advanceStep()}>Next</button>
-              ) : (
-                'nope'
-              )}
-            </li>
-          </ul>
-        </nav>
+        <nav>{this.listSteps()}</nav>
 
         {/* children */}
         {this.props.children}

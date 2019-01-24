@@ -30,6 +30,14 @@ export default (state = initialState, action) => {
         step: step < 0 ? 0 : step
       };
     }
+    case CANVAS.STEP_CHANGED: {
+      const step = action.payload;
+      console.log(step);
+      return {
+        ...state,
+        step: step <= state.totalSteps && step >= 0 ? step : 0
+      };
+    }
     case CANVAS.RESET: {
       return initialState;
     }
