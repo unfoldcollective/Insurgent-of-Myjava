@@ -24,7 +24,15 @@ function mapDispatchToProps(dispatch) {
 //Component
 class Insurgent extends React.Component {
   render() {
-    const InsurgentSidebar = <Sidebar>this is the insurgent sidebar!</Sidebar>;
+    const InsurgentSidebar = (
+      <Sidebar>
+        {
+          this.props.data.content.characters[
+            this.props.canvas.insurgent.character
+          ].description[this.props.data.lang]
+        }
+      </Sidebar>
+    );
     return (
       <WithSidebar sidebar={InsurgentSidebar}>
         <Step>
