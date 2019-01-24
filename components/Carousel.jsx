@@ -55,7 +55,8 @@ class Carousel extends Component {
             list-style: none;
             display: flex;
             height: 100vh;
-            transition: transform 0.5s linear;
+            transition: transform 0.5s ease-in-out;
+            will-change: transform;
           }
 
           li.carousel-item {
@@ -66,9 +67,10 @@ class Carousel extends Component {
           }
 
           img {
-            transition: all 0.5s linear;
+            transition: all 0.5s ease-in-out;
             transform: scale(0.8);
             opacity: 0.5;
+            will-change: transform, opacity;
           }
 
           img.current {
