@@ -18,7 +18,14 @@ const SidebarNavigation = ({ advanceStep, activateHelp }) => {
         <style jsx>{`
           ul {
             list-style: none;
+            width: 100%;
             display: flex;
+            justify-content: center;
+          }
+
+          button {
+            padding: 1rem;
+            margin: 0 1rem;
           }
         `}</style>
       </ul>

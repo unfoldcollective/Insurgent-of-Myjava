@@ -31,8 +31,7 @@ class Step extends React.Component {
           <style jsx>{`
             button {
               margin: 0 0.5rem;
-              padding: 0.5rem;
-              border: none;
+              padding: 1rem;
             }
 
             button.current {

@@ -14,6 +14,10 @@ const Main = ({ children }) => {
           padding: 0;
         }
 
+        button {
+          border: none;
+        }
+
         body {
           overflow: hidden;
           width: 100vw;
