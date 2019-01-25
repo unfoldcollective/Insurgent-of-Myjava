@@ -31,7 +31,7 @@ class Carousel extends Component {
       this.props.current === this.props.items.length - 1
         ? 0
         : this.props.current + 1;
-    console.log(current);
+
     this.props.select(current);
 
     this.setState({ sliding: true, direction: -1 }, () =>
@@ -47,9 +47,8 @@ class Carousel extends Component {
         ? this.props.items.length - 1
         : this.props.current - 1;
 
-    console.log(current);
-
     this.props.select(current);
+
     this.setState({ sliding: true, direction: 0 }, () =>
       setTimeout(() => {
         this.setState({ slides: this.getSlides(), sliding: false });
@@ -75,12 +74,15 @@ class Carousel extends Component {
 
     return (
       <div className="carousel-tray">
-        <button className="carousel-control" onClick={this.handleRetreat}>
+        <button
+          className="carousel-control"
+          onClick={!sliding && this.handleRetreat}
+        >
           Previous
         </button>
         <button
           className="carousel-control advance"
-          onClick={this.handleAdvance}
+          onClick={!sliding && this.handleAdvance}
         >
           Next
         </button>
