@@ -27,6 +27,8 @@ class Carousel extends Component {
   }
 
   handleAdvance() {
+    if (this.state.sliding) return false;
+
     const current =
       this.props.current === this.props.items.length - 1
         ? 0
@@ -42,6 +44,8 @@ class Carousel extends Component {
   }
 
   handleRetreat() {
+    if (this.state.sliding) return false;
+
     const current =
       this.props.current === 0
         ? this.props.items.length - 1
@@ -57,13 +61,12 @@ class Carousel extends Component {
   }
 
   render() {
-    // const offset = (-100 / 3) * this.props.current + 33;
     const { sliding, direction } = this.state;
 
     const slideStyles = sliding
       ? direction < 0
         ? {
-            transform: 'translateX(-66.666%)',
+            transform: `translateX(-${100 / 1.5}%)`,
             transition: 'transform 0.5s ease-in-out'
           }
         : {
@@ -74,15 +77,12 @@ class Carousel extends Component {
 
     return (
       <div className="carousel-tray">
-        <button
-          className="carousel-control"
-          onClick={!sliding && this.handleRetreat}
-        >
+        <button className="carousel-control" onClick={this.handleRetreat}>
           Previous
         </button>
         <button
           className="carousel-control advance"
-          onClick={!sliding && this.handleAdvance}
+          onClick={this.handleAdvance}
         >
           Next
         </button>
@@ -105,7 +105,7 @@ class Carousel extends Component {
                 key={`carousel_${index}`}
                 className="carousel-item"
                 style={{
-                  left: `${33.333 * index}%`
+                  left: `${(100 / 3) * index}%`
                 }}
               >
                 <img
@@ -129,12 +129,12 @@ class Carousel extends Component {
             list-style: none;
             height: 100vh;
             position: relative;
-            transform: translateX(-33%);
+            transform: translateX(calc(100% / -3));
           }
 
           li.carousel-item {
             position: absolute;
-            width: 33.333%;
+            width: calc(100% / 3);
             height: 100vh;
             top: 0;
             display: flex;
