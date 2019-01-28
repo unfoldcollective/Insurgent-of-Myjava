@@ -89,17 +89,17 @@ characters:
 # Pieces of clothes
 clothes:
   head:
-    - h1.png
-    - h2.png
+    - h1
+    - h2
   torso:
-    - t1.png
-    - t2.png
+    - t1
+    - t2
   legs:
-    - l1.png
-    - l2.png
+    - l1
+    - l2
   feet:
-    - f1.png
-    - f2.png
+    - f1
+    - f2
 
 # List of weapons
 # the list order is important
