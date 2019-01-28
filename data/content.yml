@@ -34,17 +34,17 @@ characters:
       en: Character description 1
     slots:
       head:
-        distanceTop: 0
-        distanceBottom: 25
+        top: 0
+        height: 25
       torso:
-        distanceTop: 25
-        distanceBottom: 50
+        top: 25
+        height: 25
       legs:
-        distanceTop: 50
-        distanceBottom: 75
+        top: 50
+        height: 25
       feet:
-        distanceTop: 75
-        distanceBottom: 100
+        top: 75
+        height: 25
   - name:
       sk: Character name 2 (sk)
       en: Character name 2
@@ -54,17 +54,17 @@ characters:
       en: Character description 2
     slots:
       head:
-        distanceTop: 0
-        distanceBottom: 25
+        top: 0
+        height: 25
       torso:
-        distanceTop: 25
-        distanceBottom: 50
+        top: 25
+        height: 25
       legs:
-        distanceTop: 50
-        distanceBottom: 75
+        top: 50
+        height: 25
       feet:
-        distanceTop: 75
-        distanceBottom: 100
+        top: 75
+        height: 25
   - name:
       sk: Character name 3 (sk)
       en: Character name 3
@@ -74,17 +74,17 @@ characters:
       en: Character description 3
     slots:
       head:
-        distanceTop: 0
-        distanceBottom: 25
+        top: 0
+        height: 25
       torso:
-        distanceTop: 25
-        distanceBottom: 50
+        top: 25
+        height: 25
       legs:
-        distanceTop: 50
-        distanceBottom: 75
+        top: 50
+        height: 25
       feet:
-        distanceTop: 75
-        distanceBottom: 100
+        top: 75
+        height: 25
 
 # Pieces of clothes
 clothes:

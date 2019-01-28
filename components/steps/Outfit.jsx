@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { WithSidebar } from '../layouts';
+import { WithSidebar, ContentCentered } from '../layouts';
 import Step from '../Step.jsx';
 import Sidebar from '../Sidebar.jsx';
 import Character from '../Character.jsx';
@@ -30,7 +30,9 @@ class Outfit extends React.Component {
     return (
       <WithSidebar sidebar={OutfitSidebar}>
         <Step>
-          <Character character={character} />
+          <ContentCentered>
+            <Character character={character} editable={true} />
+          </ContentCentered>
         </Step>
       </WithSidebar>
     );

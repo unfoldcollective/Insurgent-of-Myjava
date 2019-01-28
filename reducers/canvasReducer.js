@@ -1,7 +1,7 @@
 import { CANVAS } from '../constants';
 
 const initialState = {
-  step: 1,
+  step: 2,
   totalSteps: 5,
   helpMode: false,
   insurgent: {
