@@ -23,6 +23,7 @@ strings:
       EN CTX2 Lorem ipsum dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac. 
 
 # Character information
+# the list order is important
 characters:
   - name:
       sk: Character name 1 (sk)
@@ -31,6 +32,19 @@ characters:
     description: #markdown allowed
       sk: Character description 1 (sk)
       en: Character description 1
+    slots:
+      head:
+        distanceTop: 0
+        distanceBottom: 25
+      torso:
+        distanceTop: 25
+        distanceBottom: 50
+      legs:
+        distanceTop: 50
+        distanceBottom: 75
+      feet:
+        distanceTop: 75
+        distanceBottom: 100
   - name:
       sk: Character name 2 (sk)
       en: Character name 2
@@ -38,6 +52,19 @@ characters:
     description: #markdown allowed
       sk: Character description 2 (sk)
       en: Character description 2
+    slots:
+      head:
+        distanceTop: 0
+        distanceBottom: 25
+      torso:
+        distanceTop: 25
+        distanceBottom: 50
+      legs:
+        distanceTop: 50
+        distanceBottom: 75
+      feet:
+        distanceTop: 75
+        distanceBottom: 100
   - name:
       sk: Character name 3 (sk)
       en: Character name 3
@@ -45,6 +72,19 @@ characters:
     description: #markdown allowed
       sk: Character description 3 (sk)
       en: Character description 3
+    slots:
+      head:
+        distanceTop: 0
+        distanceBottom: 25
+      torso:
+        distanceTop: 25
+        distanceBottom: 50
+      legs:
+        distanceTop: 50
+        distanceBottom: 75
+      feet:
+        distanceTop: 75
+        distanceBottom: 100
 
 # Pieces of clothes
 clothes:
@@ -62,6 +102,7 @@ clothes:
     - f2.png
 
 # List of weapons
+# the list order is important
 weapons:
   - name:
       sk: Weapon name 1 (sk)
