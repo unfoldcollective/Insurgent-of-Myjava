@@ -6,7 +6,6 @@ import { bindActionCreators } from 'redux';
 import { _s } from '../utils';
 import { switchLanguage, resetCanvas } from '../actions';
 
-import Main from '../components/Main.jsx';
 import { Full } from '../components/layouts';
 
 function mapStateToProps(state) {

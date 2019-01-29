@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import interact from 'interactjs';
 import { debounce } from 'lodash';
 
-const MOVEMENT_DEBOUNCE = 2;
+const MOVEMENT_DEBOUNCE = 8;
 
 class Draggable extends Component {
   constructor(props) {
@@ -73,11 +73,13 @@ class Draggable extends Component {
 
         <style jsx>{`
           div.drag-target {
-            touch-action: manipulation;
+            touch-action: none;
           }
 
           div.drag-target.dragging {
             position: absolute;
+            touch-action: manipulation;
+            will-change: transform;
           }
         `}</style>
       </div>
