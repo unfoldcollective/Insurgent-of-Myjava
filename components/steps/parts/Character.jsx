@@ -1,7 +1,26 @@
 import React, { Component } from 'react';
+import interact from 'interactjs';
 
 class Character extends Component {
+  constructor(props) {
+    super(props);
+
+    this.dropzones = [];
+  }
+
+  componentDidMount() {
+    for (const { slotName, dropzone } of this.dropzones) {
+      interact(dropzone.current).dropzone({
+        ondrop: () => {
+          if (this.props.status.filter === slotName) {
+            this.props.dropAction(slotName, this.props.status.itemDragged);
+          }
+        }
+      });
+    }
+  }
   render() {
+    this.dropzones = [];
     const slots = Object.keys(this.props.character.slots).map(
       (slotName, index) => {
         const slotDimensions = this.props.character.slots[slotName];
@@ -11,11 +30,23 @@ class Character extends Component {
           height: `${slotDimensions.height}%`
         };
 
+        const isHighlighted =
+          this.props.status.isDragging && this.props.status.filter === slotName;
+
+        const dropzone = React.createRef();
+
+        if (this.props.editable) {
+          this.dropzones.push({ slotName, dropzone });
+        }
+
         return (
           <div
             key={`character_clothing_slot_${index}`}
-            className="character-clothing-slot"
+            className={`character-clothing-slot ${
+              isHighlighted ? 'current' : null
+            }`}
             style={style}
+            ref={dropzone}
           >
             {this.props.clothes[slotName] && (
               <img
@@ -29,7 +60,10 @@ class Character extends Component {
                 div.character-clothing-slot {
                   position: absolute;
                   width: 100%;
-                  background: rgba(0, 0, 0, 0.4);
+                }
+
+                div.character-clothing-slot.current {
+                  border: 3px dashed lightcoral;
                 }
               `}
             </style>
@@ -50,7 +84,6 @@ class Character extends Component {
         <style jsx>{`
           div.character {
             flex-grow: 1;
-            background: lightpink;
             position: relative;
           }
 

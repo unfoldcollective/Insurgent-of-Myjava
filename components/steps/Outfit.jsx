@@ -2,12 +2,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { changeOutfitFilter, dressCharacter } from '../../actions';
+import {
+  changeOutfitFilter,
+  dressCharacter,
+  setDragOutfit,
+  dropOutfit
+} from '../../actions';
 
 import { WithSidebar, ContentCentered } from '../layouts';
 import Step from '../Step.jsx';
 import Sidebar from '../Sidebar.jsx';
 import Character from './parts/Character.jsx';
+import Draggable from './parts/Draggable.jsx';
 
 function mapStateToProps(state) {
   const { data, canvas, outfit } = state;
@@ -19,7 +25,10 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ changeOutfitFilter, dressCharacter }, dispatch);
+  return bindActionCreators(
+    { changeOutfitFilter, dressCharacter, setDragOutfit, dropOutfit },
+    dispatch
+  );
 }
 
 //Component
@@ -59,11 +68,16 @@ class Outfit extends React.Component {
                 {clothes[slot].map((item, index) => {
                   return (
                     <li key={`outfit_item_${index}`} className="outfit-item">
-                      <img
-                        src={`/static/${item}.png`}
-                        className="outfit-image"
-                        onClick={() => this.props.dressCharacter(slot, item)}
-                      />
+                      <Draggable
+                        item={item}
+                        dragAction={this.props.setDragOutfit}
+                        dropAction={this.props.dropOutfit}
+                      >
+                        <img
+                          src={`/static/${item}.png`}
+                          className="outfit-image"
+                        />
+                      </Draggable>
                     </li>
                   );
                 })}
@@ -120,8 +134,10 @@ class Outfit extends React.Component {
             <Character
               character={character}
               index={this.props.canvas.insurgent.character}
-              editable={true}
               clothes={this.props.canvas.insurgent.clothes}
+              status={this.props.outfit}
+              dropAction={this.props.dressCharacter}
+              editable={true}
             />
           </ContentCentered>
         </Step>

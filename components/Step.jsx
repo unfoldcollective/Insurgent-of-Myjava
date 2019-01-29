@@ -22,7 +22,7 @@ class Step extends React.Component {
     for (let index = 0; index <= this.props.canvas.totalSteps; index++) {
       steps.push(
         <button
-          className={index === this.props.canvas.step ? 'current' : null}
+          className={index <= this.props.canvas.step ? 'current' : null}
           key={`step_${index}`}
           onClick={() => this.props.changeStep(index)}
         >
