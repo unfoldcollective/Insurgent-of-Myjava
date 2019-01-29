@@ -7,7 +7,7 @@ import { selectCharacter } from '../../actions';
 import { WithSidebar } from '../layouts';
 import Step from '../Step.jsx';
 import Sidebar from '../Sidebar.jsx';
-import Carousel from '../Carousel.jsx';
+import Carousel from './parts/Carousel.jsx';
 
 function mapStateToProps(state) {
   const { data, canvas } = state;

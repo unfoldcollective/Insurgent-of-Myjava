@@ -23,9 +23,14 @@ const Main = ({ children }) => {
           width: 100vw;
           height: 100vh;
         }
+
+        main {
+          max-width: 1920px;
+          margin: 0 auto;
+        }
       `}</style>
     </main>
   );
 };
 
-export default Main;
+export { Main };

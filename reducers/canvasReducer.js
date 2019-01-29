@@ -4,6 +4,11 @@ const initialState = {
   step: 2,
   totalSteps: 5,
   helpMode: false,
+  outfitStep: {
+    isDragging: false,
+    filter: 'head'
+  },
+  accesorizeStep: {},
   insurgent: {
     character: 0,
     clothes: [],

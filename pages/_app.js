@@ -5,7 +5,7 @@ import App, { Container } from 'next/app';
 import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
 
-import Main from '../components/Main.jsx';
+import { Main } from '../components/layouts';
 
 import { initStore } from '../store';
 import { DATA } from '../constants';
