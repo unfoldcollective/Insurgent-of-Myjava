@@ -4,14 +4,9 @@ const initialState = {
   step: 2,
   totalSteps: 5,
   helpMode: false,
-  outfitStep: {
-    isDragging: false,
-    filter: 'head'
-  },
-  accesorizeStep: {},
   insurgent: {
     character: 0,
-    clothes: [],
+    clothes: {},
     weapon: {
       model: 0,
       extras: []
@@ -63,6 +58,19 @@ export default (state = initialState, action) => {
         insurgent: {
           ...state.insurgent,
           character: action.payload
+        }
+      };
+    }
+
+    case CANVAS.CHARACTER_DRESSED: {
+      return {
+        ...state,
+        insurgent: {
+          ...state.insurgent,
+          clothes: {
+            ...state.insurgent.clothes,
+            [action.payload.slot]: action.payload.item
+          }
         }
       };
     }

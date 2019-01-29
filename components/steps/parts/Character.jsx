@@ -10,13 +10,20 @@ class Character extends Component {
           top: `${slotDimensions.top}%`,
           height: `${slotDimensions.height}%`
         };
+
         return (
           <div
             key={`character_clothing_slot_${index}`}
             className="character-clothing-slot"
             style={style}
           >
-            {slotName}
+            {this.props.clothes[slotName] && (
+              <img
+                src={`/static/${this.props.clothes[slotName]}_${
+                  this.props.index
+                }.png`}
+              />
+            )}
             <style jsx>
               {`
                 div.character-clothing-slot {

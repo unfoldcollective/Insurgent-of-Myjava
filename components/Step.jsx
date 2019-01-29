@@ -35,7 +35,8 @@ class Step extends React.Component {
             }
 
             button.current {
-              background: coral;
+              background: black;
+              color: white;
             }
           `}</style>
         </button>

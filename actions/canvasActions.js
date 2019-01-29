@@ -34,3 +34,7 @@ export const selectCharacter = index => (dispatch, getState) => {
   if (index < characters.length && index > -1)
     return dispatch({ type: CANVAS.CHARACTER_SELECTED, payload: index });
 };
+
+export const dressCharacter = (slot, item) => dispatch => {
+  return dispatch({ type: CANVAS.CHARACTER_DRESSED, payload: { slot, item } });
+};
