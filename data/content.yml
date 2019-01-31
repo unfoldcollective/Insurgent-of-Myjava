@@ -29,6 +29,7 @@ characters:
       sk: Character name 1 (sk)
       en: Character name 1
     image: c1.png
+    offset: -30
     description: #markdown allowed
       sk: Character description 1 (sk)
       en: Character description 1

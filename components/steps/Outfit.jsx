@@ -12,7 +12,7 @@ import {
 import { WithSidebar, ContentCentered } from '../layouts';
 import Step from '../Step.jsx';
 import Sidebar from '../Sidebar.jsx';
-import Character from './parts/Character.jsx';
+import Dressable from './parts/Dressable.jsx';
 import Draggable from './parts/Draggable.jsx';
 
 function mapStateToProps(state) {
@@ -131,7 +131,7 @@ class Outfit extends React.Component {
       <WithSidebar sidebar={OutfitSidebar}>
         <Step>
           <ContentCentered>
-            <Character
+            <Dressable
               character={character}
               index={this.props.canvas.insurgent.character}
               clothes={this.props.canvas.insurgent.clothes}
