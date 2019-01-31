@@ -38,3 +38,14 @@ export const selectCharacter = index => (dispatch, getState) => {
 export const dressCharacter = (slot, item) => dispatch => {
   return dispatch({ type: CANVAS.CHARACTER_DRESSED, payload: { slot, item } });
 };
+
+export const selectWeapon = index => (dispatch, getState) => {
+  const {
+    data: {
+      content: { weapons }
+    }
+  } = getState();
+
+  if (index < weapons.length && index > -1)
+    return dispatch({ type: CANVAS.WEAPON_SELECTED, payload: index });
+};

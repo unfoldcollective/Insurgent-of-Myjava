@@ -41,7 +41,7 @@ characters:
         height: 25
       legs:
         top: 50
-        height: 25
+        height: 50
       feet:
         top: 75
         height: 25
@@ -107,21 +107,21 @@ weapons:
   - name:
       sk: Weapon name 1 (sk)
       en: Weapon name 1
-    image: w1.png
+    image: w1.svg
     description: #markdown allowed
       sk: Weapon description 1 (sk)
       en: Weapon description 1
   - name:
       sk: Weapon name 2 (sk)
       en: Weapon name 2
-    image: w2.png
+    image: w2.svg
     description: #markdown allowed
       sk: Weapon description 2 (sk)
       en: Weapon description 2
   - name:
       sk: Weapon name 3 (sk)
       en: Weapon name 3
-    image: w3.png
+    image: w3.svg
     description: #markdown allowed
       sk: Weapon description 3 (sk)
       en: Weapon description 3

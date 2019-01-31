@@ -112,7 +112,9 @@ class Carousel extends Component {
                   key={`carousel_image_${index}`}
                   src={`/static/${i.image}`}
                   style={iStyle}
-                  className={index === iCurrent ? 'current' : null}
+                  className={`carousel-image ${
+                    index === iCurrent ? 'current' : null
+                  }`}
                 />
               </li>
             );
@@ -143,13 +145,14 @@ class Carousel extends Component {
             transition: left 0.5s ease-in-out;
           }
 
-          img {
+          img.carousel-image {
             transform: scale(0.8);
             opacity: 0.5;
             will-change: transform, opacity;
+            width: 100%;
           }
 
-          img.current {
+          img.carousel-image.current {
             transform: scale(1);
             opacity: 1;
           }

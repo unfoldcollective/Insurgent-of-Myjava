@@ -50,6 +50,7 @@ class Character extends Component {
           >
             {this.props.clothes[slotName] && (
               <img
+                className="character-clothing-image"
                 src={`/static/${this.props.clothes[slotName]}_${
                   this.props.index
                 }.png`}
@@ -60,10 +61,29 @@ class Character extends Component {
                 div.character-clothing-slot {
                   position: absolute;
                   width: 100%;
+                  border: 3px solid red;
+                }
+
+                div.character-clothing-slot:nth-child(3) {
+                  border-color: green;
+                }
+
+                div.character-clothing-slot:nth-child(4) {
+                  border-color: blue;
+                }
+
+                div.character-clothing-slot:nth-child(5) {
+                  border-color: lime;
+                  width: 99%;
                 }
 
                 div.character-clothing-slot.current {
                   border: 3px dashed lightcoral;
+                }
+
+                img.character-clothing-image {
+                  width: 100%;
+                  height: 100%;
                 }
               `}
             </style>
