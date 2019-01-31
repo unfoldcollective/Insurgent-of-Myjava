@@ -6,6 +6,11 @@ const Main = ({ children }) => {
       {children}
 
       <style jsx global>{`
+        html {
+          -moz-osx-font-smoothing: grayscale;
+          font-smoothing: antialiased;
+        }
+
         *,
         *::before,
         *::after {

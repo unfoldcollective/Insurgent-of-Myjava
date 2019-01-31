@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import { _s } from '../utils';
 
-import { Context, Insurgent, Outfit, Weapon, Accesories } from './steps';
+import { Context, Insurgent, Outfit, Rack, Accesories } from './steps';
 
 function mapStateToProps(state) {
   const { canvas, data } = state;
@@ -28,7 +28,7 @@ class Canvas extends Component {
       1: <Insurgent />,
       2: <Outfit />,
       3: <Context text={_s('CONTEXT_2', this.props.data, true)} />,
-      4: <Weapon />,
+      4: <Rack />,
       5: <Accesories />
     };
 

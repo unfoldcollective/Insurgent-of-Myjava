@@ -22,7 +22,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 //Component
-class Weapon extends React.Component {
+class Rack extends React.Component {
   render() {
     const WeaponSidebar = (
       <Sidebar>
@@ -51,6 +51,6 @@ class Weapon extends React.Component {
 const ConnectedWeapon = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Weapon);
+)(Rack);
 
-export { ConnectedWeapon as Weapon };
+export { ConnectedWeapon as Rack };
