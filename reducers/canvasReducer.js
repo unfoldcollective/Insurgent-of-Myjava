@@ -81,8 +81,77 @@ export default (state = initialState, action) => {
         insurgent: {
           ...state.insurgent,
           weapon: {
-            ...state.weapon,
+            ...state.insurgent.weapon,
             model: action.payload
+          }
+        }
+      };
+    }
+
+    case CANVAS.ACCESSORY_ADDED: {
+      return {
+        ...state,
+        insurgent: {
+          ...state.insurgent,
+          weapon: {
+            ...state.insurgent.weapon,
+            extras: [...state.insurgent.weapon.extras, action.payload]
+          }
+        }
+      };
+    }
+
+    case CANVAS.ACCESSORY_UPDATED: {
+      const extras = state.insurgent.weapon.extras.map((extra, index) => {
+        if (index !== action.payload.accessory) return extra;
+
+        return { ...extra, ...action.payload.data };
+      });
+      return {
+        ...state,
+        insurgent: {
+          ...state.insurgent,
+          weapon: {
+            ...state.insurgent.weapon,
+            extras
+          }
+        }
+      };
+    }
+
+    case CANVAS.ACCESSORY_REORDERED: {
+      const extras = state.insurgent.weapon.extras.map((extra, index) => {
+        if (index !== action.payload.accessory) return extra;
+
+        return { ...extra, z: action.payload.z };
+      });
+
+      return {
+        ...state,
+        insurgent: {
+          ...state.insurgent,
+          weapon: {
+            ...state.insurgent.weapon,
+            extras
+          }
+        }
+      };
+    }
+
+    case CANVAS.ACCESSORY_FLIPPED: {
+      const extras = state.insurgent.weapon.extras.map((extra, index) => {
+        if (index !== action.payload) return extra;
+
+        return { ...extra, flipped: !extra.flipped };
+      });
+
+      return {
+        ...state,
+        insurgent: {
+          ...state.insurgent,
+          weapon: {
+            ...state.insurgent.weapon,
+            extras
           }
         }
       };

@@ -1,13 +1,9 @@
 import React from 'react';
 
-const Character = ({ character, withOffset }) => {
+const Character = ({ image }) => {
   return (
     <React.Fragment>
-      <img
-        className="character-image"
-        src={`/static/${character.image}`}
-        style={withOffset && { transform: `translate(${character.offset}%)` }}
-      />
+      <img className="character-image" src={`/static/${image}`} />
 
       <style jsx>{`
         img.character-image {

@@ -33,7 +33,9 @@ class Dressable extends Component {
         };
 
         const isHighlighted =
-          this.props.status.isDragging && this.props.status.filter === slotName;
+          this.props.status &&
+          (this.props.status.isDragging &&
+            this.props.status.filter === slotName);
 
         const dropzone = React.createRef();
 
@@ -81,7 +83,12 @@ class Dressable extends Component {
     );
 
     return (
-      <div className="character">
+      <div
+        className="character"
+        style={
+          this.props.offset && { transform: `translate(${this.props.offset}%)` }
+        }
+      >
         <Character image={this.props.character.image} />
 
         {slots}

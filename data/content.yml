@@ -126,3 +126,10 @@ weapons:
     description: #markdown allowed
       sk: Weapon description 3 (sk)
       en: Weapon description 3
+
+# List of accesories
+accesories:
+  - image: accessory_1.png
+  - image: accessory_2.png
+  - image: accessory_3.png
+  - image: accessory_4.png

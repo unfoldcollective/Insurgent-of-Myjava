@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import interact from 'interactjs';
 import { debounce } from 'lodash';
 
-const MOVEMENT_DEBOUNCE = 8;
+const MOVEMENT_DEBOUNCE = 1;
 
 class Draggable extends Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class Draggable extends Component {
           e.preventDefault();
           e.stopPropagation();
 
-          this.props.dragAction(this.props.item);
+          this.props.dragAction && this.props.dragAction(this.props.item);
           this.dragging = true;
         },
         onmove: debounce(e => {
@@ -29,15 +29,14 @@ class Draggable extends Component {
           const x = (parseFloat(target.getAttribute('data-x')) || 0) + e.dx;
           const y = (parseFloat(target.getAttribute('data-y')) || 0) + e.dy;
 
-          target.style.webkitTransform = target.style.transform = `translate3d(${x}px, ${y}px, 0) scale(1.1)`;
-
+          target.style.webkitTransform = target.style.transform = `translate3d(${x}px, ${y}px, 0) scale(1.2)`;
           target.setAttribute('data-x', x);
           target.setAttribute('data-y', y);
         }, MOVEMENT_DEBOUNCE),
         onend: () => {
-          this.props.dropAction();
+          this.props.dropAction && this.props.dropAction();
           this.dragging = false;
-          dragElement.parentNode.removeChild(dragElement);
+          setTimeout(() => dragElement.parentNode.removeChild(dragElement));
         }
       })
       .on('move', e => {
@@ -80,6 +79,7 @@ class Draggable extends Component {
             position: absolute;
             touch-action: manipulation;
             will-change: transform;
+            z-index: 1000;
           }
         `}</style>
       </div>

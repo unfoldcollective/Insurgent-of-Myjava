@@ -49,3 +49,52 @@ export const selectWeapon = index => (dispatch, getState) => {
   if (index < weapons.length && index > -1)
     return dispatch({ type: CANVAS.WEAPON_SELECTED, payload: index });
 };
+
+export const addAccessory = accessory => (dispatch, getState) => {
+  const {
+    canvas: {
+      insurgent: {
+        weapon: { extras }
+      }
+    }
+  } = getState();
+
+  if (extras.length) {
+    accessory.z = Math.max(...extras.map(e => e.z || 0)) + 10;
+  } else {
+    accessory.z = 10;
+  }
+
+  return dispatch({ type: CANVAS.ACCESSORY_ADDED, payload: accessory });
+};
+
+export const updateAccessory = (accessory, data) => dispatch => {
+  return dispatch({
+    type: CANVAS.ACCESSORY_UPDATED,
+    payload: { accessory, data }
+  });
+};
+
+export const reorderAccessory = accessory => (dispatch, getState) => {
+  const {
+    canvas: {
+      insurgent: {
+        weapon: { extras }
+      }
+    }
+  } = getState();
+
+  const z = Math.max(...extras.map(e => e.z || 0)) + 10;
+
+  return dispatch({
+    type: CANVAS.ACCESSORY_REORDERED,
+    payload: { accessory, z }
+  });
+};
+
+export const flipAccessory = accessory => dispatch => {
+  return dispatch({
+    type: CANVAS.ACCESSORY_FLIPPED,
+    payload: accessory
+  });
+};
