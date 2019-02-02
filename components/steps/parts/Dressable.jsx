@@ -55,9 +55,9 @@ class Dressable extends Component {
             {this.props.clothes[slotName] && (
               <img
                 className="character-clothing-image"
-                src={`/static/${this.props.clothes[slotName]}_${
-                  this.props.index
-                }.png`}
+                src={`/static/ch-${this.props.index}-${
+                  this.props.clothes[slotName]
+                }.svg`}
               />
             )}
             <style jsx>

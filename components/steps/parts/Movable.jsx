@@ -124,7 +124,7 @@ class Movable extends Component {
           div.movable-item {
             position: absolute;
             /*filter: drop-shadow(0px 0px 5px rgba(0,0,0,.2));*/
-            touch-action: manipulation;
+            touch-action: none;
             will-change: transform;
           }
 

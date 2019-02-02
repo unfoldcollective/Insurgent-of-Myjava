@@ -28,28 +28,28 @@ characters:
   - name:
       sk: Character name 1 (sk)
       en: Character name 1
-    image: c1.png
-    offset: -30
+    image: character-0.svg
+    offset: -35
     description: #markdown allowed
       sk: Character description 1 (sk)
       en: Character description 1
     slots:
       head:
         top: 0
-        height: 25
+        height: 26.6
       torso:
-        top: 25
-        height: 25
+        top: 29.1
+        height: 35.7
       legs:
-        top: 50
-        height: 50
+        top: 47.6
+        height: 41.6
       feet:
-        top: 75
-        height: 25
+        top: 86.6
+        height: 6.3
   - name:
       sk: Character name 2 (sk)
       en: Character name 2
-    image: c2.png
+    image: character-1.svg
     description: #markdown allowed
       sk: Character description 2 (sk)
       en: Character description 2
@@ -69,7 +69,7 @@ characters:
   - name:
       sk: Character name 3 (sk)
       en: Character name 3
-    image: c3.png
+    image: character-2.svg
     description: #markdown allowed
       sk: Character description 3 (sk)
       en: Character description 3
@@ -90,17 +90,45 @@ characters:
 # Pieces of clothes
 clothes:
   head:
-    - h1
-    - h2
+    - hat-1-brown
+    - hat-1-black
+    - hat-1-beige
+    - hat-2-brown
+    - hat-2-black
+    - hat-2-beige
+    - hat-3-red
+    - hat-3-green
+    - hat-3-blue
   torso:
-    - t1
-    - t2
+    - coat-1-blue
+    - coat-1-green
+    - coat-1-red
+    - coat-2-beige
+    - coat-2-black
+    - coat-2-brown
+    - shirt-3-beige
+    - shirt-3-blue
+    - shirt-3-red
   legs:
-    - l1
-    - l2
+    - skirt-3-blue
+    - skirt-3-brown
+    - skirt-3-green
+    - trousers-1-beige
+    - trousers-1-blue
+    - trousers-1-orange
+    - trousers-2-beige
+    - trousers-2-green
+    - trousers-2-red
   feet:
-    - f1
-    - f2
+    - shoes-1-brown
+    - shoes-1-black
+    - shoes-1-beige
+    - shoes-2-red
+    - shoes-2-black
+    - shoes-2-beige
+    - shoes-3-red
+    - shoes-3-black
+    - shoes-3-beige
 
 # List of weapons
 # the list order is important
@@ -129,7 +157,5 @@ weapons:
 
 # List of accesories
 accesories:
-  - image: accessory_1.png
-  - image: accessory_2.png
-  - image: accessory_3.png
-  - image: accessory_4.png
+  - image: axe.png
+  - image: knife.png
