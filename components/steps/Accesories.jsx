@@ -8,7 +8,8 @@ import {
   reorderAccessory,
   flipAccessory,
   dragAccessory,
-  dropAccessory
+  dropAccessory,
+  removeAccessory
 } from '../../actions';
 
 import { WithSidebar, ContentCentered } from '../layouts';
@@ -36,7 +37,8 @@ function mapDispatchToProps(dispatch) {
       reorderAccessory,
       flipAccessory,
       dragAccessory,
-      dropAccessory
+      dropAccessory,
+      removeAccessory
     },
     dispatch
   );
@@ -111,6 +113,7 @@ class Accesories extends React.Component {
             updateAccessory={this.props.updateAccessory}
             reorderAccessory={this.props.reorderAccessory}
             flipAccessory={this.props.flipAccessory}
+            removeAccessory={this.props.removeAccessory}
             isDragging={this.props.accessorize.isDragging}
           />
           <ContentCentered>

@@ -67,7 +67,7 @@ class Step extends React.Component {
             flex-direction: column;
             align-items: center;
             padding: 1rem;
-            z-index: 20;
+            z-index: 2;
           }
         `}</style>
       </div>

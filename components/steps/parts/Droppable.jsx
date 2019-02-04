@@ -6,11 +6,17 @@ class Droppable extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      overTrash: false
+    };
+
     this.droppable = React.createRef();
+    this.trash = React.createRef();
   }
 
   componentDidMount() {
     const dropzone = this.droppable.current;
+    const trash = this.trash.current;
 
     interact(dropzone).dropzone({
       ondrop: e => {
@@ -41,10 +47,39 @@ class Droppable extends Component {
         };
       }
     });
+
+    interact(trash).dropzone({
+      ondragenter: () => {
+        this.setState({
+          overTrash: true
+        });
+      },
+      ondragleave: () => {
+        this.setState({
+          overTrash: false
+        });
+      },
+      ondrop: e => {
+        const index = e.relatedTarget.dataset.index;
+
+        if (index) {
+          setTimeout(() => {
+            this.props.removeAccessory(index);
+            this.setState({ overTrash: false });
+          });
+        }
+      }
+    });
   }
   render() {
     return (
       <div className="droppable" ref={this.droppable}>
+        <div
+          className={`trash ${this.state.overTrash ? 'over' : ''}`}
+          ref={this.trash}
+        >
+          Trash
+        </div>
         {this.props.extras.map((extra, index) => {
           return (
             <Movable
@@ -71,6 +106,20 @@ class Droppable extends Component {
               background: rgba(100, 100, 100, 0.4);
               z-index: 2;
               overflow: hidden;
+            }
+
+            div.trash {
+              position: absolute;
+              bottom: 1rem;
+              left: 1rem;
+              z-index: 3;
+              background: rgba(100, 100, 100, 0.6);
+              padding: 1rem;
+              color: white;
+            }
+
+            div.trash.over {
+              transform: scale(1.4);
             }
           `}
         </style>

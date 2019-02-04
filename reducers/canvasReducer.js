@@ -1,7 +1,7 @@
 import { CANVAS } from '../constants';
 
 const initialState = {
-  step: 0,
+  step: 5,
   totalSteps: 5,
   helpMode: false,
   insurgent: {
@@ -144,6 +144,23 @@ export default (state = initialState, action) => {
 
         return { ...extra, flipped: !extra.flipped };
       });
+
+      return {
+        ...state,
+        insurgent: {
+          ...state.insurgent,
+          weapon: {
+            ...state.insurgent.weapon,
+            extras
+          }
+        }
+      };
+    }
+
+    case CANVAS.ACCESSORY_REMOVED: {
+      const extras = state.insurgent.weapon.extras.filter(
+        (extra, index) => index === action.payload
+      );
 
       return {
         ...state,

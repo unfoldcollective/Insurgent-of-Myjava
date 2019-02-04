@@ -98,3 +98,10 @@ export const flipAccessory = accessory => dispatch => {
     payload: accessory
   });
 };
+
+export const removeAccessory = index => dispatch => {
+  return dispatch({
+    type: CANVAS.ACCESSORY_REMOVED,
+    payload: index
+  });
+};
