@@ -2,12 +2,22 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { advanceStep, activateHelp } from '../actions';
+import { advanceStep, activateHelp, changeStep } from '../actions';
 
 import SidebarNavigation from './SidebarNavigation.jsx';
 
+function mapStateToProps(state) {
+  const { canvas } = state;
+  return {
+    canvas
+  };
+}
+
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ advanceStep, activateHelp }, dispatch);
+  return bindActionCreators(
+    { advanceStep, activateHelp, changeStep },
+    dispatch
+  );
 }
 
 //Component
@@ -19,6 +29,9 @@ class Sidebar extends React.Component {
 
         <section className="sidebar-navigation">
           <SidebarNavigation
+            totalSteps={this.props.canvas.totalSteps}
+            step={this.props.canvas.step}
+            changeStep={this.props.changeStep}
             advanceStep={this.props.advanceStep}
             activateHelp={this.props.activateHelp}
           />
@@ -39,6 +52,8 @@ class Sidebar extends React.Component {
           section.sidebar-navigation {
             padding: 1rem;
             display: flex;
+            flex-direction: column;
+            align-items: center;
           }
         `}</style>
       </article>
@@ -47,6 +62,6 @@ class Sidebar extends React.Component {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Sidebar);

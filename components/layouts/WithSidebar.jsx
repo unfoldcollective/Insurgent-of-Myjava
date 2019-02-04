@@ -20,7 +20,7 @@ const WithSidebar = ({ sidebar, children }) => {
 
         aside.sidebar {
           flex-basis: 25%;
-          background: lightcoral;
+          background: black;
         }
       `}</style>
     </div>

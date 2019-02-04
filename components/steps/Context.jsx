@@ -5,6 +5,7 @@ import { advanceStep } from '../../actions';
 
 import { Full } from '../layouts';
 import Step from '../Step.jsx';
+import Cta from '../Cta.jsx';
 
 function mapStateToProps(state) {
   const { data, canvas } = state;
@@ -24,10 +25,43 @@ class Context extends React.Component {
     return (
       <Full>
         <Step>
-          <div className="step-content">
-            <p dangerouslySetInnerHTML={this.props.text} />
-            <button onClick={() => this.props.advanceStep()}>Continue</button>
-          </div>
+          <article className="context">
+            <section className="context-content">
+              <p dangerouslySetInnerHTML={this.props.text} />
+            </section>
+            <aside className="context-navigation">
+              <Cta className="big" action={() => this.props.advanceStep()}>
+                Continue
+              </Cta>
+            </aside>
+            <style jsx>{`
+              article.context {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                z-index: 20;
+              }
+
+              section.context-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-grow: 1;
+              }
+
+              section.context-content p {
+                font-size: 2rem;
+                margin: 0 25%;
+                text-align: center;
+              }
+
+              aside.context-navigation {
+                display: flex;
+                justify-content: flex-end;
+                padding: 2rem;
+              }
+            `}</style>
+          </article>
         </Step>
       </Full>
     );

@@ -6,6 +6,27 @@ const Main = ({ children }) => {
       {children}
 
       <style jsx global>{`
+        @font-face {
+          font-family: 'Marlene';
+          src: url('/static/fonts/WF-031857-010432-001542.eot');
+          src: url('/static/fonts/WF-031857-010432-001542.eot?#iefix')
+              format('embedded-opentype'),
+            url('/static/fonts/WF-031857-010432-001542.woff') format('woff'),
+            url('/static/fonts/WF-031857-010432-001542.ttf') format('truetype');
+          font-weight: normal;
+          font-style: normal;
+        }
+
+        @font-face {
+          font-family: 'SourceSans';
+          src: url('/static/fonts/SourceSansPro-SemiBold.eot');
+          src: url('/static/fonts/SourceSansPro-SemiBold.eot?#iefix')
+              format('embedded-opentype'),
+            url('/static/fonts/SourceSansPro-SemiBold.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+        }
+
         html {
           -moz-osx-font-smoothing: grayscale;
           font-smoothing: antialiased;
@@ -28,7 +49,9 @@ const Main = ({ children }) => {
           position: relative;
           width: 100vw;
           height: 100vh;
-          font-family: system-ui, sans-serif;
+          font-family: Marlene, serif;
+          background: black;
+          color: #e6e1dc;
         }
 
         main {

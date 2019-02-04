@@ -26,11 +26,13 @@ class Insurgent extends React.Component {
   render() {
     const InsurgentSidebar = (
       <Sidebar>
-        {
-          this.props.data.content.characters[
-            this.props.canvas.insurgent.character
-          ].description[this.props.data.lang]
-        }
+        <p>
+          {
+            this.props.data.content.characters[
+              this.props.canvas.insurgent.character
+            ].description[this.props.data.lang]
+          }
+        </p>
       </Sidebar>
     );
     return (

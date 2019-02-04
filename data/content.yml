@@ -6,17 +6,17 @@ strings:
   SUBTITLE:
     sk: A web app to create insurgents (sk)
     en: A web app to create insurgents
-  INTRO: #markdown allowed
+  INTRO: #some markdown allowed
     sk: >
       SK _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
     en: >
       EN Lorem ipsum dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
-  CONTEXT_1: #markdown allowed
+  CONTEXT_1: #some markdown allowed
     sk: >
       SK CTX1 _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
     en: >
       EN CTX1 Lorem ipsum dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
-  CONTEXT_2: #markdown allowed
+  CONTEXT_2: #some markdown allowed
     sk: >
       SK CTX2 _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
     en: >
@@ -30,7 +30,7 @@ characters:
       en: Character name 1
     image: character-0.svg
     offset: -35
-    description: #markdown allowed
+    description: #some markdown allowed
       sk: Character description 1 (sk)
       en: Character description 1
     slots:
@@ -50,7 +50,7 @@ characters:
       sk: Character name 2 (sk)
       en: Character name 2
     image: character-1.svg
-    description: #markdown allowed
+    description: #some markdown allowed
       sk: Character description 2 (sk)
       en: Character description 2
     slots:
@@ -70,7 +70,7 @@ characters:
       sk: Character name 3 (sk)
       en: Character name 3
     image: character-2.svg
-    description: #markdown allowed
+    description: #some markdown allowed
       sk: Character description 3 (sk)
       en: Character description 3
     slots:
@@ -137,21 +137,21 @@ weapons:
       sk: Weapon name 1 (sk)
       en: Weapon name 1
     image: w1.svg
-    description: #markdown allowed
+    description: #some markdown allowed
       sk: Weapon description 1 (sk)
       en: Weapon description 1
   - name:
       sk: Weapon name 2 (sk)
       en: Weapon name 2
     image: w2.svg
-    description: #markdown allowed
+    description: #some markdown allowed
       sk: Weapon description 2 (sk)
       en: Weapon description 2
   - name:
       sk: Weapon name 3 (sk)
       en: Weapon name 3
     image: w3.svg
-    description: #markdown allowed
+    description: #some markdown allowed
       sk: Weapon description 3 (sk)
       en: Weapon description 3
 

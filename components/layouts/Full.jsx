@@ -13,7 +13,6 @@ const Full = ({ children }) => {
         }
 
         section.content {
-          background: lightblue;
           flex-grow: 1;
           position: relative;
         }

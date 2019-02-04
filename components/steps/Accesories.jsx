@@ -82,6 +82,11 @@ class Accesories extends React.Component {
         </ul>
 
         <style jsx>{`
+          h1 {
+            text-align: center;
+            margin: 1rem;
+            font-size: 2rem;
+          }
           ul.accessories-list {
             display: flex;
             flex-wrap: wrap;

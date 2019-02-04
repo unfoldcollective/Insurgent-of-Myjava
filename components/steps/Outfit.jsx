@@ -11,6 +11,7 @@ import {
 
 import { WithSidebar, ContentCentered } from '../layouts';
 import Step from '../Step.jsx';
+import Cta from '../Cta.jsx';
 import Sidebar from '../Sidebar.jsx';
 import Dressable from './parts/Dressable.jsx';
 import Draggable from './parts/Draggable.jsx';
@@ -45,15 +46,13 @@ class Outfit extends React.Component {
         <h1>Outfits</h1>
         <nav className="outfit-navigation">
           {Object.keys(clothes).map((c, index) => (
-            <button
+            <Cta
               key={`outfit_switch_${index}`}
-              onClick={() => this.props.changeOutfitFilter(c)}
-              className={`outfit-switch ${
-                this.props.outfit.filter === c ? 'current' : ''
-              }`}
+              action={() => this.props.changeOutfitFilter(c)}
+              active={this.props.outfit.filter === c ? 'current' : ''}
             >
               {c}
-            </button>
+            </Cta>
           ))}
         </nav>
 
