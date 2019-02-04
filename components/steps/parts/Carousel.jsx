@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Swipeable from 'react-swipeable';
 
 class Carousel extends Component {
   constructor(props) {
@@ -76,100 +77,105 @@ class Carousel extends Component {
       : {};
 
     return (
-      <div className="carousel-tray">
-        <button className="carousel-control" onClick={this.handleRetreat}>
-          Previous
-        </button>
-        <button
-          className="carousel-control advance"
-          onClick={this.handleAdvance}
-        >
-          Next
-        </button>
-        <ul className="carousel" style={slideStyles}>
-          {this.state.slides.map((i, index) => {
-            let iCurrent = null;
-            let iStyle = {};
+      <Swipeable
+        onSwipedRight={this.handleRetreat}
+        onSwipedLeft={this.handleAdvance}
+      >
+        <div className="carousel-tray">
+          <button className="carousel-control" onClick={this.handleRetreat}>
+            Previous
+          </button>
+          <button
+            className="carousel-control advance"
+            onClick={this.handleAdvance}
+          >
+            Next
+          </button>
+          <ul className="carousel" style={slideStyles}>
+            {this.state.slides.map((i, index) => {
+              let iCurrent = null;
+              let iStyle = {};
 
-            if (sliding) {
-              iCurrent = direction < 0 ? 3 : 1;
-              iStyle = {
-                transition: 'all 0.5s ease-in-out'
-              };
-            } else {
-              iCurrent = 2;
+              if (sliding) {
+                iCurrent = direction < 0 ? 3 : 1;
+                iStyle = {
+                  transition: 'all 0.5s ease-in-out'
+                };
+              } else {
+                iCurrent = 2;
+              }
+
+              return (
+                <li
+                  key={`carousel_${index}`}
+                  className="carousel-item"
+                  style={{
+                    left: `${(100 / 3) * index}%`
+                  }}
+                >
+                  <img
+                    key={`carousel_image_${index}`}
+                    src={`/static/${i.image}`}
+                    style={iStyle}
+                    className={`carousel-image ${
+                      index === iCurrent ? 'current' : null
+                    }`}
+                  />
+                </li>
+              );
+            })}
+          </ul>
+
+          <style jsx>{`
+            div.carousel-tray {
+              position: relative;
+              overflow: hidden;
             }
 
-            return (
-              <li
-                key={`carousel_${index}`}
-                className="carousel-item"
-                style={{
-                  left: `${(100 / 3) * index}%`
-                }}
-              >
-                <img
-                  key={`carousel_image_${index}`}
-                  src={`/static/${i.image}`}
-                  style={iStyle}
-                  className={`carousel-image ${
-                    index === iCurrent ? 'current' : null
-                  }`}
-                />
-              </li>
-            );
-          })}
-        </ul>
+            ul.carousel {
+              list-style: none;
+              height: 100vh;
+              position: relative;
+              transform: translateX(calc(100% / -3));
+            }
 
-        <style jsx>{`
-          div.carousel-tray {
-            position: relative;
-            overflow: hidden;
-          }
+            li.carousel-item {
+              position: absolute;
+              width: calc(100% / 3);
+              height: 100vh;
+              top: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: left 0.5s ease-in-out;
+            }
 
-          ul.carousel {
-            list-style: none;
-            height: 100vh;
-            position: relative;
-            transform: translateX(calc(100% / -3));
-          }
+            img.carousel-image {
+              transform: scale(0.8);
+              opacity: 0.5;
+              will-change: transform, opacity;
+              width: 100%;
+            }
 
-          li.carousel-item {
-            position: absolute;
-            width: calc(100% / 3);
-            height: 100vh;
-            top: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: left 0.5s ease-in-out;
-          }
+            img.carousel-image.current {
+              transform: scale(1);
+              opacity: 1;
+            }
 
-          img.carousel-image {
-            transform: scale(0.8);
-            opacity: 0.5;
-            will-change: transform, opacity;
-            width: 100%;
-          }
+            button.carousel-control {
+              position: absolute;
+              top: calc(50% - 25px);
+              z-index: 1;
+              margin: 0 1rem;
+              padding: 1rem;
+            }
 
-          img.carousel-image.current {
-            transform: scale(1);
-            opacity: 1;
-          }
-
-          button.carousel-control {
-            position: absolute;
-            top: calc(50% - 25px);
-            z-index: 1;
-            margin: 0 1rem;
-            padding: 1rem;
-          }
-
-          button.advance {
-            right: 0;
-          }
-        `}</style>
-      </div>
+            button.advance {
+              right: 0;
+            }
+          `}</style>
+        </div>
+      </Swipeable>
     );
   }
 }
