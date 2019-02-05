@@ -115,7 +115,7 @@ class Carousel extends Component {
                 >
                   <img
                     key={`carousel_image_${index}`}
-                    src={`/static/${i.image}`}
+                    src={`/static/${i.full || i.image}`}
                     style={iStyle}
                     className={`carousel-image ${
                       index === iCurrent ? 'current' : null

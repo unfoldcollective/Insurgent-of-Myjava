@@ -29,63 +29,27 @@ characters:
       sk: Character name 1 (sk)
       en: Character name 1
     image: character-0.svg
+    full: character-0-full.svg
     offset: -35
     description: #some markdown allowed
       sk: Character description 1 (sk)
       en: Character description 1
-    slots:
-      head:
-        top: 0
-        height: 26.6
-      torso:
-        top: 29.1
-        height: 35.7
-      legs:
-        top: 47.6
-        height: 41.6
-      feet:
-        top: 86.6
-        height: 6.3
   - name:
       sk: Character name 2 (sk)
       en: Character name 2
     image: character-1.svg
+    full: character-1.svg
     description: #some markdown allowed
       sk: Character description 2 (sk)
       en: Character description 2
-    slots:
-      head:
-        top: 0
-        height: 25
-      torso:
-        top: 25
-        height: 25
-      legs:
-        top: 50
-        height: 25
-      feet:
-        top: 75
-        height: 25
   - name:
       sk: Character name 3 (sk)
       en: Character name 3
     image: character-2.svg
+    full: character-2.svg
     description: #some markdown allowed
       sk: Character description 3 (sk)
       en: Character description 3
-    slots:
-      head:
-        top: 0
-        height: 25
-      torso:
-        top: 25
-        height: 25
-      legs:
-        top: 50
-        height: 25
-      feet:
-        top: 75
-        height: 25
 
 # Pieces of clothes
 clothes:

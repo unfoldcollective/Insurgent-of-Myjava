@@ -7,81 +7,20 @@ class Dressable extends Component {
   constructor(props) {
     super(props);
 
-    this.dropzones = [];
+    this.dropzone = React.createRef();
   }
 
   componentDidMount() {
-    for (const { slotName, dropzone } of this.dropzones) {
-      interact(dropzone.current).dropzone({
-        ondrop: () => {
-          if (this.props.status.filter === slotName) {
-            this.props.dropAction(slotName, this.props.status.itemDragged);
-          }
-        }
-      });
-    }
-  }
-  render() {
-    this.dropzones = [];
-    const slots = Object.keys(this.props.character.slots).map(
-      (slotName, index) => {
-        const slotDimensions = this.props.character.slots[slotName];
-
-        const style = {
-          top: `${slotDimensions.top}%`,
-          height: `${slotDimensions.height}%`
-        };
-
-        const isHighlighted =
-          this.props.status &&
-          (this.props.status.isDragging &&
-            this.props.status.filter === slotName);
-
-        const dropzone = React.createRef();
-
-        if (this.props.editable) {
-          this.dropzones.push({ slotName, dropzone });
-        }
-
-        return (
-          <div
-            key={`character_clothing_slot_${index}`}
-            className={`character-clothing-slot ${
-              isHighlighted ? 'current' : null
-            }`}
-            style={style}
-            ref={dropzone}
-          >
-            {this.props.clothes[slotName] && (
-              <img
-                className="character-clothing-image"
-                src={`/static/ch-${this.props.index}-${
-                  this.props.clothes[slotName]
-                }.svg`}
-              />
-            )}
-            <style jsx>
-              {`
-                div.character-clothing-slot {
-                  position: absolute;
-                  width: 100%;
-                }
-
-                div.character-clothing-slot.current {
-                  border: 3px dashed lightcoral;
-                }
-
-                img.character-clothing-image {
-                  width: 100%;
-                  height: 100%;
-                }
-              `}
-            </style>
-          </div>
+    interact(this.dropzone.current).dropzone({
+      ondrop: () => {
+        this.props.dropAction(
+          this.props.status.filter,
+          this.props.status.itemDragged
         );
       }
-    );
-
+    });
+  }
+  render() {
     return (
       <div
         className="character"
@@ -90,13 +29,68 @@ class Dressable extends Component {
         }
       >
         <Character image={this.props.character.image} />
+        <div className="character-clothing-slot legs">
+          {this.props.clothes['legs'] && (
+            <img
+              className="character-clothing-image"
+              src={`/static/ch-${this.props.index}-${
+                this.props.clothes['legs']
+              }.svg`}
+            />
+          )}
+        </div>
 
-        {slots}
+        <div className="character-clothing-slot torso">
+          {this.props.clothes['torso'] && (
+            <img
+              className="character-clothing-image"
+              src={`/static/ch-${this.props.index}-${
+                this.props.clothes['torso']
+              }.svg`}
+            />
+          )}
+        </div>
+
+        <div className="character-clothing-slot feet">
+          {this.props.clothes['feet'] && (
+            <img
+              className="character-clothing-image"
+              src={`/static/ch-${this.props.index}-${
+                this.props.clothes['feet']
+              }.svg`}
+            />
+          )}
+        </div>
+
+        <div className="character-clothing-slot extra-part">
+          <img src={`/static/character-${this.props.index}-head.svg`} />
+        </div>
+
+        <div className="character-clothing-slot head">
+          {this.props.clothes['head'] && (
+            <img
+              className="character-clothing-image"
+              src={`/static/ch-${this.props.index}-${
+                this.props.clothes['head']
+              }.svg`}
+            />
+          )}
+        </div>
+
+        <div className="character-clothing-slot dropzone" ref={this.dropzone} />
 
         <style jsx>{`
           div.character {
             flex-grow: 1;
             position: relative;
+          }
+
+          div.character-clothing-slot {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
           }
         `}</style>
       </div>
