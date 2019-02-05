@@ -11,14 +11,16 @@ class Dressable extends Component {
   }
 
   componentDidMount() {
-    interact(this.dropzone.current).dropzone({
-      ondrop: () => {
-        this.props.dropAction(
-          this.props.status.filter,
-          this.props.status.itemDragged
-        );
-      }
-    });
+    if (this.props.editable) {
+      interact(this.dropzone.current).dropzone({
+        ondrop: () => {
+          this.props.dropAction(
+            this.props.status.filter,
+            this.props.status.itemDragged
+          );
+        }
+      });
+    }
   }
   render() {
     return (

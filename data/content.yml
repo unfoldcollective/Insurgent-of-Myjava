@@ -121,5 +121,7 @@ weapons:
 
 # List of accesories
 accesories:
-  - image: axe.png
-  - image: knife.png
+  - image: axe-1.svg
+  - image: knife-1.svg
+  - image: plank-1.svg
+  - image: plank-2.svg

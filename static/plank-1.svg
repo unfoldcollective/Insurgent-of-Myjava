@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39" height="111" viewBox="0 0 39 111.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-5);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-8.95" y1="60.77" x2="47.95" y2="50.73" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#eed7b8"/>
+      <stop offset="0" stop-color="#efd8ba"/>
+      <stop offset="0.88" stop-color="#ddc2a9"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="5.55" y1="10.02" x2="11.45" y2="8.98" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#697c8a"/>
+      <stop offset="0.13" stop-color="#637583"/>
+      <stop offset="0.33" stop-color="#54636e"/>
+      <stop offset="0.57" stop-color="#3a454d"/>
+      <stop offset="0.84" stop-color="#171b1e"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="26.55" y1="18.02" x2="32.45" y2="16.98" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-4" x1="5.55" y1="94.02" x2="11.45" y2="92.98" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-5" x1="26.55" y1="102.02" x2="32.45" y2="100.98" xlink:href="#linear-gradient-2"/>
+  </defs>
+  <title>plank-1</title>
+  <g id="axe-1">
+    <rect class="cls-1" width="39" height="111.5"/>
+    <circle class="cls-2" cx="8.5" cy="9.5" r="3"/>
+    <circle class="cls-3" cx="29.5" cy="17.5" r="3"/>
+    <circle class="cls-4" cx="8.5" cy="93.5" r="3"/>
+    <circle class="cls-5" cx="29.5" cy="101.5" r="3"/>
+  </g>
+</svg>
