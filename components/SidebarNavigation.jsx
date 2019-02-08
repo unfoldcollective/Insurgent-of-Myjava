@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Router from 'next/router';
 import Cta from './Cta.jsx';
 
 class SidebarNavigation extends Component {
