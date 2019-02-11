@@ -1,10 +1,12 @@
 version: '3'
 services:
   app:
-    build: .
+    build: ./app
     depends_on:
       - db
+    volumes:
+      - ./shots:/shots:Z
   db:
     image: mongo
     volumes:
-      - ./db:/data/db:z
+      - ./db:/data/db:Z
