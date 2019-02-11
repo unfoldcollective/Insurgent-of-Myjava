@@ -19,7 +19,13 @@ class SidebarNavigation extends Component {
   }
 
   render() {
-    const { advanceStep, activateHelp } = this.props;
+    const {
+      advanceStep,
+      activateHelp,
+      saveInsurgent,
+      step,
+      totalSteps
+    } = this.props;
 
     return (
       <>
@@ -31,7 +37,11 @@ class SidebarNavigation extends Component {
             <Cta href="/">Home</Cta>
           </li>
           <li>
-            <Cta action={() => advanceStep()}>Next</Cta>
+            {step < totalSteps ? (
+              <Cta action={() => advanceStep()}>Next</Cta>
+            ) : (
+              <Cta action={() => saveInsurgent()}>End</Cta>
+            )}
           </li>
           <li>
             <Cta action={() => activateHelp()}>Help</Cta>

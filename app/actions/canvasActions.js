@@ -105,3 +105,23 @@ export const removeAccessory = index => dispatch => {
     payload: index
   });
 };
+
+export const saveInsurgent = () => async (dispatch, getState) => {
+  const {
+    canvas: { insurgent }
+  } = getState();
+
+  try {
+    const saved = await fetch('/api', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: { insurgent: JSON.stringify(insurgent) }
+    });
+
+    dispatch({ type: CANVAS.SAVING_DONE, payload: await saved.json() });
+  } catch (error) {
+    dispatch({ type: CANVAS.SAVING_FAILED, payload: error.message });
+  }
+};

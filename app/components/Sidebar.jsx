@@ -2,7 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { advanceStep, activateHelp, changeStep } from '../actions';
+import {
+  advanceStep,
+  activateHelp,
+  changeStep,
+  saveInsurgent
+} from '../actions';
 
 import SidebarNavigation from './SidebarNavigation.jsx';
 
@@ -15,7 +20,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
-    { advanceStep, activateHelp, changeStep },
+    { advanceStep, activateHelp, changeStep, saveInsurgent },
     dispatch
   );
 }
@@ -34,6 +39,7 @@ class Sidebar extends React.Component {
             changeStep={this.props.changeStep}
             advanceStep={this.props.advanceStep}
             activateHelp={this.props.activateHelp}
+            saveInsurgent={this.props.saveInsurgent}
           />
         </section>
 

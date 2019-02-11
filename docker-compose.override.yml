@@ -9,3 +9,6 @@ services:
     volumes:
       - ./app:/app:Z
       - /app/node_modules
+  db:
+    ports:
+      - 27017:27017

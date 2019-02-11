@@ -3,6 +3,9 @@ import { CANVAS } from '../constants';
 const initialState = {
   step: 0,
   totalSteps: 5,
+  id: null,
+  error: null,
+  saving: false,
   helpMode: false,
   insurgent: {
     character: 0,
@@ -172,6 +175,18 @@ export default (state = initialState, action) => {
           }
         }
       };
+    }
+
+    case CANVAS.SAVING_REQUESTED: {
+      return { ...state, saving: true };
+    }
+
+    case CANVAS.SAVING_DONE: {
+      return { ...state, saving: false, id: action.payload.id };
+    }
+
+    case CANVAS.SAVING_FAILED: {
+      return { ...state, saving: false, error: action.payload };
     }
 
     default:

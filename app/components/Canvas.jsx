@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Error from 'next/error';
+import Router from 'next/router';
 
 import { connect } from 'react-redux';
 
@@ -21,7 +22,9 @@ class Canvas extends Component {
   }
 
   render() {
-    const { step } = this.props.canvas;
+    const { step, id } = this.props.canvas;
+
+    if (id) Router.push(`/finish/${id}`);
 
     const stepComponents = {
       0: <Context text={_s('CONTEXT_1', this.props.data, true)} />,
