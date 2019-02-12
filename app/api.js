@@ -1,3 +1,5 @@
+const { ObjectID } = require('mongodb');
+
 module.exports = (server, db) => {
   const storage = db.collection('storage');
 
@@ -10,6 +12,9 @@ module.exports = (server, db) => {
    * }
    */
 
+  /**
+   * List  Insurgents
+   */
   server.get('/api', async (req, res) => {
     try {
       const offset = Number(req.query.offset) || 0;
@@ -30,10 +35,13 @@ module.exports = (server, db) => {
         data
       });
     } catch (error) {
-      return res.status(500).json(error);
+      return res.status(500).json({ error: error.message });
     }
   });
 
+  /**
+   * Post Insurgent
+   */
   server.post('/api', async (req, res) => {
     try {
       const data = req.body;
@@ -44,7 +52,25 @@ module.exports = (server, db) => {
         payload
       });
     } catch (error) {
-      return res.status(500).json(error);
+      return res.status(500).json({ error: error.message });
+    }
+  });
+
+  /**
+   * Get Insurgent
+   */
+  server.get('/api/:id', async (req, res) => {
+    try {
+      const id = req.params.id;
+
+      const data = await storage.findOne({ _id: new ObjectID(id) });
+      if (!data) {
+        return res.status(404).json({ error: 'Not found' });
+      }
+
+      return res.json(data);
+    } catch (error) {
+      return res.status(500).json({ error: error.message });
     }
   });
 };

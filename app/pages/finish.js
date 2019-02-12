@@ -1,12 +1,26 @@
 import React from 'react';
 import Link from 'next/link';
+import Router from 'next/router';
 
 //Component
 class Finish extends React.Component {
-  static getInitialProps({ query: { id } }) {
-    //Redirect if already signed:
-    //https://github.com/zeit/next.js/wiki/Redirecting-in-%60getInitialProps%60
-    return { insurgentId: id };
+  static async getInitialProps({ ctx, res, query: { id } }) {
+    const request = await fetch(`${baseUrl}/api/${id}`);
+
+    const insurgent = await request.json();
+
+    if (insurgent.finished) {
+      if (res) {
+        res.writeHead(302, {
+          Location: '/gallery'
+        });
+        res.end();
+      } else {
+        Router.push('/gallery');
+      }
+    }
+
+    return { insurgent };
   }
 
   render() {
@@ -14,7 +28,7 @@ class Finish extends React.Component {
       <main>
         <header>
           <h1>Insurgent finished</h1>
-          <h2>id: {this.props.insurgentId}</h2>
+          <h2>id: {this.props.insurgent._id}</h2>
           <nav>
             <Link href="/">
               <a>Back to index</a>
