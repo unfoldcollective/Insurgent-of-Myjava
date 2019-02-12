@@ -92,16 +92,6 @@ class Outfit extends React.Component {
             font-size: 2rem;
           }
 
-          button.outfit-switch {
-            padding: 1rem;
-            margin: 0 1rem;
-          }
-
-          button.outfit-switch.current {
-            background: black;
-            color: white;
-          }
-
           nav.outfit-navigation {
             display: flex;
             justify-content: center;

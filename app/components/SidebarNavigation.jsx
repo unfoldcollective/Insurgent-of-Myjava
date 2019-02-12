@@ -58,11 +58,6 @@ class SidebarNavigation extends Component {
             display: flex;
             justify-content: center;
           }
-
-          button {
-            padding: 1rem;
-            margin: 0 1rem;
-          }
         `}</style>
       </Fragment>
     );
