@@ -22,9 +22,10 @@ class Canvas extends Component {
   }
 
   render() {
-    const { step, id } = this.props.canvas;
+    const { step, id, error } = this.props.canvas;
 
     if (id) Router.push(`/finish/${id}`);
+    if (error) return <Error statusCode={500} />;
 
     const stepComponents = {
       0: <Context text={_s('CONTEXT_1', this.props.data, true)} />,
