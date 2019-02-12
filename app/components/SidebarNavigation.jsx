@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Cta from './Cta.jsx';
 
 class SidebarNavigation extends Component {
@@ -28,7 +28,7 @@ class SidebarNavigation extends Component {
     } = this.props;
 
     return (
-      <>
+      <Fragment>
         <header className="sidebar-steps">
           <nav>{this.listSteps()}</nav>
         </header>
@@ -64,7 +64,7 @@ class SidebarNavigation extends Component {
             margin: 0 1rem;
           }
         `}</style>
-      </>
+      </Fragment>
     );
   }
 }
