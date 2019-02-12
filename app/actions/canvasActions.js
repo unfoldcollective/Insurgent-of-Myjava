@@ -111,13 +111,15 @@ export const saveInsurgent = () => async (dispatch, getState) => {
     canvas: { insurgent }
   } = getState();
 
+  dispatch({ type: CANVAS.SAVING_REQUESTED });
+
   try {
     const saved = await fetch('/api', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: { insurgent: JSON.stringify(insurgent) }
+      body: JSON.stringify({ insurgent: insurgent })
     });
 
     dispatch({ type: CANVAS.SAVING_DONE, payload: await saved.json() });

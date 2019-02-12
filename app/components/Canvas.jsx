@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Error from 'next/error';
 import Router from 'next/router';
 
+import MessageOverlay from './MessageOverlay.jsx';
+
 import { connect } from 'react-redux';
 
 import { _s } from '../utils';
@@ -22,10 +24,9 @@ class Canvas extends Component {
   }
 
   render() {
-    const { step, id, error } = this.props.canvas;
+    const { step, id, error, saving } = this.props.canvas;
 
     if (id) Router.push(`/finish/${id}`);
-    if (error) return <Error statusCode={500} />;
 
     const stepComponents = {
       0: <Context text={_s('CONTEXT_1', this.props.data, true)} />,
@@ -36,7 +37,16 @@ class Canvas extends Component {
       5: <Accesories />
     };
 
-    return stepComponents[step] || <Error statusCode={500} />;
+    const current = stepComponents[step];
+
+    if (error || !current) return <Error statusCode={500} />;
+
+    return (
+      <div className="create">
+        {saving && <MessageOverlay message="Saving..." />}
+        {current}
+      </div>
+    );
   }
 }
 
