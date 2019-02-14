@@ -10,16 +10,39 @@ class Validate extends Component {
   render() {
     return (
       <Full>
-        <Droppable extras={this.props.extras} />
-        <ContentCentered>
-          <Weapon weapon={this.props.weapon} />
-          <Dressable
-            character={this.props.character}
-            offset={this.props.character.offset}
-            index={this.props.insurgent.character}
-            clothes={this.props.insurgent.clothes}
-          />
-        </ContentCentered>
+        <div
+          className="final-canvas"
+          style={{ backgroundImage: 'url(/static/bg1.jpg)' }}
+        >
+          <div className="final-canvas-content">
+            <Droppable extras={this.props.extras} />
+            <ContentCentered>
+              <Weapon weapon={this.props.weapon} />
+              <Dressable
+                character={this.props.character}
+                offset={this.props.character.offset}
+                index={this.props.insurgent.character}
+                clothes={this.props.insurgent.clothes}
+              />
+            </ContentCentered>
+          </div>
+        </div>
+
+        <style jsx>
+          {`
+            div.final-canvas {
+              display: flex;
+              justify-content: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center center;
+            }
+
+            div.final-canvas-content {
+              width: 75%;
+            }
+          `}
+        </style>
       </Full>
     );
   }

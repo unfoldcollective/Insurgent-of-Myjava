@@ -120,7 +120,7 @@ class Movable extends Component {
             this.image = el;
           }}
           src={`/static/${this.props.src}`}
-          className={`movable-image ${this.props.flipped ? 'flipped' : null}`}
+          className={`movable-image ${this.props.flipped ? 'flipped' : ''}`}
         />
 
         <style jsx>{`
@@ -132,6 +132,7 @@ class Movable extends Component {
           }
 
           img.movable-image {
+            display: block;
           }
 
           img.flipped {

@@ -11,10 +11,10 @@ class Finish extends React.Component {
 
     const request = await fetch(`${baseUrl}/api/${id}`);
 
-    const insurgent = await request.json();
+    const savedInsurgent = await request.json();
 
-    if (insurgent.finished) {
-      const dest = `/gallery/${insurgent._id}`;
+    if (savedInsurgent.finished) {
+      const dest = `/gallery/${savedInsurgent._id}`;
       if (res) {
         res.writeHead(302, {
           Location: dest
@@ -25,11 +25,11 @@ class Finish extends React.Component {
       }
     }
 
-    return { insurgent };
+    return { savedInsurgent };
   }
 
   render() {
-    return <Finale insurgent={this.props.insurgent} />;
+    return <Finale saved={this.props.savedInsurgent} />;
   }
 }
 

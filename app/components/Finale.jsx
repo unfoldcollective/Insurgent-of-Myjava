@@ -32,14 +32,14 @@ class Finale extends Component {
     const { step } = this.props.finish;
 
     const character = this.props.data.content.characters[
-      this.props.insurgent.character
+      this.props.saved.insurgent.character
     ];
 
     const weapon = this.props.data.content.weapons[
-      this.props.insurgent.weapon.model
+      this.props.saved.insurgent.weapon.model
     ];
 
-    const extras = this.props.insurgent.weapon.extras;
+    const extras = this.props.saved.insurgent.weapon.extras;
 
     const finaleComponents = {
       0: <Loader next={this.props.finishAdvance} />,
@@ -48,7 +48,7 @@ class Finale extends Component {
           character={character}
           weapon={weapon}
           extras={extras}
-          insurgent={this.props.insurgent}
+          insurgent={this.props.saved.insurgent}
         />
       )
     };
