@@ -111,6 +111,7 @@ class Accesories extends React.Component {
       <WithSidebar sidebar={AccesoriesSidebar}>
         <Step>
           <Droppable
+            editable={true}
             extras={extras}
             addAccessory={this.props.addAccessory}
             dragAccessory={this.props.dragAccessory}

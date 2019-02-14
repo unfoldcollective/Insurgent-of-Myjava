@@ -15,6 +15,8 @@ class Droppable extends Component {
   }
 
   componentDidMount() {
+    if (!this.props.editable) return;
+
     const dropzone = this.droppable.current;
     const trash = this.trash.current;
 
@@ -64,12 +66,14 @@ class Droppable extends Component {
   render() {
     return (
       <div className="droppable" ref={this.droppable}>
-        <div
-          className={`trash ${this.state.overTrash ? 'over' : ''}`}
-          ref={this.trash}
-        >
-          Trash
-        </div>
+        {this.props.editable ? (
+          <div
+            className={`trash ${this.state.overTrash ? 'over' : ''}`}
+            ref={this.trash}
+          >
+            Trash
+          </div>
+        ) : null}
         {this.props.extras.map((extra, index) => {
           return (
             <Movable
@@ -82,6 +86,7 @@ class Droppable extends Component {
               canvasSize={this.canvasSize}
               dragAccessory={this.props.dragAccessory}
               dropAccessory={this.props.dropAccessory}
+              editable={this.props.editable}
             />
           );
         })}

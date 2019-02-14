@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 
 import { _s } from '../utils';
 
-import { Context, Insurgent, Outfit, Rack, Accesories } from './steps';
+import { Context, Insurgent, Outfit, Rack, Accesories } from './canvas-steps';
 
 function mapStateToProps(state) {
   const { canvas, data } = state;

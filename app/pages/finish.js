@@ -2,21 +2,26 @@ import React from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
 
+import Finale from '../components/Finale.jsx';
+
 //Component
 class Finish extends React.Component {
-  static async getInitialProps({ ctx, res, query: { id } }) {
+  static async getInitialProps({ req, res, query: { id } }) {
+    const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : '';
+
     const request = await fetch(`${baseUrl}/api/${id}`);
 
     const insurgent = await request.json();
 
     if (insurgent.finished) {
+      const dest = `/gallery/${insurgent._id}`;
       if (res) {
         res.writeHead(302, {
-          Location: '/gallery'
+          Location: dest
         });
         res.end();
       } else {
-        Router.push('/gallery');
+        Router.push(dest);
       }
     }
 
@@ -24,19 +29,7 @@ class Finish extends React.Component {
   }
 
   render() {
-    return (
-      <main>
-        <header>
-          <h1>Insurgent finished</h1>
-          <h2>id: {this.props.insurgent._id}</h2>
-          <nav>
-            <Link href="/">
-              <a>Back to index</a>
-            </Link>
-          </nav>
-        </header>
-      </main>
-    );
+    return <Finale insurgent={this.props.insurgent} />;
   }
 }
 

@@ -10,6 +10,8 @@ class Movable extends Component {
     this.movable = React.createRef();
   }
   componentDidMount() {
+    if (!this.props.editable) return;
+
     let scale = this.props.scale;
     let rotate = this.props.rotate;
 
@@ -85,6 +87,7 @@ class Movable extends Component {
   }
 
   componentWillUnmount() {
+    if (!this.props.editable) return;
     interact(this.movable.current)
       .draggable(false)
       .gesturable(false);
