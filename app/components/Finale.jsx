@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import Error from 'next/error';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -8,6 +7,7 @@ import { finishAdvance } from '../actions';
 
 import { Loader, Validate } from './finale-steps';
 import TimeoutCta from './TimeoutCta.jsx';
+import Keyboard from './Keyboard.jsx';
 
 function mapStateToProps(state) {
   const { data, finish } = state;
@@ -56,6 +56,8 @@ class Finale extends Component {
             </TimeoutCta>
           </div>
         ) : null}
+
+        {step === 2 ? <Keyboard /> : null}
 
         <Validate
           character={character}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Cta from './Cta.jsx';
 
 class TimeoutCta extends Component {
   constructor(props) {
@@ -44,9 +45,9 @@ class TimeoutCta extends Component {
 
   render() {
     return (
-      <button onClick={this.forceAction}>
-        {this.state.countdown} {this.props.children}
-      </button>
+      <Cta action={this.forceAction} className="big">
+        {this.props.children} ({this.state.countdown})
+      </Cta>
     );
   }
 }
