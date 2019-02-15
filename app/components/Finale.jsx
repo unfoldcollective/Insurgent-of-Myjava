@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux';
 import { finishAdvance } from '../actions';
 
 import { Loader, Validate } from './finale-steps';
+import TimeoutCta from './TimeoutCta.jsx';
 
 function mapStateToProps(state) {
   const { data, finish } = state;
@@ -45,12 +46,34 @@ class Finale extends Component {
 
     return (
       <Fragment>
+        {step === 1 ? (
+          <div className="timeout-overlay">
+            <TimeoutCta
+              timeout={10000}
+              action={() => this.props.finishAdvance()}
+            >
+              Set name
+            </TimeoutCta>
+          </div>
+        ) : null}
+
         <Validate
           character={character}
           weapon={weapon}
           extras={extras}
           insurgent={this.props.saved.insurgent}
         />
+
+        <style jsx>
+          {`
+            div.timeout-overlay {
+              position: absolute;
+              z-index: 1000000;
+              right: 10vw;
+              bottom: 10vh;
+            }
+          `}
+        </style>
       </Fragment>
     );
   }

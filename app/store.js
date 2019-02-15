@@ -11,6 +11,8 @@ export const initStore = (initialState = {}) => {
   return createStore(
     reducer,
     initialState,
-    composeEnhancers(applyMiddleware(thunkMiddleware))
+    process.env.NODE_ENV === 'production'
+      ? applyMiddleware(thunkMiddleware)
+      : composeEnhancers(applyMiddleware(thunkMiddleware))
   );
 };

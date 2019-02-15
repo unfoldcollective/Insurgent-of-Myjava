@@ -42,10 +42,6 @@ class TimeoutCta extends Component {
     if (this.timeout) clearTimeout(this.timeout);
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    console.log(prevProps, prevState);
-  }
-
   render() {
     return (
       <button onClick={this.forceAction}>

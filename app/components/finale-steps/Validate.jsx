@@ -5,18 +5,11 @@ import { Full, ContentCentered } from '../layouts';
 import Weapon from '../canvas-steps/parts/Weapon.jsx';
 import Droppable from '../canvas-steps/parts/Droppable.jsx';
 import Dressable from '../canvas-steps/parts/Dressable.jsx';
-import TimeoutCta from '../TimeoutCta.jsx';
 
 class Validate extends Component {
   render() {
     return (
       <Full>
-        <div className="timeout-overlay">
-          <TimeoutCta timeout={10000} action={() => alert('foo')}>
-            Click here
-          </TimeoutCta>
-        </div>
-
         <div
           className="final-canvas"
           style={{ backgroundImage: 'url(/static/bg1.jpg)' }}
