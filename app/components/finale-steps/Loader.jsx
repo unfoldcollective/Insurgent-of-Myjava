@@ -8,7 +8,7 @@ class Loader extends Component {
   }
 
   componentDidMount() {
-    this.timeout = setTimeout(() => this.props.next(), 10000);
+    this.timeout = setTimeout(() => this.props.next(), 2000);
   }
 
   componentWillUnmount() {

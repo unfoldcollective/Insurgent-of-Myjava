@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Error from 'next/error';
 
 import { connect } from 'react-redux';
@@ -41,19 +41,18 @@ class Finale extends Component {
 
     const extras = this.props.saved.insurgent.weapon.extras;
 
-    const finaleComponents = {
-      0: <Loader next={this.props.finishAdvance} />,
-      1: (
+    if (step === 0) return <Loader next={this.props.finishAdvance} />;
+
+    return (
+      <Fragment>
         <Validate
           character={character}
           weapon={weapon}
           extras={extras}
           insurgent={this.props.saved.insurgent}
         />
-      )
-    };
-
-    return finaleComponents[step] || <Error statusCode={500} />;
+      </Fragment>
+    );
   }
 }
 
