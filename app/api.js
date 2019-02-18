@@ -1,4 +1,5 @@
 const { ObjectID } = require('mongodb');
+const puppeteer = require('puppeteer');
 
 module.exports = (server, db) => {
   const storage = db.collection('storage');
@@ -46,6 +47,41 @@ module.exports = (server, db) => {
     try {
       const data = req.body;
       const payload = await storage.insertOne(data);
+
+      return res.json({
+        id: data._id,
+        payload
+      });
+    } catch (error) {
+      return res.status(500).json({ error: error.message });
+    }
+  });
+
+  server.post('/prepare', async (req, res) => {
+    try {
+      const data = req.body;
+      const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : '';
+
+      const payload = await storage.updateOne(
+        { _id: new ObjectID(data.id) },
+        {
+          $set: {
+            name: data.name,
+            email: data.email,
+            finished: true
+          }
+        }
+      );
+
+      const browser = await puppeteer.launch({
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+      });
+      const page = await browser.newPage();
+      await page.setViewport({ width: 1920, height: 1080 });
+      await page.goto(`${baseUrl}/shot/${data.id}`);
+      await page.screenshot({ path: `/shots/${data.id}.jpg` });
+
+      await browser.close();
 
       return res.json({
         id: data._id,
