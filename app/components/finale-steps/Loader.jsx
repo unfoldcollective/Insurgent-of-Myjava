@@ -20,7 +20,7 @@ class Loader extends Component {
       <Full>
         <article className="loader">
           <figure className="loader-figure">
-            <img src="/static/knives.png" className="loader-external" />
+            <img src="/static/knife-spinner.gif" className="loader-external" />
           </figure>
         </article>
         <style jsx>
@@ -45,15 +45,10 @@ class Loader extends Component {
             figure.loader-figure {
               height: 70vh;
               width: 70vh;
-              background: url(/static/loader-back.png);
-              background-repeat: no-repeat;
-              background-position: 55% center;
-              background-size: 40%;
             }
 
             img.loader-external {
               width: 100%;
-              animation: spin 15s linear infinite;
             }
           `}
         </style>
