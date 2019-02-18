@@ -31,6 +31,8 @@ app.prepare().then(async () => {
     })
   );
 
+  server.use('/shots', express.static('/shots'));
+
   //Load API service
   api(server, db);
 
