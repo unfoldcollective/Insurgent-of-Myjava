@@ -53,7 +53,7 @@ class Finale extends Component {
   render() {
     const { step, done } = this.props.finish;
 
-    // if (done) Router.push(`/gallery`);
+    if (done) Router.push(`/gallery`);
 
     const character = this.props.data.content.characters[
       this.props.saved.insurgent.character

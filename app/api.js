@@ -1,5 +1,6 @@
 const { ObjectID } = require('mongodb');
 const puppeteer = require('puppeteer');
+const jimp = require('jimp');
 
 module.exports = (server, db) => {
   const storage = db.collection('storage');
@@ -73,15 +74,25 @@ module.exports = (server, db) => {
         }
       );
 
+      //Generate screenshot
+
+      const shotPath = `/shots/${data.id}.jpg`;
       const browser = await puppeteer.launch({
         args: ['--no-sandbox', '--disable-setuid-sandbox']
       });
       const page = await browser.newPage();
       await page.setViewport({ width: 1920, height: 1080 });
       await page.goto(`${baseUrl}/shot/${data.id}`);
-      await page.screenshot({ path: `/shots/${data.id}.jpg` });
+      await page.screenshot({ path: shotPath });
 
       await browser.close();
+
+      //Generate thumb
+      const shot = await jimp.read(shotPath);
+      await shot
+        .clone()
+        .resize(500, jimp.AUTO)
+        .write(`/shots/${data.id}_thumb.jpg`);
 
       return res.json({
         id: data._id,
