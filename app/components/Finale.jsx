@@ -37,6 +37,7 @@ class Finale extends Component {
   }
 
   setName(name) {
+    if (!name) return;
     this.props.setInsurgentName(name);
     this.props.finishAdvance();
   }
