@@ -69,6 +69,14 @@ app.prepare().then(async () => {
     return app.render(req, res, '/shot', { id: req.params.id });
   });
 
+  //Gallery single
+  server.get('/insurgent/:id', (req, res) => {
+    const id = req.params.id;
+    if (!id) return res.redirect(301, '/');
+
+    return app.render(req, res, '/insurgent', { id: req.params.id });
+  });
+
   server.get('*', (req, res) => {
     return handle(req, res);
   });

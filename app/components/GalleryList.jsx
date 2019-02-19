@@ -21,11 +21,15 @@ class GalleryList extends Component {
           {this.props.items.data.map(item => {
             return (
               <li key={item._id} className="gallery-item">
-                <img
-                  src={`/shots/${item._id}_thumb.jpg`}
-                  className="gallery-image"
-                />
-                <h2 className="gallery-item-title">{item.name}</h2>
+                <Link href={`/insurgent/${item._id}`}>
+                  <a>
+                    <img
+                      src={`/shots/${item._id}_thumb.jpg`}
+                      className="gallery-image"
+                    />
+                    <h2 className="gallery-item-title">{item.name}</h2>
+                  </a>
+                </Link>
               </li>
             );
           })}
@@ -34,12 +38,10 @@ class GalleryList extends Component {
         <style jsx>{`
           div.gallery-overlay {
             position: absolute;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            padding: 10rem;
+            bottom: 10rem;
+            right: 10rem;
+            background: black;
+            padding: 2rem;
           }
           section.gallery {
             background: white;
@@ -79,6 +81,11 @@ class GalleryList extends Component {
             padding: 0.5rem 1rem;
             font-size: 1rem;
             font-family: SourceSans, serif;
+          }
+
+          a {
+            text-decoration: none;
+            color: white;
           }
         `}</style>
       </section>
