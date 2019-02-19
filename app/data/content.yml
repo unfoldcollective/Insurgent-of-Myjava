@@ -1,11 +1,11 @@
 # General text strings
 strings:
   TITLE:
-    sk: Insurgent Composer (sk)
-    en: Insurgent Composer
+    sk: Insurgent of Myjava (sk)
+    en: Insurgent of Myjava
   SUBTITLE:
-    sk: A web app to create insurgents (sk)
-    en: A web app to create insurgents
+    sk: Prepare your best volunteer for battle (sk)
+    en: Prepare your best volunteer for battle
   INTRO: #some markdown allowed
     sk: >
       SK _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
@@ -20,7 +20,7 @@ strings:
     sk: >
       SK CTX2 _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
     en: >
-      EN CTX2 Lorem ipsum dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac. 
+      Classy! Now that your insurgent has an outfit, it is time to assemble a fitting weapon...
 
 # Character information
 # the list order is important
