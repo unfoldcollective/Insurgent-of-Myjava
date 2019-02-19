@@ -75,8 +75,8 @@ module.exports = (server, db) => {
       );
 
       //Generate screenshot
-
       const shotPath = `/shots/${data.id}.jpg`;
+
       const browser = await puppeteer.launch({
         args: ['--no-sandbox', '--disable-setuid-sandbox']
       });

@@ -61,7 +61,7 @@ app.prepare().then(async () => {
     return app.render(req, res, '/finish', { id: req.params.id });
   });
 
-  //Finish step
+  //Shot single
   server.get('/shot/:id', (req, res) => {
     const id = req.params.id;
     if (!id) return res.redirect(301, '/');

@@ -11,7 +11,7 @@ class Keyboard extends Component {
         '1 2 3 4 5 6 7 8 9 0'.split(' '),
         'q w e r t z u i o p'.split(' '),
         'a s d f g h j k l -'.split(' '),
-        '@ z x c v b n m , .'.split(' ')
+        '@ y x c v b n m , .'.split(' ')
       ]
     };
   }
@@ -19,7 +19,7 @@ class Keyboard extends Component {
   click(k) {
     const content = [...this.state.content, k];
 
-    this.setState({ content });
+    this.setState({ content, caps: false });
   }
 
   del() {
