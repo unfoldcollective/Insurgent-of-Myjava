@@ -1,0 +1,21 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e6e1dc;
+      }
+    </style>
+  </defs>
+  <title>i-arrow</title>
+  <g>
+    <circle cx="32" cy="32" r="31"/>
+    <path class="cls-1" d="M32,2A30,30,0,1,1,2,32,30,30,0,0,1,32,2m0-2A32,32,0,1,0,64,32,32,32,0,0,0,32,0Z"/>
+  </g>
+  <g>
+    <g>
+      <polyline points="36.06 44.5 48.06 32.5 36.06 20.5"/>
+      <polygon class="cls-1" points="36.77 45.21 35.35 43.79 46.65 32.5 35.35 21.21 36.77 19.79 49.48 32.5 36.77 45.21"/>
+    </g>
+    <rect class="cls-1" x="15.94" y="31.16" width="32" height="2"/>
+  </g>
+</svg>

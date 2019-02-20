@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Cta from './Cta.jsx';
+import Link from 'next/link';
 
 import { _s } from '../utils';
 
@@ -91,10 +92,14 @@ class SidebarNavigation extends Component {
             )}
           </li>
           <li>
-            <Cta action={() => activateHelp()}>{_s('HELP', data)}</Cta>
+            <button className="icon help" onClick={() => activateHelp()}>
+              {_s('HELP', data)}
+            </button>
           </li>
           <li>
-            <Cta href="/">{_s('HOME', data)}</Cta>
+            <Link href="/">
+              <button className="icon home">{_s('HOME', data)}</button>
+            </Link>
           </li>
         </ul>
         <style jsx>{`
@@ -114,7 +119,23 @@ class SidebarNavigation extends Component {
             flex-basis: 100%;
             display: flex;
             justify-content: center;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+          }
+
+          button.icon {
+            background: transparent;
+            width: 2rem;
+            height: 2rem;
+            color: transparent;
+            margin: 0 1rem;
+          }
+
+          button.home {
+            background-image: url('/static/i-return.svg');
+          }
+
+          button.help {
+            background-image: url('/static/i-info.svg');
           }
         `}</style>
       </Fragment>

@@ -170,10 +170,18 @@ class Carousel extends Component {
               z-index: 1;
               margin: 0 1rem;
               padding: 1rem;
+              width: 4rem;
+              height: 4rem;
+              background-color: transparent;
+              background-image: url('/static/i-arrow.svg');
+              color: transparent;
+              transform: scaleX(-1);
+              outline: none;
             }
 
             button.advance {
               right: 0;
+              transform: none;
             }
           `}</style>
         </div>
