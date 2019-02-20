@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { _s } from '../../utils';
 
 import { selectWeapon } from '../../actions';
 
@@ -27,20 +28,16 @@ class Rack extends React.Component {
     const WeaponSidebar = (
       <Sidebar>
         <h1 className="sidebar-title">
-          {
-            this.props.data.content.weapons[
-              this.props.canvas.insurgent.weapon.model
-            ].name[this.props.data.lang]
-          }
+          {_s('WEAPON_SELECTION_TITLE', this.props.data)}
         </h1>
-        <p className="sidebar-intro">
-          {
-            this.props.data.content.weapons[
-              this.props.canvas.insurgent.weapon.model
-            ].description[this.props.data.lang]
-          }
-        </p>
-
+        <p
+          className="sidebar-intro"
+          dangerouslySetInnerHTML={_s(
+            'WEAPON_SELECTION_INTRO',
+            this.props.data,
+            true
+          )}
+        />
         <style jsx>{`
           h1.sidebar-title {
             font-size: 2rem;

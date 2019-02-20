@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { _s } from '../../utils';
 
 import { selectCharacter } from '../../actions';
 
@@ -27,19 +28,16 @@ class Insurgent extends React.Component {
     const InsurgentSidebar = (
       <Sidebar>
         <h1 className="sidebar-title">
-          {
-            this.props.data.content.characters[
-              this.props.canvas.insurgent.character
-            ].name[this.props.data.lang]
-          }
+          {_s('CHARACTER_SELECTION_TITLE', this.props.data)}
         </h1>
-        <p className="sidebar-intro">
-          {
-            this.props.data.content.characters[
-              this.props.canvas.insurgent.character
-            ].description[this.props.data.lang]
-          }
-        </p>
+        <p
+          className="sidebar-intro"
+          dangerouslySetInnerHTML={_s(
+            'CHARACTER_SELECTION_INTRO',
+            this.props.data,
+            true
+          )}
+        />
 
         <style jsx>{`
           h1.sidebar-title {

@@ -19,6 +19,22 @@ strings:
       SK CTX1 _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
     en: >
       EN CTX1 Lorem ipsum dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
+  CHARACTER_SELECTION_TITLE:
+    sk: Character selection
+    en: Character selection
+  CHARACTER_SELECTION_INTRO:
+    sk: >
+      SK Character selection intro
+    en: >
+      Character selection intro
+  WEAPON_SELECTION_TITLE:
+    sk: Weapon selection
+    en: Weapon selection
+  WEAPON_SELECTION_INTRO:
+    sk: >
+      SK Weapon selection intro
+    en: >
+      Weapon selection intro
   CREATE:
     sk: Create insurgent
     en: Create insurgent
