@@ -35,16 +35,16 @@ class Index extends React.Component {
             <header className="index-header">
               <nav className="index-language">
                 <Cta
-                  active={this.props.data.lang === 'en'}
-                  action={() => this.props.switchLanguage('en')}
-                >
-                  en
-                </Cta>
-                <Cta
                   active={this.props.data.lang === 'sk'}
                   action={() => this.props.switchLanguage('sk')}
                 >
                   sk
+                </Cta>
+                <Cta
+                  active={this.props.data.lang === 'en'}
+                  action={() => this.props.switchLanguage('en')}
+                >
+                  en
                 </Cta>
               </nav>
 
