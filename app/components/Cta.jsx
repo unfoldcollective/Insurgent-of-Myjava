@@ -16,9 +16,9 @@ const Cta = ({ href, action, children, className, active }) => {
             color: #e6e1dc;
             background: transparent;
             border: none;
-            border-color: #e6e1dc;
+            border-color: transparent;
             border-style: solid;
-            border-width: 0;
+            border-width: 2px;
             text-transform: uppercase;
             font-size: 1.5rem;
             margin: 0 0.5rem;
@@ -26,12 +26,16 @@ const Cta = ({ href, action, children, className, active }) => {
           }
 
           button.cta.big {
+            border-color: #e6e1dc;
+
             font-size: 2rem;
             border-width: 3px;
             padding: 0.5rem 1rem;
           }
 
           button.cta.current {
+            border-color: #e6e1dc;
+            border-width: 0;
             border-bottom-width: 2px;
           }
         `}
