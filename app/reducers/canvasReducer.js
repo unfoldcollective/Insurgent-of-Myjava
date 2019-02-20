@@ -2,7 +2,7 @@ import { CANVAS } from '../constants';
 
 const initialState = {
   step: 0,
-  totalSteps: 5,
+  totalSteps: 4,
   id: null,
   error: null,
   saving: false,

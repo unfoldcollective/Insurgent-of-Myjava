@@ -29,12 +29,11 @@ class Canvas extends Component {
     if (id) Router.push(`/finish/${id}`);
 
     const stepComponents = {
-      0: <Context text={_s('CONTEXT_1', this.props.data, true)} />,
-      1: <Insurgent />,
-      2: <Outfit />,
-      3: <Context text={_s('CONTEXT_2', this.props.data, true)} />,
-      4: <Rack />,
-      5: <Accesories />
+      0: <Insurgent />,
+      1: <Outfit />,
+      2: <Context text={_s('CONTEXT_2', this.props.data, true)} />,
+      3: <Rack />,
+      4: <Accesories />
     };
 
     const current = stepComponents[step];
