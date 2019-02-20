@@ -85,7 +85,9 @@ class SidebarNavigation extends Component {
                 {_s('CONTINUE', data)}
               </Cta>
             ) : (
-              <Cta action={() => saveInsurgent()}>{_s('FINISH', data)}</Cta>
+              <Cta action={() => saveInsurgent()} className="big">
+                {_s('FINISH', data)}
+              </Cta>
             )}
           </li>
           <li>
