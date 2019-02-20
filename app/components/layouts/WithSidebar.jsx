@@ -14,7 +14,8 @@ const WithSidebar = ({ sidebar, children }) => {
 
         section.content {
           flex-basis: 75%;
-          background: lightblue;
+          background-image: url('/static/bg-canvas.jpg');
+          background-size: cover;
           position: relative;
         }
 
