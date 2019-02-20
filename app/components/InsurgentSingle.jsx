@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import Link from 'next/link';
 import TimeoutCta from './TimeoutCta.jsx';
 import Router from 'next/router';
 

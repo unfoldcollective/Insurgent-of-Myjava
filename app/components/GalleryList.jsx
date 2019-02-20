@@ -16,16 +16,45 @@ function mapStateToProps(state) {
 class GalleryList extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      showButton: true
+    };
+
+    this.timeout = null;
+  }
+
+  handleScroll() {
+    this.setState({
+      showButton: false
+    });
+
+    if (this.timeout) clearTimeout(this.timeout);
+
+    setTimeout(() => {
+      this.setState({
+        showButton: true
+      });
+    }, 2000);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll.bind(this));
   }
 
   render() {
     return (
       <section className="gallery">
-        <div className="gallery-overlay">
-          <TimeoutCta timeout={20000} action={() => Router.push('/')}>
-            {_s('LEAVE_GALLERY', this.props.data)}
-          </TimeoutCta>
-        </div>
+        {this.state.showButton ? (
+          <div className="gallery-overlay">
+            <TimeoutCta timeout={20000} action={() => Router.push('/')}>
+              {_s('LEAVE_GALLERY', this.props.data)}
+            </TimeoutCta>
+          </div>
+        ) : null}
         <header className="gallery-header">
           <h1 className="gallery-title">
             {_s('INSURGENT_READY', this.props.data)}
