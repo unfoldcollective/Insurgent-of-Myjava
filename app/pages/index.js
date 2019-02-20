@@ -79,7 +79,7 @@ class Index extends React.Component {
 
           p.index-credits {
             position: absolute;
-            bottom: 3rem;
+            bottom: 2rem;
             right: 3rem;
             font-family: SourceSans, serif;
           }
