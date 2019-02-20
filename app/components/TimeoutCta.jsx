@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Cta from './Cta.jsx';
 
 class TimeoutCta extends Component {
   constructor(props) {
@@ -45,9 +44,67 @@ class TimeoutCta extends Component {
 
   render() {
     return (
-      <Cta action={this.forceAction} className="big">
-        {this.props.children} ({this.state.countdown})
-      </Cta>
+      <div className="countdown" onClick={() => this.props.action()}>
+        <div className="countdown-inner">
+          <span className="countdown-text">{this.props.children}</span>
+        </div>
+        <svg width="150" height="150">
+          <circle r="70" cx="75" cy="75" />
+        </svg>
+        <style jsx>
+          {`
+            div.countdown {
+              width: 150px;
+              height: 150px;
+              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            @keyframes countdown {
+              from {
+                stroke-dashoffset: 0px;
+              }
+              to {
+                stroke-dashoffset: 440px;
+              }
+            }
+
+            svg {
+              position: absolute;
+              top: 0;
+              left: 0;
+              transform: rotateY(-180deg) rotateZ(-90deg);
+            }
+
+            svg circle {
+              stroke: white;
+              stroke-width: 5px;
+              stroke-dasharray: 440px;
+              stroke-dashoffset: 0px;
+              stroke-linecap: round;
+              animation: countdown ${this.props.timeout / 1000}s linear infinite
+                forwards;
+            }
+
+            div.countdown-inner {
+              z-index: 100000;
+              font-family: SourceSans, serif;
+              text-transform: uppercase;
+              font-size: 1.5rem;
+              text-align: center;
+              font-weight: bold;
+              width: 110px;
+              height: 110px;
+              border: 3px dashed white;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+            }
+          `}
+        </style>
+      </div>
     );
   }
 }

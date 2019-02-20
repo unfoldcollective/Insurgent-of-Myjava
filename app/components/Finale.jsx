@@ -74,7 +74,7 @@ class Finale extends Component {
         {step === 1 ? (
           <div className="timeout-overlay">
             <TimeoutCta
-              timeout={10000}
+              timeout={20000}
               action={() => this.props.finishAdvance()}
             >
               {_s('CONTINUE', this.props.data)}
