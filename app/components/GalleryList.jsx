@@ -42,6 +42,7 @@ class GalleryList extends Component {
   }
 
   componentWillUnmount() {
+    if (this.timeout) clearTimeout(this.timeout);
     window.removeEventListener('scroll', this.handleScroll.bind(this));
   }
 
