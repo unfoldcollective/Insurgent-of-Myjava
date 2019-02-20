@@ -11,16 +11,14 @@ strings:
       SK _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
     en: >
       EN Lorem ipsum dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
-  CONTEXT_1: #some markdown allowed
+  CONTEXT_1_TITLE:
+    sk: Context 1 title (sk)
+    en: Context 1 title
+  CONTEXT_1_INTRO: #some markdown allowed
     sk: >
       SK CTX1 _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
     en: >
       EN CTX1 Lorem ipsum dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
-  CONTEXT_2: #some markdown allowed
-    sk: >
-      SK CTX2 _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
-    en: >
-      EN CTX2 Lorem ipsum dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
   CREATE:
     sk: Create insurgent
     en: Create insurgent

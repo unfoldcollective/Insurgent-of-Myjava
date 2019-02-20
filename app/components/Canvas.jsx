@@ -31,7 +31,12 @@ class Canvas extends Component {
     const stepComponents = {
       0: <Insurgent />,
       1: <Outfit />,
-      2: <Context text={_s('CONTEXT_2', this.props.data, true)} />,
+      2: (
+        <Context
+          title={_s('CONTEXT_1_TITLE', this.props.data)}
+          text={_s('CONTEXT_1_INTRO', this.props.data, true)}
+        />
+      ),
       3: <Rack />,
       4: <Accesories />
     };

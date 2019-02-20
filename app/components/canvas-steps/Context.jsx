@@ -29,6 +29,7 @@ class Context extends React.Component {
         <Step>
           <article className="context">
             <section className="context-content">
+              <h1 className="context-title">{this.props.title}</h1>
               <p dangerouslySetInnerHTML={this.props.text} />
             </section>
             <aside className="context-navigation">
@@ -44,8 +45,14 @@ class Context extends React.Component {
                 z-index: 20;
               }
 
+              h1.context-title {
+                font-size: 3rem;
+                margin-bottom: 3rem;
+              }
+
               section.context-content {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 flex-grow: 1;
@@ -54,6 +61,7 @@ class Context extends React.Component {
               section.context-content p {
                 font-size: 2rem;
                 margin: 0 25%;
+                line-height: 150%;
                 text-align: center;
               }
 
