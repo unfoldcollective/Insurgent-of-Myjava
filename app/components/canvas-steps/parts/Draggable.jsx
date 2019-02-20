@@ -73,6 +73,8 @@ class Draggable extends Component {
         <style jsx>{`
           div.drag-target {
             touch-action: none;
+            display: flex;
+            align-items: center;
           }
 
           div.drag-target.dragging {

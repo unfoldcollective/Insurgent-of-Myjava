@@ -108,10 +108,14 @@ class Outfit extends React.Component {
           li.outfit-item {
             flex-basis: 33.333%;
             padding: 0.5rem;
+            display: flex;
+            height: 12rem;
           }
 
           img.outfit-image {
-            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
           }
         `}</style>
       </Sidebar>
