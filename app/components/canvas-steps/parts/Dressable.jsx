@@ -35,7 +35,7 @@ class Dressable extends Component {
           {this.props.clothes['legs'] && (
             <img
               className="character-clothing-image"
-              src={`/static/ch-${this.props.index}-${
+              src={`/static/ch-0-${
                 this.props.clothes['legs']
               }.svg`}
             />
@@ -46,7 +46,7 @@ class Dressable extends Component {
           {this.props.clothes['torso'] && (
             <img
               className="character-clothing-image"
-              src={`/static/ch-${this.props.index}-${
+              src={`/static/ch-0-${
                 this.props.clothes['torso']
               }.svg`}
             />
@@ -57,7 +57,7 @@ class Dressable extends Component {
           {this.props.clothes['feet'] && (
             <img
               className="character-clothing-image"
-              src={`/static/ch-${this.props.index}-${
+              src={`/static/ch-0-${
                 this.props.clothes['feet']
               }.svg`}
             />
@@ -72,7 +72,7 @@ class Dressable extends Component {
           {this.props.clothes['head'] && (
             <img
               className="character-clothing-image"
-              src={`/static/ch-${this.props.index}-${
+              src={`/static/ch-0-${
                 this.props.clothes['head']
               }.svg`}
             />

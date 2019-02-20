@@ -93,7 +93,8 @@ characters:
       sk: Character name 2 (sk)
       en: Character name 2
     image: character-1.svg
-    full: character-1.svg
+    full: character-1-full.svg
+    offset: -35
     description: #some markdown allowed
       sk: Character description 2 (sk)
       en: Character description 2
@@ -101,7 +102,8 @@ characters:
       sk: Character name 3 (sk)
       en: Character name 3
     image: character-2.svg
-    full: character-2.svg
+    full: character-2-full.svg
+    offset: -35
     description: #some markdown allowed
       sk: Character description 3 (sk)
       en: Character description 3

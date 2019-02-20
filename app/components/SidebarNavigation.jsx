@@ -33,15 +33,23 @@ class SidebarNavigation extends Component {
     return (
       <Fragment>
         <header className="sidebar-steps">
-          <nav>{this.listSteps()}</nav>
+          <nav>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="100" viewBox="0 0 105.833 26.458">
+    <g transform="translate(0 -270.542)" stroke="#fff" strokeWidth=".54">
+        <path d="M8.524 282.966c18.92 0 75.678.133 94.597.133v-.133-.132c-18.92 0-75.678.132-94.597.132z" transform="matrix(1.05696 0 0 1 -6.225 .804)" fill="none" />
+        <circle cx="3.326" cy="283.771" r="1.663" fill={step > 0 ? 'white' : 'black'}/>
+        <circle r="1.663" cy="283.771" cx="36.311" fill={step > 1 ? 'white' : 'black'} />
+        <circle cx="69.296" cy="283.771" r="1.663" fill={step > 2 ? 'white' : 'black'}/>
+        <circle r="1.663" cy="283.771" cx="102.281" fill={step > 4 ? 'white' : 'black'}/>
+    </g>
+</svg>
+          </nav>
         </header>
         <ul className="sidebar-nav">
-          <li>
-            <Cta href="/">{_s('HOME', data)}</Cta>
-          </li>
-          <li>
+
+          <li className="sidebar-next">
             {step < totalSteps ? (
-              <Cta action={() => advanceStep()}>{_s('CONTINUE', data)}</Cta>
+              <Cta action={() => advanceStep()} className="big">{_s('CONTINUE', data)}</Cta>
             ) : (
               <Cta action={() => saveInsurgent()}>{_s('FINISH', data)}</Cta>
             )}
@@ -49,10 +57,12 @@ class SidebarNavigation extends Component {
           <li>
             <Cta action={() => activateHelp()}>{_s('HELP', data)}</Cta>
           </li>
+          <li>
+            <Cta href="/">{_s('HOME', data)}</Cta>
+          </li>
         </ul>
         <style jsx>{`
           header.sidebar-steps {
-            margin-bottom: 2rem;
           }
 
           ul.sidebar-nav {
@@ -60,6 +70,16 @@ class SidebarNavigation extends Component {
             width: 100%;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+          }
+
+          li.sidebar-next {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+
           }
         `}</style>
       </Fragment>
