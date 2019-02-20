@@ -126,8 +126,6 @@ class Finale extends Component {
             div.timeout-overlay {
               position: absolute;
               z-index: 1000000;
-              right: 10vw;
-              bottom: 10vh;
             }
 
             h1.input-title {

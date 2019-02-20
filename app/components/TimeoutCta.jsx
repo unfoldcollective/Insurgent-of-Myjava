@@ -92,7 +92,7 @@ class TimeoutCta extends Component {
               z-index: 100000;
               font-family: SourceSans, serif;
               text-transform: uppercase;
-              font-size: 1.5rem;
+              font-size: 1.4rem;
               text-align: center;
               font-weight: bold;
               width: 110px;

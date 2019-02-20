@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Link from 'next/link';
+import TimeoutCta from './TimeoutCta.jsx';
+import Router from 'next/router';
 
 import { connect } from 'react-redux';
 
@@ -29,9 +31,9 @@ class InsurgentSingle extends Component {
     return (
       <Fragment>
         <div className="insurgent-overlay">
-          <Link href="/gallery">
-            <a>{_s('BACK_TO_GALLERY', this.props.data)}</a>
-          </Link>
+          <TimeoutCta timeout={20000} action={() => Router.push('/gallery')}>
+            {_s('BACK_TO_GALLERY', this.props.data)}
+          </TimeoutCta>
         </div>
         <Validate
           character={character}
@@ -43,9 +45,8 @@ class InsurgentSingle extends Component {
         <style jsx>{`
           div.insurgent-overlay {
             position: absolute;
-            bottom: 10rem;
-            right: 10rem;
-            background: black;
+            bottom: 5vw;
+            right: 5vh;
             padding: 2rem;
             z-index: 1000000;
           }

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
+import Router from 'next/router';
 
 import { connect } from 'react-redux';
 import { _s } from '../utils';
+import TimeoutCta from './TimeoutCta.jsx';
 
 function mapStateToProps(state) {
   const { data } = state;
@@ -20,9 +22,9 @@ class GalleryList extends Component {
     return (
       <section className="gallery">
         <div className="gallery-overlay">
-          <Link href="/">
-            <a> {_s('LEAVE_GALLERY', this.props.data)}</a>
-          </Link>
+          <TimeoutCta timeout={20000} action={() => Router.push('/')}>
+            {_s('LEAVE_GALLERY', this.props.data)}
+          </TimeoutCta>
         </div>
         <header className="gallery-header">
           <h1 className="gallery-title">
@@ -49,10 +51,9 @@ class GalleryList extends Component {
 
         <style jsx>{`
           div.gallery-overlay {
-            position: absolute;
-            bottom: 10rem;
-            right: 10rem;
-            background: black;
+            position: fixed;
+            right: 5vw;
+            bottom: 5vh;
             padding: 2rem;
           }
           section.gallery {
