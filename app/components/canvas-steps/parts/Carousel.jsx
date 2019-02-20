@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Swipeable from 'react-swipeable';
+import { _s } from '../../../utils';
 
 class Carousel extends Component {
   constructor(props) {
@@ -63,6 +64,7 @@ class Carousel extends Component {
 
   render() {
     const { sliding, direction } = this.state;
+    const { data } = this.props;
 
     const slideStyles = sliding
       ? direction < 0
@@ -83,13 +85,13 @@ class Carousel extends Component {
       >
         <div className="carousel-tray">
           <button className="carousel-control" onClick={this.handleRetreat}>
-            Previous
+            {_s('PREVIOUS', data)}
           </button>
           <button
             className="carousel-control advance"
             onClick={this.handleAdvance}
           >
-            Next
+            {_s('NEXT', data)}
           </button>
           <ul className="carousel" style={slideStyles}>
             {this.state.slides.map((i, index) => {

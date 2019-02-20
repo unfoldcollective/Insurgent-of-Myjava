@@ -12,8 +12,9 @@ import {
 import SidebarNavigation from './SidebarNavigation.jsx';
 
 function mapStateToProps(state) {
-  const { canvas } = state;
+  const { canvas, data } = state;
   return {
+    data,
     canvas
   };
 }
@@ -34,6 +35,7 @@ class Sidebar extends React.Component {
 
         <section className="sidebar-navigation">
           <SidebarNavigation
+            data={this.props.data}
             totalSteps={this.props.canvas.totalSteps}
             step={this.props.canvas.step}
             changeStep={this.props.changeStep}

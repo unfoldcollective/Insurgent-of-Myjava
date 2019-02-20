@@ -3,6 +3,7 @@ import Router from 'next/router';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { _s } from '../utils';
 
 import {
   finishAdvance,
@@ -76,23 +77,40 @@ class Finale extends Component {
               timeout={10000}
               action={() => this.props.finishAdvance()}
             >
-              Set name
+              {_s('CONTINUE', this.props.data)}
             </TimeoutCta>
           </div>
         ) : null}
 
         {step === 2 ? (
           <Input nextAction={this.setName}>
-            <h1 className="input-title">Insurgent name</h1>
-            <p className="input-intro">lorem ipsum dolor sit amet</p>
+            <h1 className="input-title">
+              {_s('INPUT_NAME_TITLE', this.props.data)}
+            </h1>
+            <div
+              className="input-intro"
+              dangerouslySetInnerHTML={_s(
+                'INPUT_NAME_TEXT',
+                this.props.data,
+                true
+              )}
+            />
           </Input>
         ) : null}
 
         {step === 3 ? (
           <Input nextAction={this.setEmail}>
-            <h1 className="input-title">Insurgent email</h1>
-            <p className="input-intro">lorem ipsum dolor sit amet</p>
-            <p className="input-intro">Legal notice: your email will be....</p>
+            <h1 className="input-title">
+              {_s('INPUT_EMAIL_TITLE', this.props.data)}
+            </h1>
+            <div
+              className="input-intro"
+              dangerouslySetInnerHTML={_s(
+                'INPUT_EMAIL_TEXT',
+                this.props.data,
+                true
+              )}
+            />
           </Input>
         ) : null}
 
@@ -117,7 +135,7 @@ class Finale extends Component {
               margin-bottom: 1.5rem;
             }
 
-            p.input-intro {
+            div.input-intro {
               font-family: SourceSans;
               font-size: 1.3rem;
             }

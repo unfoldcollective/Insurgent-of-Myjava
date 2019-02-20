@@ -39,6 +39,7 @@ class Insurgent extends React.Component {
       <WithSidebar sidebar={InsurgentSidebar}>
         <Step>
           <Carousel
+            data={this.props.data}
             items={this.props.data.content.characters}
             current={this.props.canvas.insurgent.character}
             select={this.props.selectCharacter}

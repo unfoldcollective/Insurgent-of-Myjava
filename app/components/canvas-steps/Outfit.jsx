@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { _s } from '../../utils';
 
 import {
   changeOutfitFilter,
@@ -43,7 +44,7 @@ class Outfit extends React.Component {
 
     const OutfitSidebar = (
       <Sidebar>
-        <h1>Outfits</h1>
+        <h1>{_s('OUTFITS_TITLE', this.props.data)}</h1>
         <nav className="outfit-navigation">
           {Object.keys(clothes).map((c, index) => (
             <Cta

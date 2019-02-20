@@ -57,12 +57,12 @@ class Index extends React.Component {
                 <ul className="index-nav-list">
                   <li>
                     <Cta className="big" href="/create">
-                      Create insurgent
+                      {_s('CREATE', data)}
                     </Cta>
                   </li>
                   <li>
                     <Cta active={true} href="/gallery">
-                      <a>Gallery</a>
+                      <a>{_s('GALLERY', data)}</a>
                     </Cta>
                   </li>
                 </ul>

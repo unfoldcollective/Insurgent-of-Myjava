@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { advanceStep } from '../../actions';
 
+import { _s } from '../../utils';
+
 import { Full } from '../layouts';
 import Step from '../Step.jsx';
 import Cta from '../Cta.jsx';
@@ -31,7 +33,7 @@ class Context extends React.Component {
             </section>
             <aside className="context-navigation">
               <Cta className="big" action={() => this.props.advanceStep()}>
-                Continue
+                {_s('CONTINUE', this.props.data)}
               </Cta>
             </aside>
             <style jsx>{`

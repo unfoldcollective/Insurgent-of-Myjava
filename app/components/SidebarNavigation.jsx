@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import Cta from './Cta.jsx';
 
+import { _s } from '../utils';
+
 class SidebarNavigation extends Component {
   listSteps() {
     const steps = [];
@@ -24,7 +26,8 @@ class SidebarNavigation extends Component {
       activateHelp,
       saveInsurgent,
       step,
-      totalSteps
+      totalSteps,
+      data
     } = this.props;
 
     return (
@@ -34,17 +37,17 @@ class SidebarNavigation extends Component {
         </header>
         <ul className="sidebar-nav">
           <li>
-            <Cta href="/">Home</Cta>
+            <Cta href="/">{_s('HOME', data)}</Cta>
           </li>
           <li>
             {step < totalSteps ? (
-              <Cta action={() => advanceStep()}>Next</Cta>
+              <Cta action={() => advanceStep()}>{_s('CONTINUE', data)}</Cta>
             ) : (
-              <Cta action={() => saveInsurgent()}>End</Cta>
+              <Cta action={() => saveInsurgent()}>{_s('FINISH', data)}</Cta>
             )}
           </li>
           <li>
-            <Cta action={() => activateHelp()}>Help</Cta>
+            <Cta action={() => activateHelp()}>{_s('HELP', data)}</Cta>
           </li>
         </ul>
         <style jsx>{`

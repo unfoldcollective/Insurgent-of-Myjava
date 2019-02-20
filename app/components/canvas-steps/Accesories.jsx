@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { _s } from '../../utils';
 
 import {
   addAccessory,
@@ -62,7 +63,7 @@ class Accesories extends React.Component {
 
     const AccesoriesSidebar = (
       <Sidebar>
-        <h1>Accessories</h1>
+        <h1>{_s('ACCESSORIES_TITLE', this.props.data)}</h1>
         <ul className="accessories-list">
           {accesories.map((item, index) => {
             return (

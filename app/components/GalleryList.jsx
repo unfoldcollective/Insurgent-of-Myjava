@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
 
+import { connect } from 'react-redux';
+import { _s } from '../utils';
+
+function mapStateToProps(state) {
+  const { data } = state;
+  return {
+    data
+  };
+}
+
 class GalleryList extends Component {
   constructor(props) {
     super(props);
@@ -11,11 +21,13 @@ class GalleryList extends Component {
       <section className="gallery">
         <div className="gallery-overlay">
           <Link href="/">
-            <a>home</a>
+            <a> {_s('LEAVE_GALLERY', this.props.data)}</a>
           </Link>
         </div>
         <header className="gallery-header">
-          <h1 className="gallery-title">Insurgent ready for battle</h1>
+          <h1 className="gallery-title">
+            {_s('INSURGENT_READY', this.props.data)}
+          </h1>
         </header>
         <ul className="gallery-list">
           {this.props.items.data.map(item => {
@@ -93,4 +105,6 @@ class GalleryList extends Component {
   }
 }
 
-export default GalleryList;
+const ConnectedGalleryList = connect(mapStateToProps)(GalleryList);
+
+export default ConnectedGalleryList;

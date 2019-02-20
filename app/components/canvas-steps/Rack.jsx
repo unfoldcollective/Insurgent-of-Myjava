@@ -38,6 +38,7 @@ class Rack extends React.Component {
       <WithSidebar sidebar={WeaponSidebar}>
         <Step>
           <Carousel
+            data={this.props.data}
             items={this.props.data.content.weapons}
             current={this.props.canvas.insurgent.weapon.model}
             select={this.props.selectWeapon}

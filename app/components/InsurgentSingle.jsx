@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 
 import { Validate } from './finale-steps';
 
+import { _s } from '../utils';
+
 function mapStateToProps(state) {
   const { data } = state;
   return {
@@ -28,7 +30,7 @@ class InsurgentSingle extends Component {
       <Fragment>
         <div className="insurgent-overlay">
           <Link href="/gallery">
-            <a>gallery</a>
+            <a>{_s('BACK_TO_GALLERY', this.props.data)}</a>
           </Link>
         </div>
         <Validate

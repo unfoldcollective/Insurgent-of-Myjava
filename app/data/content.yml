@@ -20,7 +20,62 @@ strings:
     sk: >
       SK CTX2 _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
     en: >
-      EN CTX2 Lorem ipsum dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac. 
+      EN CTX2 Lorem ipsum dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
+  CREATE:
+    sk: Create insurgent
+    en: Create insurgent
+  GALLERY:
+    sk: Gallery
+    en: Gallery
+  CONTINUE:
+    sk: Next step
+    en: Next step
+  FINISH:
+    sk: Finish
+    en: Finish
+  HELP:
+    sk: Help
+    en: Help
+  HOME:
+    sk: Home
+    en: Home
+  NEXT:
+    sk: Next
+    en: Next
+  PREVIOUS:
+    sk: Previous
+    en: Previous
+  OUTFITS_TITLE:
+    sk: Outfits
+    en: Outfits
+  ACCESSORIES_TITLE:
+    sk: Accesories
+    en: Accesories
+  INPUT_NAME_TITLE:
+    sk: Insurgent name
+    en: Insurgent name
+  INPUT_NAME_TEXT: #markdown allowed
+    sk: >
+      This is required
+    en: >
+      This is required
+  INPUT_EMAIL_TITLE:
+    sk: Insurgent email
+    en: Insurgent email
+  INPUT_EMAIL_TEXT: #markdown allowed
+    sk: >
+      This is not required
+    en: >
+      This is not required
+  INSURGENT_READY:
+    sk: Insurgent ready for battle
+    en: Insurgent ready for battle
+  LEAVE_GALLERY:
+    sk: Leave gallery
+    en: Leave gallery
+  BACK_TO_GALLERY:
+    sk: Back to gallery
+    en: Back to gallery
 
 # Character information
 # the list order is important
