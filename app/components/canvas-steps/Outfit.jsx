@@ -12,7 +12,6 @@ import {
 
 import { WithSidebar, ContentCentered } from '../layouts';
 import Step from '../Step.jsx';
-import Cta from '../Cta.jsx';
 import Sidebar from '../Sidebar.jsx';
 import Dressable from './parts/Dressable.jsx';
 import Draggable from './parts/Draggable.jsx';
