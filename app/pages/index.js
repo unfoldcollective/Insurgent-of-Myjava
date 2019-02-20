@@ -68,12 +68,20 @@ class Index extends React.Component {
                 </ul>
               </nav>
             </header>
+            <p className="index-credits">{_s('CREDITS', data)}</p>
           </article>
         </Full>
         <style jsx>{`
           article.index {
             background-image: url('/static/bg1.jpg');
             background-size: cover;
+          }
+
+          p.index-credits {
+            position: absolute;
+            bottom: 3rem;
+            right: 3rem;
+            font-family: SourceSans, serif;
           }
 
           header.index-header {

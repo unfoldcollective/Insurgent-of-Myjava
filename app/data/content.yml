@@ -6,6 +6,9 @@ strings:
   SUBTITLE:
     sk: Prepare your best volunteer for battle (sk)
     en: Prepare your best volunteer for battle
+  CREDITS:
+    sk: Made by Unfold Collective in collaboration width lab.SNG
+    en: Made by Unfold Collective in collaboration width lab.SNG
   INTRO: #some markdown allowed
     sk: >
       SK _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
