@@ -72,7 +72,7 @@ class Index extends React.Component {
         </Full>
         <style jsx>{`
           article.index {
-            background-image: url('/static/frontpage.jpg');
+            background-image: url('/static/bg1.jpg');
             background-size: cover;
           }
 
