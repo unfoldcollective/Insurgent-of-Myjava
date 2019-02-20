@@ -23,7 +23,7 @@ module.exports = (server, db) => {
       const n = Math.min(req.query.n || 20, 200);
 
       const data = await storage
-        .find()
+        .find({ finished: true })
         .sort({ _id: -1 })
         .skip(offset)
         .limit(n)
