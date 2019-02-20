@@ -26,13 +26,33 @@ class Insurgent extends React.Component {
   render() {
     const InsurgentSidebar = (
       <Sidebar>
-        <p>
+        <h1 className="sidebar-title">
+          {
+            this.props.data.content.characters[
+              this.props.canvas.insurgent.character
+            ].name[this.props.data.lang]
+          }
+        </h1>
+        <p className="sidebar-intro">
           {
             this.props.data.content.characters[
               this.props.canvas.insurgent.character
             ].description[this.props.data.lang]
           }
         </p>
+
+        <style jsx>{`
+          h1.sidebar-title {
+            font-size: 2rem;
+            text-align: center;
+            margin: 3rem;
+          }
+
+          p.sidebar-intro {
+            text-align: center;
+            margin: 0 3rem;
+          }
+        `}</style>
       </Sidebar>
     );
     return (
