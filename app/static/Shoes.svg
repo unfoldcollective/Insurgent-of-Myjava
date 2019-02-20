@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 82">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e6e1dc;
+      }
+    </style>
+  </defs>
+  <title>Shoes</title>
+  <polygon class="cls-1" points="12.54 66.5 10.54 66.5 10.54 61.77 30.61 44.46 28.39 18.59 30.38 18.41 32.69 45.31 12.54 62.69 12.54 66.5"/>
+  <path class="cls-1" d="M59.49,67.5h-10v-4l-5.2,4H21V61.77L41.11,44.46l-2.32-27H67.41L64.25,53.76Zm-8-2h6.58l4.25-12.28L65.23,19.5H41l2.22,25.81L23,62.69V65.5H43.61l7.88-6.06Z"/>
+</svg>

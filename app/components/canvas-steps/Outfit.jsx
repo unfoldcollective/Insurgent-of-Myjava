@@ -47,13 +47,15 @@ class Outfit extends React.Component {
         <h1>{_s('OUTFITS_TITLE', this.props.data)}</h1>
         <nav className="outfit-navigation">
           {Object.keys(clothes).map((c, index) => (
-            <Cta
+            <button
               key={`outfit_switch_${index}`}
-              action={() => this.props.changeOutfitFilter(c)}
-              active={this.props.outfit.filter === c ? 'current' : ''}
+              onClick={() => this.props.changeOutfitFilter(c)}
+              className={`tab ${c} ${
+                this.props.outfit.filter === c ? 'current' : ''
+              }`}
             >
               {c}
-            </Cta>
+            </button>
           ))}
         </nav>
 
@@ -87,6 +89,40 @@ class Outfit extends React.Component {
         })}
 
         <style jsx>{`
+          button.tab {
+            background-color: transparent;
+            color: transparent;
+            width: 82px;
+            height: 82px;
+            outline: none;
+          }
+
+          button.head {
+            background-image: url('/static/Hat.svg');
+          }
+          button.torso {
+            background-image: url('/static/Torso.svg');
+          }
+          button.legs {
+            background-image: url('/static/LegWear.svg');
+          }
+          button.feet {
+            background-image: url('/static/Shoes.svg');
+          }
+
+          button.head.current {
+            background-image: url('/static/Hat-Active.svg');
+          }
+          button.torso.current {
+            background-image: url('/static/Torso-Active.svg');
+          }
+          button.legs.current {
+            background-image: url('/static/LegWear-Active.svg');
+          }
+          button.feet.current {
+            background-image: url('/static/Shoes-Active.svg');
+          }
+
           h1 {
             text-align: center;
             margin: 1rem;
@@ -96,7 +132,6 @@ class Outfit extends React.Component {
           nav.outfit-navigation {
             display: flex;
             justify-content: center;
-            margin-bottom: 2rem;
           }
 
           ul.outfit-list {
