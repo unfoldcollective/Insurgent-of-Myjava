@@ -104,12 +104,14 @@ class Droppable extends Component {
 
             div.trash {
               position: absolute;
-              bottom: 1rem;
-              left: 1rem;
+              bottom: 2rem;
+              left: 2rem;
               z-index: 3;
-              background: rgba(100, 100, 100, 0.6);
-              padding: 1rem;
-              color: white;
+              width: 6rem;
+              height: 6rem;
+              color: transparent;
+              background-color: transparent;
+              background-image: url('/static/i-trash.svg');
             }
 
             div.trash.over {

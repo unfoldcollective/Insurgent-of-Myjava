@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e6e1dc;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #e6e1dc;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <title>i-trash</title>
+  <g id="SB-Buttons">
+    <g>
+      <path class="cls-1" d="M64,4A60,60,0,1,1,4,64,60.07,60.07,0,0,1,64,4m0-4a64,64,0,1,0,64,64A64,64,0,0,0,64,0Z"/>
+      <g>
+        <line class="cls-2" x1="44" y1="44" x2="84" y2="84"/>
+        <line class="cls-2" x1="84" y1="44" x2="44" y2="84"/>
+      </g>
+    </g>
+  </g>
+</svg>
