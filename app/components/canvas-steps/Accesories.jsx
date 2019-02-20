@@ -95,14 +95,15 @@ class Accesories extends React.Component {
           }
 
           li.accessories-item {
-            flex-basis: 33.333%;
+            flex-basis: 16.666%;
             padding: 0.5rem;
             display: flex;
             justify-content: center;
           }
 
           img.accessories-image {
-            height: 6rem;
+            width: 100%;
+            max-height: 12rem;
           }
         `}</style>
       </Sidebar>

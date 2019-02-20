@@ -155,28 +155,46 @@ weapons:
   - name:
       sk: Weapon name 1 (sk)
       en: Weapon name 1
-    image: w1.svg
+    image: w0.svg
     description: #some markdown allowed
       sk: Weapon description 1 (sk)
       en: Weapon description 1
   - name:
       sk: Weapon name 2 (sk)
       en: Weapon name 2
-    image: w2.svg
+    image: w1.svg
     description: #some markdown allowed
       sk: Weapon description 2 (sk)
       en: Weapon description 2
   - name:
       sk: Weapon name 3 (sk)
       en: Weapon name 3
-    image: w3.svg
+    image: w2.svg
     description: #some markdown allowed
       sk: Weapon description 3 (sk)
       en: Weapon description 3
 
 # List of accesories
 accesories:
-  - image: axe-1.svg
-  - image: knife-1.svg
-  - image: plank-1.svg
-  - image: plank-2.svg
+  - image: pickaxe.svg
+  - image: spoon.svg
+  - image: Table.svg
+  - image: sieve.svg
+  - image: scoop.svg
+  - image: sickle.svg
+  - image: saw.svg
+  - image: shovel.svg
+  - image: pot.svg
+  - image: pliers.svg
+  - image: plate.svg
+  - image: chisel.svg
+  - image: Nail.svg
+  - image: hammer.svg
+  - image: horseshoe.svg
+  - image: grater.svg
+  - image: Kettle.svg
+  - image: broom.svg
+  - image: chain.svg
+  - image: antlers.svg
+  - image: Knife.svg
+  - image: Axe.svg
