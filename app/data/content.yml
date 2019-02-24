@@ -7,91 +7,91 @@ strings:
     sk: Prepare your best volunteer for battle (sk)
     en: Prepare your best volunteer for battle
   CREDITS:
-    sk: Made by Unfold Collective in collaboration width lab.SNG
-    en: Made by Unfold Collective in collaboration width lab.SNG
+    sk: Made by Unfold Collective in collaboration with lab.SNG (sk)
+    en: Made by Unfold Collective in collaboration with lab.SNG
   INTRO: #some markdown allowed
     sk: >
-      SK _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
+      Prepare your best volunteer for battle (sk)
     en: >
-      EN Lorem ipsum dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
+      Prepare your best volunteer for battle
   CONTEXT_1_TITLE:
-    sk: Context 1 title (sk)
-    en: Context 1 title
+    sk: Stylish! (sk)
+    en: Stylish!
   CONTEXT_1_INTRO: #some markdown allowed
     sk: >
-      SK CTX1 _Lorem ipsum_ dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
+      Now that your insurgent has a classy outfit, it is time to assemble a fitting weapon... (sk)
     en: >
-      EN CTX1 Lorem ipsum dolor sit amet consectetur adipiscing elit enim vulputate, sapien montes feugiat dis luctus nisl laoreet mattis, nibh per litora sodales nisi id aptent hac.
+      Now that your insurgent has a classy outfit, it is time to assemble a fitting weapon...
   CHARACTER_SELECTION_TITLE:
-    sk: Character selection
-    en: Character selection
+    sk: Choose your volunteer (sk)
+    en: Choose your volunteer
   CHARACTER_SELECTION_INTRO:
     sk: >
-      SK Character selection intro
+      Please select your finest revolutionary to send to the battle field. (sk)
     en: >
-      Character selection intro
+      Please select your finest revolutionary to send to the battle field.
   WEAPON_SELECTION_TITLE:
-    sk: Weapon selection
-    en: Weapon selection
+    sk: Choose your weapon (sk)
+    en: Choose your weapon
   WEAPON_SELECTION_INTRO:
     sk: >
-      SK Weapon selection intro
+      Please select which tool to use as a base for your weapon (sk)
     en: >
-      Weapon selection intro
+      Please select which tool to use as a base for your weapon
   CREATE:
-    sk: Create insurgent
-    en: Create insurgent
+    sk: Choose your volunteer (sk)
+    en: Choose your volunteer
   GALLERY:
-    sk: Gallery
-    en: Gallery
+    sk: See gallery (sk)
+    en: See gallery
   CONTINUE:
-    sk: Next step
+    sk: Next step (sk)
     en: Next step
   FINISH:
-    sk: Finish
-    en: Finish
+    sk: Finish insurgent (sk)
+    en: Finish insurgent
   HELP:
-    sk: Help
+    sk: Help (sk)
     en: Help
   HOME:
-    sk: Home
+    sk: Home (sk)
     en: Home
   NEXT:
-    sk: Next
+    sk: Next (sk)
     en: Next
   PREVIOUS:
-    sk: Previous
+    sk: Previous (sk)
     en: Previous
   OUTFITS_TITLE:
-    sk: Outfits
-    en: Outfits
+    sk: Dress your volunteer (sk)
+    en: Dress your volunteer
   ACCESSORIES_TITLE:
-    sk: Accesories
-    en: Accesories
+    sk: Assemble a mighty weapon (sk)
+    en: Assemble a mighty weapon
   INPUT_NAME_TITLE:
-    sk: Insurgent name
+    sk: Insurgent name (sk)
     en: Insurgent name
   INPUT_NAME_TEXT: #markdown allowed
     sk: >
-      This is required
+      Please name your insurgent (sk)
     en: >
-      This is required
+      Please name your insurgent
   INPUT_EMAIL_TITLE:
-    sk: Insurgent email
-    en: Insurgent email
+    sk: Your email (sk)
+    en: Your email
   INPUT_EMAIL_TEXT: #markdown allowed
     sk: >
-      This is not required
+      If you like, you can send your insurgent by email (sk)
     en: >
-      This is not required
+      If you like, you can send your insurgent by email
   INSURGENT_READY:
-    sk: Insurgent ready for battle
-    en: Insurgent ready for battle
+    sk: Insurgents ready for battle (sk)
+    en: Insurgents ready for battle
   LEAVE_GALLERY:
-    sk: Leave gallery
+    sk: Leave gallery (sk)
     en: Leave gallery
   BACK_TO_GALLERY:
-    sk: Back to gallery
+    sk: Back to gallery (sk)
     en: Back to gallery
 
 # Character information
