@@ -1,7 +1,6 @@
 import React from 'react';
 
 const MessageOverlay = ({ message }) => {
-
   return (
     <div className="message-overlay">
       <p className="message">{message}</p>
@@ -14,6 +13,8 @@ const MessageOverlay = ({ message }) => {
           display: flex;
           justify-content: center;
           z-index: 10000000;
+          top: 0;
+          left: 0;
         }
 
         p.message {

@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { _s } from '../utils';
 
+import MessageOverlay from './MessageOverlay.jsx';
+
 import {
   finishAdvance,
   setInsurgentName,
@@ -65,7 +67,7 @@ class Finale extends Component {
   }
 
   render() {
-    const { step, done } = this.props.finish;
+    const { step, done, saving } = this.props.finish;
 
     if (done) Router.push(`/gallery`);
 
@@ -133,6 +135,8 @@ class Finale extends Component {
           bg={this.props.finish.bg}
           insurgent={this.props.saved.insurgent}
         />
+
+        {saving && <MessageOverlay message="Saving..." />}
 
         <style jsx>
           {`

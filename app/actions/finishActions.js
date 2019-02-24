@@ -12,7 +12,7 @@ export const setInsurgentEmail = email => dispatch => {
   return dispatch({ type: FINISH.EMAIL_SET, payload: email });
 };
 
-export const setInsurgentBackground = bg => (dispatch, getState) => {
+export const setInsurgentBackground = () => (dispatch, getState) => {
   const {
     data: {
       content: { backgrounds }
@@ -25,6 +25,7 @@ export const setInsurgentBackground = bg => (dispatch, getState) => {
 };
 
 export const finishFinished = payload => async dispatch => {
+  dispatch({ type: FINISH.SAVING_REQUESTED });
   try {
     await fetch('/prepare', {
       method: 'POST',

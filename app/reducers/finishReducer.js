@@ -6,7 +6,8 @@ const initialState = {
   email: null,
   bg: null,
   done: false,
-  error: null
+  error: null,
+  saving: false
 };
 
 export default (state = initialState, action) => {
@@ -43,6 +44,13 @@ export default (state = initialState, action) => {
       return {
         ...state,
         error: action.payload
+      };
+    }
+
+    case FINISH.SAVING_REQUESTED: {
+      return {
+        ...state,
+        saving: true
       };
     }
 
