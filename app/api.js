@@ -1,6 +1,14 @@
+const fs = require('fs');
+const path = require('path');
 const { ObjectID } = require('mongodb');
 const puppeteer = require('puppeteer');
 const jimp = require('jimp');
+const nodemailer = require('nodemailer');
+const yaml = require('js-yaml');
+const snarkdown = require('snarkdown');
+
+const { promisify } = require('util');
+const readFile = promisify(fs.readFile);
 
 module.exports = (server, db) => {
   const storage = db.collection('storage');
@@ -92,8 +100,43 @@ module.exports = (server, db) => {
       const shot = await jimp.read(shotPath);
       await shot
         .clone()
-        .resize(500, jimp.AUTO)
+        .resize(400, jimp.AUTO)
         .write(`/shots/${data.id}_thumb.jpg`);
+
+      //Send email
+      if (data.email) {
+        const emailData = await readFile(
+          path.join(__dirname, 'data/email.yml'),
+          'utf-8'
+        );
+
+        const emailStrings = yaml.safeLoad(emailData);
+
+        const transporter = nodemailer.createTransport({
+          service: 'gmail',
+          auth: {
+            user: process.env.GMAIL_ADDRESS,
+            pass: process.env.GMAIL_PASS
+          }
+        });
+
+        const emailContent = emailStrings.email.body
+          .replace(/\n\n/g, '</p><p>')
+          .replace(/\n/g, '<br>')
+          .replace('_NAME_', data.name ? `, ${data.name}, ` : ' ')
+          .replace('_URL_', 'PENDING URL');
+
+        console.log(snarkdown(emailContent));
+
+        const mailOptions = {
+          from: `"${emailStrings.email.from}" <${process.env.GMAIL_ADDRESS}>`,
+          to: data.email,
+          subject: emailStrings.email.subject,
+          html: snarkdown(emailContent)
+        };
+
+        transporter.sendMail(mailOptions);
+      }
 
       return res.json({
         id: data._id,

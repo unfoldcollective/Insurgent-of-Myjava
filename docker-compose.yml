@@ -1,6 +1,9 @@
-version: '3'
+version: "3"
 services:
   app:
+    environment:
+      - GMAIL_ADDRESS=${GMAIL_ADDRESS}
+      - GMAIL_PASS=${GMAIL_PASS}
     build: ./app
     depends_on:
       - db

@@ -4,3 +4,4 @@
 /db
 /shots/*
 !/shots/.keep
+.env

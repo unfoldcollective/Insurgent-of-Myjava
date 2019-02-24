@@ -1,0 +1,12 @@
+email:
+  from: Insurgent of Myjava
+  subject: Your insurgent is ready
+  #add \n for newlines
+  body: "Fellow revolutionary,\n
+    \n
+    Congratulations on your recent accomplishment! Thanks to your efforts we shall enter the battle fashionably and well equipped!\n
+    \n
+    Your insurgent_NAME_is ready for battle:\n
+    _URL_\n
+    \n
+    The Insurgent of Myjava application is brought to you by [Unfold Collective](http://unfold.is/) in collaboration with [lab.SNG](http://lab.sng.sk/)."
