@@ -69,6 +69,7 @@ module.exports = (server, db) => {
           $set: {
             name: data.name,
             email: data.email,
+            bg: data.bg,
             finished: true
           }
         }

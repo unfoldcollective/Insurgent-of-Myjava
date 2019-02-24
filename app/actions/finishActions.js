@@ -12,9 +12,21 @@ export const setInsurgentEmail = email => dispatch => {
   return dispatch({ type: FINISH.EMAIL_SET, payload: email });
 };
 
+export const setInsurgentBackground = bg => (dispatch, getState) => {
+  const {
+    data: {
+      content: { backgrounds }
+    }
+  } = getState();
+
+  const bg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+  return dispatch({ type: FINISH.BG_SET, payload: bg });
+};
+
 export const finishFinished = payload => async dispatch => {
   try {
-    const saved = await fetch('/prepare', {
+    await fetch('/prepare', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

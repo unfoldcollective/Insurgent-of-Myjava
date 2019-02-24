@@ -4,6 +4,7 @@ const initialState = {
   step: 0,
   name: null,
   email: null,
+  bg: null,
   done: false,
   error: null
 };
@@ -42,6 +43,13 @@ export default (state = initialState, action) => {
       return {
         ...state,
         error: action.payload
+      };
+    }
+
+    case FINISH.BG_SET: {
+      return {
+        ...state,
+        bg: action.payload
       };
     }
 

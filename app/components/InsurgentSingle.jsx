@@ -38,6 +38,7 @@ class InsurgentSingle extends Component {
           character={character}
           weapon={weapon}
           extras={extras}
+          bg={this.props.saved.bg}
           insurgent={this.props.saved.insurgent}
         />
 

@@ -12,7 +12,7 @@ class Validate extends Component {
       <Full>
         <div
           className="final-canvas"
-          style={{ backgroundImage: 'url(/static/bg1.jpg)' }}
+          style={{ backgroundImage: `url(/static/${this.props.bg}.jpg)` }}
         >
           <div className="final-canvas-content">
             <Droppable extras={this.props.extras} />

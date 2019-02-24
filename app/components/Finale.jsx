@@ -9,6 +9,7 @@ import {
   finishAdvance,
   setInsurgentName,
   setInsurgentEmail,
+  setInsurgentBackground,
   finishFinished
 } from '../actions';
 
@@ -25,7 +26,13 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
-    { finishAdvance, setInsurgentName, setInsurgentEmail, finishFinished },
+    {
+      finishAdvance,
+      setInsurgentName,
+      setInsurgentEmail,
+      setInsurgentBackground,
+      finishFinished
+    },
     dispatch
   );
 }
@@ -35,6 +42,10 @@ class Finale extends Component {
     super(props);
     this.setName = this.setName.bind(this);
     this.setEmail = this.setEmail.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.setInsurgentBackground();
   }
 
   setName(name) {
@@ -48,6 +59,7 @@ class Finale extends Component {
     this.props.finishFinished({
       id: this.props.saved._id,
       name: this.props.finish.name,
+      bg: this.props.finish.bg,
       email
     });
   }
@@ -118,6 +130,7 @@ class Finale extends Component {
           character={character}
           weapon={weapon}
           extras={extras}
+          bg={this.props.finish.bg}
           insurgent={this.props.saved.insurgent}
         />
 
