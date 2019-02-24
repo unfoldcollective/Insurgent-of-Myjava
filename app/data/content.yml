@@ -217,3 +217,10 @@ accesories:
   - image: antlers.svg
   - image: Knife.svg
   - image: Axe.svg
+
+# List of final backgrounds
+
+backgrounds:
+  - bg1
+  - bg2
+  - bg3

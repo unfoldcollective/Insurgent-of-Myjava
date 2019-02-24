@@ -83,7 +83,7 @@ class Finale extends Component {
         ) : null}
 
         {step === 2 ? (
-          <Input nextAction={this.setName}>
+          <Input nextAction={this.setName} required={true}>
             <h1 className="input-title">
               {_s('INPUT_NAME_TITLE', this.props.data)}
             </h1>
@@ -125,6 +125,8 @@ class Finale extends Component {
           {`
             div.timeout-overlay {
               position: absolute;
+              right: 5vw;
+              bottom: 5vh;
               z-index: 1000000;
             }
 

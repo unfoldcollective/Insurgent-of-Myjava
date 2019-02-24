@@ -1,11 +1,20 @@
 import React from 'react';
 import Keyboard from '../Keyboard.jsx';
+import Cta from '../Cta.jsx';
 
-const Input = ({ children, nextAction }) => {
+const Input = ({ children, nextAction, required }) => {
   return (
     <article className="input-overlay">
       <header className="input-header">{children}</header>
-      <Keyboard action={nextAction} />
+      <Keyboard action={nextAction} required={required} />
+
+      {!required ? (
+        <div className="input-skip">
+          <Cta action={nextAction} className="big">
+            Skip
+          </Cta>
+        </div>
+      ) : null}
 
       <style jsx>
         {`
@@ -24,6 +33,12 @@ const Input = ({ children, nextAction }) => {
           header.input-header {
             text-align: center;
             margin-bottom: 2rem;
+          }
+
+          div.input-skip {
+            position: absolute;
+            right: 5vw;
+            bottom: 5vh;
           }
         `}
       </style>

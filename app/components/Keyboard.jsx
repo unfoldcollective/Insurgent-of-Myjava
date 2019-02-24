@@ -7,6 +7,7 @@ class Keyboard extends Component {
     this.state = {
       caps: false,
       content: [],
+      hasError: false,
       rows: [
         '1 2 3 4 5 6 7 8 9 0'.split(' '),
         'q w e r t z u i o p'.split(' '),
@@ -35,15 +36,27 @@ class Keyboard extends Component {
     });
   }
 
+  send() {
+    if (this.state.content.length === 0 && this.props.required) {
+      this.setState({ hasError: true });
+      return;
+    }
+
+    this.props.action(this.state.content.join(''));
+  }
+
   render() {
     return (
       <article className="keyboard">
         <div className="keyboard-input">
-          <div className="keyboard-feed">{this.state.content.join('')}</div>
-          <button
-            className="keyboard-action"
-            onClick={() => this.props.action(this.state.content.join(''))}
+          <div
+            className={`keyboard-feed ${
+              this.state.hasError ? 'inputError' : ''
+            }`}
           >
+            {this.state.content.join('')}
+          </div>
+          <button className="keyboard-action" onClick={() => this.send()}>
             Next
           </button>
         </div>
@@ -174,6 +187,36 @@ class Keyboard extends Component {
             button.keyboard-key:active {
               background: white;
               color: black;
+            }
+
+            div.inputError {
+              animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+              transform: translate3d(0, 0, 0);
+              backface-visibility: hidden;
+              perspective: 1000px;
+            }
+
+            @keyframes shake {
+              10%,
+              90% {
+                transform: translate3d(-1px, 0, 0);
+              }
+
+              20%,
+              80% {
+                transform: translate3d(2px, 0, 0);
+              }
+
+              30%,
+              50%,
+              70% {
+                transform: translate3d(-4px, 0, 0);
+              }
+
+              40%,
+              60% {
+                transform: translate3d(4px, 0, 0);
+              }
             }
           `}
         </style>

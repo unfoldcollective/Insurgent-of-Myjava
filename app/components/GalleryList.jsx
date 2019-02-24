@@ -24,26 +24,30 @@ class GalleryList extends Component {
   }
 
   handleScroll() {
-    this.setState({
-      showButton: false
-    });
+    this.isM &&
+      this.setState({
+        showButton: false
+      });
 
     if (this.timeout) clearTimeout(this.timeout);
 
-    setTimeout(() => {
-      this.setState({
-        showButton: true
-      });
+    this.timeout = setTimeout(() => {
+      this.isM &&
+        this.setState({
+          showButton: true
+        });
     }, 2000);
   }
 
   componentDidMount() {
+    this.isM = true;
     window.addEventListener('scroll', this.handleScroll.bind(this));
   }
 
   componentWillUnmount() {
-    if (this.timeout) clearTimeout(this.timeout);
+    this.isM = false;
     window.removeEventListener('scroll', this.handleScroll.bind(this));
+    if (this.timeout) clearTimeout(this.timeout);
   }
 
   render() {
