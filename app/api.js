@@ -126,8 +126,6 @@ module.exports = (server, db) => {
           .replace('_NAME_', data.name ? `, ${data.name}, ` : ' ')
           .replace('_URL_', 'PENDING URL');
 
-        console.log(snarkdown(emailContent));
-
         const mailOptions = {
           from: `"${emailStrings.email.from}" <${process.env.GMAIL_ADDRESS}>`,
           to: data.email,

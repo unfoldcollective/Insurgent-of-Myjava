@@ -5,6 +5,8 @@ import App, { Container } from 'next/app';
 import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
 
+import { PageTransition } from 'next-page-transitions';
+
 import { Main } from '../components/layouts';
 
 import { initStore } from '../store';
@@ -39,10 +41,29 @@ class Insurgent extends App {
     return (
       <Container>
         <Provider store={store}>
-          <Main>
-            <Component {...pageProps} />
-          </Main>
+          <PageTransition timeout={500} classNames="page-transition">
+            <Main>
+              <Component {...pageProps} />
+            </Main>
+          </PageTransition>
         </Provider>
+
+        <style jsx global>{`
+          .page-transition-enter {
+            opacity: 0;
+          }
+          .page-transition-enter-active {
+            opacity: 1;
+            transition: opacity 500ms;
+          }
+          .page-transition-exit {
+            opacity: 1;
+          }
+          .page-transition-exit-active {
+            opacity: 0;
+            transition: opacity 500ms;
+          }
+        `}</style>
       </Container>
     );
   }
