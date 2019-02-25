@@ -6,6 +6,9 @@ import MessageOverlay from './MessageOverlay.jsx';
 import Transition from './Transition.jsx';
 
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import { chooseFunFact } from '../actions';
 
 import { _s } from '../utils';
 
@@ -19,13 +22,26 @@ function mapStateToProps(state) {
   };
 }
 
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(
+    {
+      chooseFunFact
+    },
+    dispatch
+  );
+}
+
 class Canvas extends Component {
   constructor() {
     super();
   }
 
+  componentDidMount() {
+    this.props.chooseFunFact();
+  }
+
   render() {
-    const { step, id, error, saving } = this.props.canvas;
+    const { step, id, error, saving, funfact } = this.props.canvas;
 
     if (id) Router.push(`/finish/${id}`);
 
@@ -49,10 +65,33 @@ class Canvas extends Component {
     return (
       <div className="create">
         {saving && <MessageOverlay message="Saving..." />}
-        <Transition step={`c_${step}`}>{current}</Transition>
+        <Transition step={`c_${step}`}>
+          {funfact && <div className="canvas-funfact">{funfact}</div>}
+
+          {current}
+        </Transition>
+
+        <style jsx>
+          {`
+            div.canvas-funfact {
+              position: absolute;
+              top: 2rem;
+              left: 2rem;
+              background: black;
+              padding: 1rem;
+              z-index: 10000000;
+              width: 20rem;
+              font-family: SourceSans, serif;
+              font-size: 1.5rem;
+            }
+          `}
+        </style>
       </div>
     );
   }
 }
 
-export default connect(mapStateToProps)(Canvas);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Canvas);

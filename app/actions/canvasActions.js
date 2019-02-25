@@ -1,5 +1,7 @@
 import { CANVAS } from '../constants';
 
+let ffTimeout = null;
+
 export const advanceStep = () => dispatch => {
   return dispatch({ type: CANVAS.STEP_ADVANCED });
 };
@@ -22,6 +24,30 @@ export const activateHelp = () => dispatch => {
 
 export const deactivateHelp = () => dispatch => {
   return dispatch({ type: CANVAS.HELP_DEACTIVATED });
+};
+
+export const chooseFunFact = () => (dispatch, getState) => {
+  dispatch({ type: CANVAS.FUNFACT_DISCARDED });
+  const {
+    canvas: { step },
+    data: {
+      lang,
+      content: { funfacts }
+    }
+  } = getState();
+
+  if (ffTimeout) clearTimeout(ffTimeout);
+
+  if (funfacts[step]) {
+    const ff =
+      funfacts[step][Math.floor(Math.random() * funfacts[step].length)];
+
+    dispatch({ type: CANVAS.FUNFACT_CHOSEN, payload: ff[lang] });
+
+    ffTimeout = setTimeout(() => {
+      dispatch({ type: CANVAS.FUNFACT_DISCARDED });
+    }, 10000);
+  }
 };
 
 export const selectCharacter = index => (dispatch, getState) => {

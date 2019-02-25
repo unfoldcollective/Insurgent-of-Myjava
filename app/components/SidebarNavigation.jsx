@@ -3,6 +3,7 @@ import Cta from './Cta.jsx';
 import Link from 'next/link';
 
 import { _s } from '../utils';
+import { chooseFunFact } from '../actions/index.js';
 
 class SidebarNavigation extends Component {
   listSteps() {
@@ -25,6 +26,7 @@ class SidebarNavigation extends Component {
     const {
       advanceStep,
       activateHelp,
+      chooseFunFact,
       saveInsurgent,
       step,
       totalSteps,
@@ -82,7 +84,13 @@ class SidebarNavigation extends Component {
         <ul className="sidebar-nav">
           <li className="sidebar-next">
             {step < totalSteps ? (
-              <Cta action={() => advanceStep()} className="big">
+              <Cta
+                action={() => {
+                  advanceStep();
+                  chooseFunFact();
+                }}
+                className="big"
+              >
                 {_s('CONTINUE', data)}
               </Cta>
             ) : (

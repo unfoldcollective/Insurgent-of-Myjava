@@ -7,6 +7,7 @@ const initialState = {
   error: null,
   saving: false,
   helpMode: false,
+  funfact: null,
   insurgent: {
     character: 0,
     clothes: {},
@@ -187,6 +188,14 @@ export default (state = initialState, action) => {
 
     case CANVAS.SAVING_FAILED: {
       return { ...state, saving: false, error: action.payload };
+    }
+
+    case CANVAS.FUNFACT_CHOSEN: {
+      return { ...state, funfact: action.payload };
+    }
+
+    case CANVAS.FUNFACT_DISCARDED: {
+      return { ...state, funfact: null };
     }
 
     default:

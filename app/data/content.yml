@@ -94,6 +94,28 @@ strings:
     sk: Back to gallery (sk)
     en: Back to gallery
 
+funfacts:
+  #step 0 is characterselection
+  0:
+    - sk: Ján Francisci, Ľudovít Štúr a ďalší velitelia výprav boli najmä prozaici a básnici. Ich hlavnými zbraňami boli slová a idey.
+      en: Ján Francisci, Ľudovít Štúr and other commanders were primarily writers and poets. Their main weapons were words and ideas.
+    - sk: Johanka Hrebendová-Bóriková cvičila zbor dobrovoľníkov, ošetrovala ranených a robila osvetu. Vyslúžila si titul “slovenská panna orleánska”.
+      en: Johanka Hrebendová-Bóriková trained a troop of volunteers, nursed the wounded and spread education. She earned the title 'Slovak Maid of Orleans'.
+  #step 1 is charactercustomization
+  1:
+    - sk: Dobrovoľník neváha ísť do boja vo vkusnom odeve – nohavice a blúza z mocného plátna, vojenský plášť, opasok na náboje a pštrosie pero za klobúkom.
+      en: A volunteer does not hesitate to enter the battle in tasteful clothing - trunks with a thick linen shirt, an army coat, an ammunition belt and an ostrich feather hat.
+    - sk: Povstalci Viliam Šulek a Karol Holuby, zlapaní a odsúdení na smrť, sa na popravu ustrojili do najlepších šiat a nechali sa v nich aj pochovať.
+      en: Rebels Viliam Šulek and Karol Holuby were caught and condemned to death. For the execution and the funeral, they put on their best clothes.
+  #step 3 is baseweaponselection
+  3:
+    - sk: Slovenskí povstalci bojovali za slobodu nástrojmi svojej obživy – kosami, cepmi či vidlami. Pravá vojenská výzbroj bola vzácnosťou.
+      en: When fighting for freedom, the Slovak rebel army used the tools of their everyday livelihood - scythes, flails or pitchforks. A proper army gear was a rarity.
+  #step 4 is weaponcomposition
+  4:
+    - sk: Improvizované zbrane a brnenia museli povstalcom stačiť proti cvičeným gardistom a kyrysníkom. Čo im chýbalo na výzbroji dohnali silným zápalom pre vec národnú.
+      en: Improvised weapons and armours had to protect the rebels against trained guardsmen and cuirassiers. The shortcomings on gear had to be taunted by their determination to fight for the matters of the nation.
+
 # Character information
 # the list order is important
 characters:

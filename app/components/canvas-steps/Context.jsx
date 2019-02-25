@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { advanceStep } from '../../actions';
+import { advanceStep, chooseFunFact } from '../../actions';
 
 import { _s } from '../../utils';
 
@@ -18,7 +18,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ advanceStep }, dispatch);
+  return bindActionCreators({ advanceStep, chooseFunFact }, dispatch);
 }
 
 //Component
@@ -33,7 +33,13 @@ class Context extends React.Component {
               <p dangerouslySetInnerHTML={this.props.text} />
             </section>
             <aside className="context-navigation">
-              <Cta className="big" action={() => this.props.advanceStep()}>
+              <Cta
+                className="big"
+                action={() => {
+                  this.props.advanceStep();
+                  this.props.chooseFunFact();
+                }}
+              >
                 {_s('CONTINUE', this.props.data)}
               </Cta>
             </aside>

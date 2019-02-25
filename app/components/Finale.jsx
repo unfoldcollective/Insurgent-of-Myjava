@@ -6,7 +6,6 @@ import { bindActionCreators } from 'redux';
 import { _s } from '../utils';
 
 import MessageOverlay from './MessageOverlay.jsx';
-import Transition from './Transition.jsx';
 
 import {
   finishAdvance,

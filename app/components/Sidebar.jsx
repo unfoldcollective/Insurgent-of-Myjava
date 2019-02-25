@@ -6,7 +6,8 @@ import {
   advanceStep,
   activateHelp,
   changeStep,
-  saveInsurgent
+  saveInsurgent,
+  chooseFunFact
 } from '../actions';
 
 import SidebarNavigation from './SidebarNavigation.jsx';
@@ -21,7 +22,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
-    { advanceStep, activateHelp, changeStep, saveInsurgent },
+    { advanceStep, activateHelp, changeStep, saveInsurgent, chooseFunFact },
     dispatch
   );
 }
@@ -42,6 +43,7 @@ class Sidebar extends React.Component {
             advanceStep={this.props.advanceStep}
             activateHelp={this.props.activateHelp}
             saveInsurgent={this.props.saveInsurgent}
+            chooseFunFact={this.props.chooseFunFact}
           />
         </section>
 
