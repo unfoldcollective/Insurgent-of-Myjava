@@ -4,6 +4,7 @@ services:
     environment:
       - GMAIL_ADDRESS=${GMAIL_ADDRESS}
       - GMAIL_PASS=${GMAIL_PASS}
+      - MAGIC=${MAGIC}
     build: ./app
     depends_on:
       - db

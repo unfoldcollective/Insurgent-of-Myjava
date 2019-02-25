@@ -163,4 +163,36 @@ module.exports = (server, db) => {
       return res.status(500).json({ error: error.message });
     }
   });
+
+  /**
+   * Nuke insurgent
+   */
+
+  server.get('/api/id/:id/nuke', (req, res) => {
+    const form =
+      '<form method="POST"><input type="text" name="magic" placeholder="Magic word" /><button type="submit">Delete</button></form>';
+    return res.send(form);
+  });
+
+  server.post('/api/id/:id/nuke', async (req, res, next) => {
+    const id = req.params.id;
+    const magic = req.body.magic;
+
+    if (magic !== process.env.MAGIC) {
+      return next(new Error('Incorrect magic word'));
+    }
+
+    const data = await storage.remove({ _id: new ObjectID(id) });
+
+    if (!data) {
+      const err = new Error('Element not found in the database');
+      err.status = 404;
+      return next(err);
+    }
+
+    return res.send({
+      error: false,
+      data
+    });
+  });
 };
