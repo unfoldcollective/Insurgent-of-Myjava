@@ -20,9 +20,11 @@ class Transition extends React.PureComponent {
     return (
       <TransitionGroup component={null}>
         <ReactTransition key={step} timeout={timeout}>
-          {status => (
-            <div className={`step-transition-${status}`}>{children}</div>
-          )}
+          {status => {
+            return (
+              <div className={`step-transition-${status}`}>{children}</div>
+            );
+          }}
         </ReactTransition>
 
         <style jsx>{`
@@ -46,11 +48,11 @@ class Transition extends React.PureComponent {
           }
 
           .step-transition-entering {
-            animation: enter 0.5s forwards;
+            animation: enter ${timeout.enter}ms forwards;
           }
 
           .step-transition-exiting {
-            animation: exit 0.5s forwards;
+            animation: exit ${timeout.exit}ms forwards;
           }
         `}</style>
       </TransitionGroup>

@@ -36,6 +36,7 @@ class Validate extends Component {
               background-repeat: no-repeat;
               background-size: cover;
               background-position: center center;
+              animation: enter 1000ms forwards;
             }
 
             div.timeout-overlay {
@@ -47,6 +48,16 @@ class Validate extends Component {
 
             div.final-canvas-content {
               width: 75%;
+            }
+
+            @keyframes enter {
+              0% {
+                opacity: 0;
+              }
+
+              100% {
+                opacity: 1;
+              }
             }
           `}
         </style>

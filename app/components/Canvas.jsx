@@ -49,7 +49,7 @@ class Canvas extends Component {
     return (
       <div className="create">
         {saving && <MessageOverlay message="Saving..." />}
-        <Transition step={step}>{current}</Transition>
+        <Transition step={`c_${step}`}>{current}</Transition>
       </div>
     );
   }

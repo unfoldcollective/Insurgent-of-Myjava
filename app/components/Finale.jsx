@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import { _s } from '../utils';
 
 import MessageOverlay from './MessageOverlay.jsx';
+import Transition from './Transition.jsx';
 
 import {
   finishAdvance,
@@ -128,13 +129,15 @@ class Finale extends Component {
           </Input>
         ) : null}
 
-        <Validate
-          character={character}
-          weapon={weapon}
-          extras={extras}
-          bg={this.props.finish.bg}
-          insurgent={this.props.saved.insurgent}
-        />
+        {step > 0 ? (
+          <Validate
+            character={character}
+            weapon={weapon}
+            extras={extras}
+            bg={this.props.finish.bg}
+            insurgent={this.props.saved.insurgent}
+          />
+        ) : null}
 
         {saving && <MessageOverlay message="Saving..." />}
 

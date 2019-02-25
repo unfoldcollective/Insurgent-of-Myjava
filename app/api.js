@@ -92,6 +92,7 @@ module.exports = (server, db) => {
       const page = await browser.newPage();
       await page.setViewport({ width: 1920, height: 1080 });
       await page.goto(`${baseUrl}/shot/${data.id}`);
+      await page.waitFor(700);
       await page.screenshot({ path: shotPath });
 
       await browser.close();
