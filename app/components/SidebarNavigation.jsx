@@ -33,6 +33,12 @@ class SidebarNavigation extends Component {
       data
     } = this.props;
 
+    let helpSection = null;
+
+    if (step === 0) helpSection = 'helpModeInsurgent';
+    if (step === 1) helpSection = 'helpModeOutfit';
+    if (step === 4) helpSection = 'helpModeAccessories';
+
     return (
       <Fragment>
         <header className="sidebar-steps">
@@ -99,11 +105,16 @@ class SidebarNavigation extends Component {
               </Cta>
             )}
           </li>
-          <li>
-            <button className="icon help" onClick={() => activateHelp()}>
-              {_s('HELP', data)}
-            </button>
-          </li>
+          {helpSection ? (
+            <li>
+              <button
+                className="icon help"
+                onClick={() => activateHelp(helpSection)}
+              >
+                {_s('HELP', data)}
+              </button>
+            </li>
+          ) : null}
           <li>
             <Link href="/">
               <button className="icon home">{_s('HOME', data)}</button>

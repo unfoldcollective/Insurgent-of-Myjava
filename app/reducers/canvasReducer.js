@@ -6,7 +6,9 @@ const initialState = {
   id: null,
   error: null,
   saving: false,
-  helpMode: false,
+  helpModeInsurgent: true,
+  helpModeOutfit: true,
+  helpModeAccessories: true,
   funfact: null,
   insurgent: {
     character: 0,
@@ -47,13 +49,13 @@ export default (state = initialState, action) => {
     case CANVAS.HELP_ACTIVATED: {
       return {
         ...state,
-        helpMode: true
+        [action.payload]: true
       };
     }
     case CANVAS.HELP_DEACTIVATED: {
       return {
         ...state,
-        helpMode: false
+        [action.payload]: false
       };
     }
     case CANVAS.CHARACTER_SELECTED: {

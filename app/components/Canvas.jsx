@@ -4,11 +4,12 @@ import Router from 'next/router';
 
 import MessageOverlay from './MessageOverlay.jsx';
 import Transition from './Transition.jsx';
+import HelpVideo from './canvas-steps/parts/HelpVideo.jsx';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { chooseFunFact } from '../actions';
+import { chooseFunFact, activateHelp, deactivateHelp } from '../actions';
 
 import { _s } from '../utils';
 
@@ -25,7 +26,9 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      chooseFunFact
+      chooseFunFact,
+      activateHelp,
+      deactivateHelp
     },
     dispatch
   );
@@ -41,13 +44,22 @@ class Canvas extends Component {
   }
 
   render() {
-    const { step, id, error, saving, funfact } = this.props.canvas;
+    const {
+      step,
+      id,
+      error,
+      saving,
+      funfact,
+      helpModeInsurgent,
+      helpModeOutfit,
+      helpModeAccessories
+    } = this.props.canvas;
 
     if (id) Router.push(`/finish/${id}`);
 
     const stepComponents = {
-      0: <Insurgent />,
-      1: <Outfit />,
+      0: <Insurgent />, //has help video
+      1: <Outfit />, //has help video
       2: (
         <Context
           title={_s('CONTEXT_1_TITLE', this.props.data)}
@@ -55,7 +67,7 @@ class Canvas extends Component {
         />
       ),
       3: <Rack />,
-      4: <Accesories />
+      4: <Accesories /> //has help video
     };
 
     const current = stepComponents[step];
@@ -65,8 +77,30 @@ class Canvas extends Component {
     return (
       <div className="create">
         {saving && <MessageOverlay message="Saving..." />}
+
         <Transition step={`c_${step}`}>
           {funfact && <div className="canvas-funfact">{funfact}</div>}
+
+          {(step === 0) & helpModeInsurgent ? (
+            <HelpVideo
+              file="CharacterCarousel.mp4"
+              endAction={() => this.props.deactivateHelp('helpModeInsurgent')}
+            />
+          ) : null}
+
+          {(step === 1) & helpModeOutfit ? (
+            <HelpVideo
+              file="Clothing.mp4"
+              endAction={() => this.props.deactivateHelp('helpModeOutfit')}
+            />
+          ) : null}
+
+          {(step === 4) & helpModeAccessories ? (
+            <HelpVideo
+              file="WeaponComposin.mp4"
+              endAction={() => this.props.deactivateHelp('helpModeAccessories')}
+            />
+          ) : null}
 
           {current}
         </Transition>
@@ -79,7 +113,7 @@ class Canvas extends Component {
               left: 2rem;
               background: black;
               padding: 1rem;
-              z-index: 10000000;
+              z-index: 10000;
               width: 20rem;
               font-family: SourceSans, serif;
               font-size: 1.5rem;

@@ -18,12 +18,12 @@ export const resetCanvas = () => dispatch => {
   return dispatch({ type: CANVAS.RESET });
 };
 
-export const activateHelp = () => dispatch => {
-  return dispatch({ type: CANVAS.HELP_ACTIVATED });
+export const activateHelp = step => dispatch => {
+  return dispatch({ type: CANVAS.HELP_ACTIVATED, payload: step });
 };
 
-export const deactivateHelp = () => dispatch => {
-  return dispatch({ type: CANVAS.HELP_DEACTIVATED });
+export const deactivateHelp = step => dispatch => {
+  return dispatch({ type: CANVAS.HELP_DEACTIVATED, payload: step });
 };
 
 export const chooseFunFact = () => (dispatch, getState) => {
