@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Error from 'next/error';
 import Router from 'next/router';
 
-import MessageOverlay from './MessageOverlay.jsx';
+import Loader from './Loader.jsx';
 import Transition from './Transition.jsx';
 import HelpVideo from './canvas-steps/parts/HelpVideo.jsx';
 
@@ -76,7 +76,7 @@ class Canvas extends Component {
 
     return (
       <div className="create">
-        {saving && <MessageOverlay message="Saving..." />}
+        {saving && <Loader />}
 
         <Transition step={`c_${step}`}>
           {funfact && <div className="canvas-funfact">{funfact}</div>}

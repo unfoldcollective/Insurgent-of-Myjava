@@ -3,7 +3,6 @@ import Cta from './Cta.jsx';
 import Link from 'next/link';
 
 import { _s } from '../utils';
-import { chooseFunFact } from '../actions/index.js';
 
 class SidebarNavigation extends Component {
   listSteps() {

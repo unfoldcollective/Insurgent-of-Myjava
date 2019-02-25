@@ -5,8 +5,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { _s } from '../utils';
 
-import MessageOverlay from './MessageOverlay.jsx';
-
 import {
   finishAdvance,
   setInsurgentName,
@@ -15,8 +13,9 @@ import {
   finishFinished
 } from '../actions';
 
-import { Loader, Validate, Input } from './finale-steps';
+import { Validate, Input } from './finale-steps';
 import TimeoutCta from './TimeoutCta.jsx';
+import Loader from './Loader.jsx';
 
 function mapStateToProps(state) {
   const { data, finish } = state;
@@ -81,7 +80,7 @@ class Finale extends Component {
 
     const extras = this.props.saved.insurgent.weapon.extras;
 
-    if (step === 0) return <Loader next={this.props.finishAdvance} />;
+    if (saving) return <Loader />;
 
     return (
       <Fragment>
@@ -137,8 +136,6 @@ class Finale extends Component {
             insurgent={this.props.saved.insurgent}
           />
         ) : null}
-
-        {saving && <MessageOverlay message="Saving..." />}
 
         <style jsx>
           {`

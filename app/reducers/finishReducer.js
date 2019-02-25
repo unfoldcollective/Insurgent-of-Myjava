@@ -1,7 +1,7 @@
 import { FINISH } from '../constants';
 
 const initialState = {
-  step: 0,
+  step: 1,
   name: null,
   email: null,
   bg: null,

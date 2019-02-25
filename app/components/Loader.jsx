@@ -1,20 +1,7 @@
 import React, { Component } from 'react';
-import { Full } from '../layouts';
+import { Full } from './layouts';
 
 class Loader extends Component {
-  constructor(props) {
-    super(props);
-    this.timeout = null;
-  }
-
-  componentDidMount() {
-    this.timeout = setTimeout(() => this.props.next(), 2000);
-  }
-
-  componentWillUnmount() {
-    if (this.timeout) clearTimeout(this.timeout);
-  }
-
   render() {
     return (
       <Full>
@@ -25,16 +12,6 @@ class Loader extends Component {
         </article>
         <style jsx>
           {`
-            @keyframes spin {
-              from {
-                transform: rotate(0deg);
-              }
-
-              to {
-                transform: rotate(360deg);
-              }
-            }
-
             article.loader {
               height: 100vh;
               display: flex;
@@ -57,4 +34,4 @@ class Loader extends Component {
   }
 }
 
-export { Loader };
+export default Loader;
