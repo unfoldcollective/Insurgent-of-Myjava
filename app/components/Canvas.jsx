@@ -3,6 +3,7 @@ import Error from 'next/error';
 import Router from 'next/router';
 
 import MessageOverlay from './MessageOverlay.jsx';
+import Transition from './Transition.jsx';
 
 import { connect } from 'react-redux';
 
@@ -48,7 +49,7 @@ class Canvas extends Component {
     return (
       <div className="create">
         {saving && <MessageOverlay message="Saving..." />}
-        {current}
+        <Transition step={step}>{current}</Transition>
       </div>
     );
   }
