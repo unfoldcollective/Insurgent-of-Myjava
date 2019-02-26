@@ -1,97 +1,97 @@
 # General text strings
 strings:
   TITLE:
-    sk: Insurgent of Myjava (sk)
-    en: Insurgent of Myjava
+    sk: Myjavskí povstalci
+    en: Insurgents of Myjava
   SUBTITLE:
-    sk: Prepare your best volunteer for battle (sk)
+    sk: Priprav svojho najlepšieho dobrovoľníka alebo dobrovoľníčku do boja za slobodu
     en: Prepare your best volunteer for battle
   CREDITS:
-    sk: Made by Unfold Collective in collaboration with lab.SNG (sk)
+    sk: Vytvoril Unfold Collective v spolupráci s lab.SNG
     en: Made by Unfold Collective in collaboration with lab.SNG
   INTRO: #some markdown allowed
     sk: >
-      Prepare your best volunteer for battle (sk)
+      Priprav svojho najlepšieho dobrovoľníka alebo dobrovoľníčku do boja za slobodu
     en: >
       Prepare your best volunteer for battle
   CONTEXT_1_TITLE:
-    sk: Stylish! (sk)
+    sk: Štýlové!
     en: Stylish!
   CONTEXT_1_INTRO: #some markdown allowed
     sk: >
-      Now that your insurgent has a classy outfit, it is time to assemble a fitting weapon... (sk)
+      K skvelému outfitu treba ešte vytvoriť vhodnú zbraň
     en: >
       Now that your insurgent has a classy outfit, it is time to assemble a fitting weapon...
   CHARACTER_SELECTION_TITLE:
-    sk: Choose your volunteer (sk)
+    sk: Vyber si svoju postavu
     en: Choose your volunteer
   CHARACTER_SELECTION_INTRO:
     sk: >
-      Please select your finest revolutionary to send to the battle field. (sk)
+      Vyber do boja svojho najlepšieho dobrovoľníka alebo dobrovoľníčku
     en: >
       Please select your finest revolutionary to send to the battle field.
   WEAPON_SELECTION_TITLE:
-    sk: Choose your weapon (sk)
+    sk: Vyber si zbraň
     en: Choose your weapon
   WEAPON_SELECTION_INTRO:
     sk: >
-      Please select which tool to use as a base for your weapon (sk)
+      Vyber si niektorý z nástrojov ako základ zbrane
     en: >
       Please select which tool to use as a base for your weapon
   CREATE:
-    sk: Choose your volunteer (sk)
+    sk: Vyber si svoju postavu
     en: Choose your volunteer
   GALLERY:
-    sk: See gallery (sk)
-    en: See gallery
+    sk: Pozri si galériu návrhov
+    en: See gallery of insurgents
   CONTINUE:
-    sk: Next step (sk)
+    sk: Pokračuj
     en: Next step
   FINISH:
-    sk: Finish insurgent (sk)
+    sk: Hotovo
     en: Finish insurgent
   HELP:
-    sk: Help (sk)
+    sk: Nápoveda
     en: Help
   HOME:
-    sk: Home (sk)
+    sk: Naspäť na začiatok
     en: Home
   NEXT:
-    sk: Next (sk)
+    sk: Ďalej
     en: Next
   PREVIOUS:
-    sk: Previous (sk)
+    sk: Naspäť
     en: Previous
   OUTFITS_TITLE:
-    sk: Dress your volunteer (sk)
+    sk: Obleč svojho dobrovoľníka alebo dobrovoľníčku
     en: Dress your volunteer
   ACCESSORIES_TITLE:
-    sk: Assemble a mighty weapon (sk)
+    sk: Zhotov si zbraň podľa svojich predstáv
     en: Assemble a mighty weapon
   INPUT_NAME_TITLE:
-    sk: Insurgent name (sk)
+    sk: Meno postavy
     en: Insurgent name
   INPUT_NAME_TEXT: #markdown allowed
     sk: >
-      Please name your insurgent (sk)
+      Nazvi svojho povstalca alebo povstalkyňu
     en: >
       Please name your insurgent
   INPUT_EMAIL_TITLE:
-    sk: Your email (sk)
+    sk: Tvoj email
     en: Your email
   INPUT_EMAIL_TEXT: #markdown allowed
     sk: >
-      If you like, you can send your insurgent by email (sk)
+      Svojho povstalca alebo povstalkyňu si môžeš poslať mailom
     en: >
       If you like, you can send your insurgent by email
   INSURGENT_READY:
-    sk: Insurgents ready for battle (sk)
+    sk: Povstalci pripravení do boja
     en: Insurgents ready for battle
   LEAVE_GALLERY:
-    sk: Leave gallery (sk)
+    sk: Opustiť galériu
     en: Leave gallery
   BACK_TO_GALLERY:
-    sk: Back to gallery (sk)
+    sk: Naspäť do galérie
     en: Back to gallery
 
 funfacts:
@@ -101,20 +101,32 @@ funfacts:
       en: Ján Francisci, Ľudovít Štúr and other commanders were primarily writers and poets. Their main weapons were words and ideas.
     - sk: Johanka Hrebendová-Bóriková cvičila zbor dobrovoľníkov, ošetrovala ranených a robila osvetu. Vyslúžila si titul “slovenská panna orleánska”.
       en: Johanka Hrebendová-Bóriková trained a troop of volunteers, nursed the wounded and spread education. She earned the title 'Slovak Maid of Orleans'.
+    - sk: Košútovký útlak sa týkal všetkých nemaďarských obyvateľov slovenskej časti Uhorska. Do povstania sa tak zapojili aj Rómovia, Židia či Nemci.
+      en: The Kossuth supression restrained all the non-Hungarian inhabitants of the Slovak part of Great Hungaria. Therefore Roma people, jews and Germans also joined the uprising.   
+    - sk: Medzi dobrovoľníkmi boli aj zdatní bojovníci, ktorí sa odmietli stať člemi maďarskej domobrany – honvédmi. Jedným z nich bol Ján Kučera, žiak Ľudovíta Štúra.
+      en: There were also some talented warriors among the volunteers, who refused to become members of the Hungarian homeland defense (Honvédség in Hungarian). Ján Kučera, Ľudovít Štúr's student, was one of them.
   #step 1 is charactercustomization
   1:
     - sk: Dobrovoľník neváha ísť do boja vo vkusnom odeve – nohavice a blúza z mocného plátna, vojenský plášť, opasok na náboje a pštrosie pero za klobúkom.
       en: A volunteer does not hesitate to enter the battle in tasteful clothing - trunks with a thick linen shirt, an army coat, an ammunition belt and an ostrich feather hat.
     - sk: Povstalci Viliam Šulek a Karol Holuby, zlapaní a odsúdení na smrť, sa na popravu ustrojili do najlepších šiat a nechali sa v nich aj pochovať.
       en: Rebels Viliam Šulek and Karol Holuby were caught and condemned to death. For the execution and the funeral, they put on their best clothes.
+    - sk: Typickým koloritom dobrovoľníka je modrý kabát, biele plátené nohavice a čierne bagandže. Farebnej fantázii na bojisku sa ale medze nekladú.
+      en: A volunteer typically wears a blue coat, white linen trunks and heavy black boots. But there are no colour restrictions on the battle field.
   #step 3 is baseweaponselection
   3:
     - sk: Slovenskí povstalci bojovali za slobodu nástrojmi svojej obživy – kosami, cepmi či vidlami. Pravá vojenská výzbroj bola vzácnosťou.
       en: When fighting for freedom, the Slovak rebel army used the tools of their everyday livelihood - scythes, flails or pitchforks. A proper army gear was a rarity.
+    - sk: Hŕstka dobrovoľníkov mala naporúdzi belgické pušky z dreva, ocele a mosadze. Nabíjali sa kapslami a pri hlavni mali držiak na bodák.
+      en: Only some volunteers had Belgian rifles made of wood, steal and brass. The rifles were charged by capsules and had a bayonet fixed on their muzzles. 
+    - sk: Gro protiuhorských výprav tvorili roľníci bez výzbroje a vojenskej prípravy. Časť zbraní a streliva neoficiálne poskytla Viedenská vláda.
+      en: Peasants comprised the majority of the anti-Habsburgh crussaides with no gear and army training. The Vienna government unoficially provided some of the weapons and ammunition.
   #step 4 is weaponcomposition
   4:
     - sk: Improvizované zbrane a brnenia museli povstalcom stačiť proti cvičeným gardistom a kyrysníkom. Čo im chýbalo na výzbroji dohnali silným zápalom pre vec národnú.
-      en: Improvised weapons and armours had to protect the rebels against trained guardsmen and cuirassiers. The shortcomings on gear had to be taunted by their determination to fight for the matters of the nation.
+      en: Improvised weapons and armours had to protect the rebels against trained guardsmen and cuirassiers. The shortcomings on gear had to be taunted by their determination to fight for the matters of the nation. 
+    - sk: „Kto si nevyvolil znášať príkoria na obranu spravodlivosti, ten nepoznal jej svätosť.“ - Ľudovít Štúr
+      en: He who chose not to bear agony to defend justice knew nothing about its sanctity.' - Ľudovít Štúr
 
 # Character information
 # the list order is important
