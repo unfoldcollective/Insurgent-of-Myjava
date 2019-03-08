@@ -101,6 +101,7 @@ class TimeoutCta extends Component {
               border-radius: 50%;
               display: flex;
               align-items: center;
+              justify-content: center;
             }
           `}
         </style>

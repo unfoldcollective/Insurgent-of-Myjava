@@ -45,8 +45,8 @@ class InsurgentSingle extends Component {
         <style jsx>{`
           div.insurgent-overlay {
             position: absolute;
-            bottom: 5vw;
-            right: 5vh;
+            bottom: 5vh;
+            right: 5vw;
             padding: 2rem;
             z-index: 1000000;
           }

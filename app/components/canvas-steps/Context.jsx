@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { advanceStep, chooseFunFact } from '../../actions';
+import TimeoutCta from '../TimeoutCta.jsx';
 
 import { _s } from '../../utils';
 
@@ -33,15 +34,15 @@ class Context extends React.Component {
               <p dangerouslySetInnerHTML={this.props.text} />
             </section>
             <aside className="context-navigation">
-              <Cta
-                className="big"
+              <TimeoutCta
+                timeout={20000}
                 action={() => {
                   this.props.advanceStep();
                   this.props.chooseFunFact();
                 }}
               >
                 {_s('CONTINUE', this.props.data)}
-              </Cta>
+              </TimeoutCta>
             </aside>
             <style jsx>{`
               article.context {
@@ -72,8 +73,9 @@ class Context extends React.Component {
               }
 
               aside.context-navigation {
-                display: flex;
-                justify-content: flex-end;
+                position: fixed;
+                right: 5vw;
+                bottom: 5vh;
                 padding: 2rem;
               }
             `}</style>
