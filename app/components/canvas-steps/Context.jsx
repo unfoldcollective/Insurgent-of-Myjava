@@ -8,7 +8,6 @@ import { _s } from '../../utils';
 
 import { Full } from '../layouts';
 import Step from '../Step.jsx';
-import Cta from '../Cta.jsx';
 
 function mapStateToProps(state) {
   const { data, canvas } = state;

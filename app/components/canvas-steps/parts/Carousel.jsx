@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Swipeable from 'react-swipeable';
 import { _s } from '../../../utils';
 
+const SLIDE_TIMEOUT = 500;
+
 class Carousel extends Component {
   constructor(props) {
     super(props);
@@ -41,7 +43,7 @@ class Carousel extends Component {
     this.setState({ sliding: true, direction: -1 }, () =>
       setTimeout(() => {
         this.setState({ slides: this.getSlides(), sliding: false });
-      }, 500)
+      }, SLIDE_TIMEOUT + 50)
     );
   }
 
@@ -58,7 +60,7 @@ class Carousel extends Component {
     this.setState({ sliding: true, direction: 0 }, () =>
       setTimeout(() => {
         this.setState({ slides: this.getSlides(), sliding: false });
-      }, 500)
+      }, SLIDE_TIMEOUT)
     );
   }
 
@@ -70,11 +72,11 @@ class Carousel extends Component {
       ? direction < 0
         ? {
             transform: `translateX(-${100 / 1.5}%)`,
-            transition: 'transform 0.5s ease-in-out'
+            transition: `transform ${SLIDE_TIMEOUT}ms ease-in-out`
           }
         : {
             transform: 'translateX(0)',
-            transition: 'transform 0.5s ease-in-out'
+            transition: `transform ${SLIDE_TIMEOUT}ms ease-in-out`
           }
       : {};
 
@@ -101,7 +103,7 @@ class Carousel extends Component {
               if (sliding) {
                 iCurrent = direction < 0 ? 3 : 1;
                 iStyle = {
-                  transition: 'all 0.5s ease-in-out'
+                  transition: `all ${SLIDE_TIMEOUT}ms ease-in-out`
                 };
               } else {
                 iCurrent = 2;
@@ -149,7 +151,7 @@ class Carousel extends Component {
               display: flex;
               align-items: center;
               justify-content: center;
-              transition: left 0.5s ease-in-out;
+              transition: left ${SLIDE_TIMEOUT}ms ease-in-out;
             }
 
             img.carousel-image {
