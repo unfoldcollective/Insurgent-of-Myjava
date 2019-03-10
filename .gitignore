@@ -1,6 +1,7 @@
 /app/node_modules
 /app/.next
 /app/.vscode
+/public/node_modules
 /db
 /shots/*
 !/shots/.keep
