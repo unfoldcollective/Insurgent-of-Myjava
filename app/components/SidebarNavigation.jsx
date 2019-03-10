@@ -27,6 +27,7 @@ class SidebarNavigation extends Component {
       activateHelp,
       chooseFunFact,
       saveInsurgent,
+      exitRequested,
       step,
       totalSteps,
       data
@@ -115,9 +116,9 @@ class SidebarNavigation extends Component {
             </li>
           ) : null}
           <li>
-            <Link href="/">
-              <button className="icon home">{_s('HOME', data)}</button>
-            </Link>
+            <button className="icon home" onClick={exitRequested}>
+              {_s('HOME', data)}
+            </button>
           </li>
         </ul>
         <style jsx>{`
