@@ -47,7 +47,7 @@ class Canvas extends Component {
   }
 
   componentDidMount() {
-    this.props.chooseFunFact();
+    //this.props.chooseFunFact();
   }
 
   render() {
@@ -107,7 +107,10 @@ class Canvas extends Component {
           {(step === 0) & helpModeInsurgent ? (
             <HelpVideo
               file="CharacterCarousel.mp4"
-              endAction={() => this.props.deactivateHelp('helpModeInsurgent')}
+              endAction={() => {
+                this.props.deactivateHelp('helpModeInsurgent');
+                setTimeout(() => this.props.chooseFunFact(), 1000);
+              }}
             />
           ) : null}
 
