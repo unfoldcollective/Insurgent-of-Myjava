@@ -125,7 +125,7 @@ module.exports = (server, db) => {
           .replace(/\n\n/g, '</p><p>')
           .replace(/\n/g, '<br>')
           .replace('_NAME_', data.name ? `, ${data.name}, ` : ' ')
-          .replace('_URL_', 'PENDING URL');
+          .replace('_URL_', `http://public.insurgent.sng.sk/${data.id}`);
 
         const mailOptions = {
           from: `"${emailStrings.email.from}" <${process.env.GMAIL_ADDRESS}>`,
