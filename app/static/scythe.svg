@@ -1,0 +1,42 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 324 70">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        opacity: 0.6;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="229.08" y1="288.94" x2="229.08" y2="356.36" gradientTransform="matrix(0.99, 0, 0, -0.99, -66.68, 353.98)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#697c8a"/>
+      <stop offset="0.13" stop-color="#637583"/>
+      <stop offset="0.33" stop-color="#54636e"/>
+      <stop offset="0.57" stop-color="#3a454d"/>
+      <stop offset="0.84" stop-color="#171b1e"/>
+      <stop offset="1"/>
+    </linearGradient>
+  </defs>
+  <title>scythe</title>
+  <g id="Weapon">
+    <g>
+      <path class="cls-1" d="M.2,69.07C28.61,5.87,234.64-1.63,323.65,2.64l.15,39.44-18.65.77L304.8,11.4l-18.23-.25-9.8,38.3S146.17,21.17.2,69.07Z"/>
+      <g class="cls-2">
+        <path class="cls-3" d="M18.22,53.21a68.72,68.72,0,0,1,15-10.75,152.34,152.34,0,0,1,16.74-7.81c5.73-2.29,11.57-4.26,17.45-6.06l4.42-1.36L76.26,26c2.95-.86,5.94-1.6,8.92-2.37s6-1.43,9-2.15,6-1.28,9-1.91l9.07-1.75,9.09-1.57c12.15-2,24.33-3.64,36.55-5,6.11-.67,12.23-1.18,18.36-1.74s12.25-1,18.38-1.35c12.26-.8,24.53-1.45,36.81-1.72,6.12-.15,12.24-.3,18.42-.34S262.15,6,268.29,6c12.27.13,24.54.32,36.82.79l0,.19q-36.81-.33-73.6,1c-12.26.47-24.56,1.09-36.74,2-6.16.39-12.23.89-18.35,1.43s-12.21,1.14-18.3,1.85c-24.39,2.67-48.7,6.25-72.58,11.91A292.08,292.08,0,0,0,50.28,35.64a156.1,156.1,0,0,0-16.8,7.42A71.21,71.21,0,0,0,18.32,53.35Z"/>
+      </g>
+      <path class="cls-4" d="M1.45,68.34c59.27-22.92,168.85-39.28,276-20"/>
+    </g>
+  </g>
+</svg>
