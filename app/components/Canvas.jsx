@@ -9,11 +9,17 @@ import HelpVideo from './canvas-steps/parts/HelpVideo.jsx';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { chooseFunFact, activateHelp, deactivateHelp } from '../actions';
+import {
+  chooseFunFact,
+  activateHelp,
+  deactivateHelp,
+  exitCanceled
+} from '../actions';
 
 import { _s } from '../utils';
 
 import { Context, Insurgent, Outfit, Rack, Accesories } from './canvas-steps';
+import Cta from './Cta.jsx';
 
 function mapStateToProps(state) {
   const { canvas, data } = state;
@@ -28,7 +34,8 @@ function mapDispatchToProps(dispatch) {
     {
       chooseFunFact,
       activateHelp,
-      deactivateHelp
+      deactivateHelp,
+      exitCanceled
     },
     dispatch
   );
@@ -40,7 +47,7 @@ class Canvas extends Component {
   }
 
   componentDidMount() {
-    this.props.chooseFunFact();
+    //this.props.chooseFunFact();
   }
 
   render() {
@@ -49,6 +56,7 @@ class Canvas extends Component {
       id,
       error,
       saving,
+      exiting,
       funfact,
       helpModeInsurgent,
       helpModeOutfit,
@@ -77,6 +85,21 @@ class Canvas extends Component {
     return (
       <div className="create">
         {saving && <Loader />}
+        {exiting && (
+          <div className="exit">
+            <div className="exit-dialog">
+              <p className="exit-title">{_s('EXIT_TITLE', this.props.data)}</p>
+              <div className="exit-buttons">
+                <Cta className="big" href="/">
+                  {_s('EXIT_OK', this.props.data)}
+                </Cta>
+                <Cta className="big" action={this.props.exitCanceled}>
+                  {_s('EXIT_CANCEL', this.props.data)}
+                </Cta>
+              </div>
+            </div>
+          </div>
+        )}
 
         <Transition step={`c_${step}`}>
           {funfact && <div className="canvas-funfact">{funfact}</div>}
@@ -84,7 +107,10 @@ class Canvas extends Component {
           {(step === 0) & helpModeInsurgent ? (
             <HelpVideo
               file="CharacterCarousel.mp4"
-              endAction={() => this.props.deactivateHelp('helpModeInsurgent')}
+              endAction={() => {
+                this.props.deactivateHelp('helpModeInsurgent');
+                setTimeout(() => this.props.chooseFunFact(), 1000);
+              }}
             />
           ) : null}
 
@@ -107,6 +133,36 @@ class Canvas extends Component {
 
         <style jsx>
           {`
+            div.exit {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100vw;
+              height: 100vh;
+              background: rgba(0, 0, 0, 0.5);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              z-index: 1000000;
+            }
+
+            div.exit-dialog {
+              background: black;
+              padding: 2rem;
+            }
+
+            div.exit-buttons {
+              display: flex;
+              justify-content: center;
+            }
+
+            p.exit-title {
+              font-family: SourceSans, sans-serif;
+              font-size: 2rem;
+              text-align: center;
+              margin-bottom: 2rem;
+            }
+
             div.canvas-funfact {
               position: absolute;
               top: 2rem;

@@ -153,3 +153,11 @@ export const saveInsurgent = () => async (dispatch, getState) => {
     dispatch({ type: CANVAS.SAVING_FAILED, payload: error.message });
   }
 };
+
+export const exitRequested = () => dispatch => {
+  return dispatch({ type: CANVAS.EXIT_REQUESTED });
+};
+
+export const exitCanceled = () => dispatch => {
+  return dispatch({ type: CANVAS.EXIT_CANCELED });
+};

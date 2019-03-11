@@ -6,6 +6,7 @@ const initialState = {
   id: null,
   error: null,
   saving: false,
+  exiting: false,
   helpModeInsurgent: true,
   helpModeOutfit: true,
   helpModeAccessories: true,
@@ -198,6 +199,14 @@ export default (state = initialState, action) => {
 
     case CANVAS.FUNFACT_DISCARDED: {
       return { ...state, funfact: null };
+    }
+
+    case CANVAS.EXIT_REQUESTED: {
+      return { ...state, exiting: true };
+    }
+
+    case CANVAS.EXIT_CANCELED: {
+      return { ...state, exiting: false };
     }
 
     default:

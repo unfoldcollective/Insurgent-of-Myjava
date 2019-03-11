@@ -4,8 +4,15 @@ services:
     build: ./proxy
     ports:
       - 8000:80
+      - 8001:90
     depends_on:
       - app
+  public:
+    environment:
+      - NODE_ENV=production
+      - PORT=3002
+    command: >
+      sh -c 'npm start'
   app:
     environment:
       - NODE_ENV=production

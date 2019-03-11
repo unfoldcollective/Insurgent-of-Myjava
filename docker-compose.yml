@@ -1,5 +1,9 @@
-version: "3"
+version: '3'
 services:
+  public:
+    build: ./public
+    volumes:
+      - ./shots:/shots:Z
   app:
     environment:
       - GMAIL_ADDRESS=${GMAIL_ADDRESS}

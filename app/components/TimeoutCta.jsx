@@ -48,14 +48,14 @@ class TimeoutCta extends Component {
         <div className="countdown-inner">
           <span className="countdown-text">{this.props.children}</span>
         </div>
-        <svg width="150" height="150">
-          <circle r="70" cx="75" cy="75" />
+        <svg width="160" height="160">
+          <circle r="75" cx="80" cy="80" />
         </svg>
         <style jsx>
           {`
             div.countdown {
-              width: 150px;
-              height: 150px;
+              width: 160px;
+              height: 160px;
               position: relative;
               display: flex;
               justify-content: center;
@@ -95,12 +95,13 @@ class TimeoutCta extends Component {
               font-size: 1.4rem;
               text-align: center;
               font-weight: bold;
-              width: 110px;
-              height: 110px;
+              width: 130px;
+              height: 130px;
               border: 3px dashed white;
               border-radius: 50%;
               display: flex;
               align-items: center;
+              justify-content: center;
             }
           `}
         </style>
