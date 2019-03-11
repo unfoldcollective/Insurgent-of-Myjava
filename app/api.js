@@ -87,8 +87,12 @@ module.exports = (server, db) => {
       const shotPath = `/shots/${data.id}.jpg`;
 
       const browser = await puppeteer.launch({
-        ignoreHTTPSErrors: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
+        headless: false,
+        args: [
+          '--no-sandbox',
+          '--disable-setuid-sandbox',
+          '--ignore-certificate-errors'
+        ]
       });
       const page = await browser.newPage();
       await page.setViewport({ width: 1920, height: 1080 });
