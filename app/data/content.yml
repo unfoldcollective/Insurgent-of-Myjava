@@ -240,7 +240,6 @@ weapons:
 accesories:
   - image: pickaxe.svg
   - image: spoon.svg
-  - image: Table.svg
   - image: sieve.svg
   - image: scoop.svg
   - image: sickle.svg
@@ -260,6 +259,10 @@ accesories:
   - image: antlers.svg
   - image: Knife.svg
   - image: Axe.svg
+  - image: scythe.svg
+  - image: plank-1-2.svg
+  - image: plank-2-2.svg
+
 
 # List of final backgrounds
 
