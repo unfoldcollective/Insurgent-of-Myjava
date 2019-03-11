@@ -4,16 +4,16 @@ strings:
     sk: Myjavskí povstalci
     en: Insurgents of Myjava
   SUBTITLE:
-    sk: Priprav svojho najlepšieho dobrovoľníka alebo dobrovoľníčku do boja za slobodu
-    en: Prepare your best volunteer for battle
+    sk: Píše sa rok 1848. Ľud slovenský potrebuje tvoju pomoc v boji za slobodu! Priprav svoju najlepšiu dobrovoľníčku alebo dobrovoľníka a zapíš sa do dejín národného obrodenia!
+    en: It is the year 1848. The Slovak people need your support in their fight for freedom! Prepare your finest volunteer for battle and take part in the history of the national revival.
   CREDITS:
     sk: Vytvoril Unfold Collective v spolupráci s lab.SNG
     en: Made by Unfold Collective in collaboration with lab.SNG
   INTRO: #some markdown allowed
     sk: >
-      Priprav svojho najlepšieho dobrovoľníka alebo dobrovoľníčku do boja za slobodu
+      Píše sa rok 1848. Ľud slovenský potrebuje tvoju pomoc v boji za slobodu! Priprav svoju najlepšiu dobrovoľníčku alebo dobrovoľníka a zapíš sa do dejín národného obrodenia!
     en: >
-      Prepare your best volunteer for battle
+      It is the year 1848. The Slovak people need your support in their fight for freedom! Prepare your finest volunteer for battle and take part in the history of the national revival.
   CONTEXT_1_TITLE:
     sk: Štýlové!
     en: Stylish!
