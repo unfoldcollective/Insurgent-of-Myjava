@@ -17,6 +17,7 @@ const handle = app.getRequestHandler();
 
 app.prepare().then(async () => {
   const server = express();
+  server.set('port', port);
   const client = new MongoClient('mongodb://db:27017/', {
     useNewUrlParser: true
   });

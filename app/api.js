@@ -69,7 +69,8 @@ module.exports = (server, db) => {
   server.post('/prepare', async (req, res) => {
     try {
       const data = req.body;
-      const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : '';
+
+      const baseUrl = `http://localhost:${server.get('port')}`;
 
       const payload = await storage.updateOne(
         { _id: new ObjectID(data.id) },
@@ -87,12 +88,7 @@ module.exports = (server, db) => {
       const shotPath = `/shots/${data.id}.jpg`;
 
       const browser = await puppeteer.launch({
-        headless: false,
-        args: [
-          '--no-sandbox',
-          '--disable-setuid-sandbox',
-          '--ignore-certificate-errors'
-        ]
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
       });
       const page = await browser.newPage();
       await page.setViewport({ width: 1920, height: 1080 });
@@ -147,7 +143,7 @@ module.exports = (server, db) => {
         payload
       });
     } catch (error) {
-      return res.status(500).json({ error: error.message });
+      return res.status(500).json({ error: error.message, stack: error.stack });
     }
   });
 
