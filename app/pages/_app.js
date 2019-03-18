@@ -1,5 +1,6 @@
 import 'isomorphic-unfetch';
 import React from 'react';
+import Head from 'next/head';
 import App, { Container } from 'next/app';
 
 import { Provider } from 'react-redux';
@@ -40,6 +41,17 @@ class Insurgent extends App {
     window.addEventListener('contextmenu', function(e) {
       e.preventDefault();
     });
+
+    document.body.addEventListener(
+      'touchstart',
+      e => {
+        if (e.touches > 2) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      },
+      false
+    );
   }
 
   render() {
@@ -49,6 +61,13 @@ class Insurgent extends App {
         <Provider store={store}>
           <PageTransition timeout={500} classNames="page-transition">
             <Main>
+              <Head>
+                <title>My page title</title>
+                <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+                />
+              </Head>
               <Component {...pageProps} />
             </Main>
           </PageTransition>

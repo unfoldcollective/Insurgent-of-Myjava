@@ -54,6 +54,7 @@ const Main = ({ children }) => {
           font-family: Marlene, serif;
           background: black;
           color: #e6e1dc;
+          touch-action: none;
         }
 
         main {
