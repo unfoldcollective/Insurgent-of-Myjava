@@ -62,7 +62,7 @@ class Insurgent extends App {
           <PageTransition timeout={500} classNames="page-transition">
             <Main>
               <Head>
-                <title>My page title</title>
+                <title>Insurgent of Myjava</title>
                 <meta
                   name="viewport"
                   content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"

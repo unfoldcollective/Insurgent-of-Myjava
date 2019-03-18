@@ -161,10 +161,6 @@ class Carousel extends Component {
               align-items: flex-end;
             }
 
-            svg {
-              border: 1px solid red;
-            }
-
             circle {
               stroke: white;
               stroke-width: 2px;
