@@ -12,7 +12,7 @@ class Keyboard extends Component {
         '1 2 3 4 5 6 7 8 9 0'.split(' '),
         'q w e r t z u i o p'.split(' '),
         'a s d f g h j k l -'.split(' '),
-        '@ y x c v b n m , .'.split(' ')
+        '@ y x c v b n m _ .'.split(' ')
       ]
     };
   }

@@ -126,10 +126,8 @@ class Movable extends Component {
         <style jsx>{`
           div.movable-item {
             position: absolute;
-            touch-action: none;
-             {
-              /* will-change: transform; */
-            }
+            touch-action: manipulation;
+            will-change: transform;
           }
 
           img.movable-image {
