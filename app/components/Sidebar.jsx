@@ -66,6 +66,7 @@ class Sidebar extends React.Component {
           section.sidebar-main {
             flex-grow: 1;
             padding: 1rem;
+            letter-spacing: 0.1rem;
           }
 
           section.sidebar-navigation {
