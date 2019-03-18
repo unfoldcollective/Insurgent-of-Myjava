@@ -25,7 +25,7 @@ class SidebarNavigation extends Component {
     const {
       advanceStep,
       activateHelp,
-      chooseFunFact,
+      discardFunFact,
       saveInsurgent,
       exitRequested,
       step,
@@ -93,7 +93,7 @@ class SidebarNavigation extends Component {
               <Cta
                 action={() => {
                   advanceStep();
-                  chooseFunFact();
+                  discardFunFact();
                 }}
                 className="big"
               >
