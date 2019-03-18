@@ -64,6 +64,7 @@ class Keyboard extends Component {
             }`}
           >
             {this.state.content.join('')}
+            <span className="cursor" />
           </div>
           <button className="keyboard-action caps" onClick={() => this.send()}>
             {_s('NEXT_BUTTON', this.props.data)}
@@ -150,7 +151,6 @@ class Keyboard extends Component {
             }
 
             button.keyboard-action {
-              padding: 0.5rem 1rem;
               background: black;
               color: white;
               border: 2px solid white;
@@ -210,6 +210,28 @@ class Keyboard extends Component {
               transform: translate3d(0, 0, 0);
               backface-visibility: hidden;
               perspective: 1000px;
+            }
+
+            span.cursor {
+              border-left: 2px solid black;
+              margin-left: 0.1rem;
+              animation-duration: 1s;
+              animation-name: blink;
+              animation-iteration-count: infinite;
+            }
+
+            @keyframes blink {
+              0% {
+                opacity: 0;
+              }
+
+              50% {
+                opacity: 0.75;
+              }
+
+              100% {
+                opacity: 0;
+              }
             }
 
             @keyframes shake {
