@@ -36,6 +36,12 @@ class Insurgent extends App {
     return { pageProps };
   }
 
+  componentDidMount() {
+    window.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+  }
+
   render() {
     const { Component, pageProps, store } = this.props;
     return (
