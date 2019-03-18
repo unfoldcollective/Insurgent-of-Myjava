@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import Cta from './Cta.jsx';
-import Link from 'next/link';
 
 import { _s } from '../utils';
 
