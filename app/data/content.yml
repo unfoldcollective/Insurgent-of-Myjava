@@ -114,6 +114,9 @@ strings:
   DEL_BUTTON:
     sk: Dely
     en: Del
+  GDPR:
+    sk: (sk) By submitting your email address you agree to it being processed according to our terms and conditions.
+    en: By submitting your email address you agree to it being processed according to our terms and conditions.
 
 funfacts:
   #step 0 is characterselection
