@@ -102,6 +102,18 @@ strings:
   EXIT_CANCEL:
     sk: (sk) Cancel
     en: Cancel
+  NEXT_BUTTON:
+    sk: Nexty
+    en: Next
+  CAPS_BUTTON:
+    sk: Capsy
+    en: Caps
+  SPACE_BUTTON:
+    sk: Spacy
+    en: Space
+  DEL_BUTTON:
+    sk: Dely
+    en: Del
 
 funfacts:
   #step 0 is characterselection
@@ -262,7 +274,6 @@ accesories:
   - image: scythe.svg
   - image: plank-1-2.svg
   - image: plank-2-2.svg
-
 
 # List of final backgrounds
 
