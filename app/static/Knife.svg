@@ -1,155 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 213 31" width="213" height="31">
-  <defs>
-    <style>
-      .cls-1 {
-        isolation: isolate;
-      }
-
-      .cls-2 {
-        fill: url(#linear-gradient);
-      }
-
-      .cls-3 {
-        fill: url(#linear-gradient-2);
-      }
-
-      .cls-4 {
-        fill: #eed7b8;
-      }
-
-      .cls-5 {
-        mask: url(#mask);
-      }
-
-      .cls-6 {
-        opacity: 0.25;
-        mix-blend-mode: multiply;
-      }
-
-      .cls-7 {
-        mask: url(#mask-2);
-      }
-
-      .cls-8 {
-        fill: url(#linear-gradient-3);
-      }
-
-      .cls-9 {
-        mask: url(#mask-3);
-      }
-
-      .cls-10 {
-        fill: url(#linear-gradient-4);
-      }
-
-      .cls-11 {
-        mask: url(#mask-4);
-      }
-
-      .cls-12 {
-        opacity: 0.5;
-      }
-
-      .cls-13 {
-        fill: #fff;
-      }
-
-      .cls-14 {
-        filter: url(#luminosity-invert);
-      }
-    </style>
-    <linearGradient id="linear-gradient" x1="60.31" y1="29.12" x2="66.68" y2="-6.98" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#697c8a"/>
-      <stop offset="0.13" stop-color="#637583"/>
-      <stop offset="0.33" stop-color="#54636e"/>
-      <stop offset="0.57" stop-color="#3a454d"/>
-      <stop offset="0.84" stop-color="#171b1e"/>
-      <stop offset="1"/>
-    </linearGradient>
-    <linearGradient id="linear-gradient-2" x1="58.09" y1="28.75" x2="64.43" y2="-7.19" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#e4f1eb"/>
-      <stop offset="0.09" stop-color="#ddeae4"/>
-      <stop offset="0.23" stop-color="#cad5d0"/>
-      <stop offset="0.39" stop-color="#aab3af"/>
-      <stop offset="0.58" stop-color="#7e8581"/>
-      <stop offset="0.78" stop-color="#454947"/>
-      <stop offset="1" stop-color="#010101"/>
-      <stop offset="1"/>
-    </linearGradient>
-    <filter id="luminosity-invert" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feColorMatrix values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/>
-    </filter>
-    <mask id="mask" x="123.75" y="-1.72" width="92" height="32" maskUnits="userSpaceOnUse">
-      <g class="cls-14">
-        <image width="92" height="32" transform="translate(123.75 -1.72)" xlink:href="data:image/png;base64,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"/>
-      </g>
-    </mask>
-    <mask id="mask-2" x="119.75" y="-2.72" width="15" height="34" maskUnits="userSpaceOnUse">
-      <g class="cls-14">
-        <image width="15" height="34" transform="translate(119.75 -2.72)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAiCAYAAACA5IOiAAAACXBIWXMAAAsSAAALEgHS3X78AAACaUlEQVRIS72VXU+jQBiFn+Gj0kpoqbXGBmnSK/3/f8Y7bUigammUjxalZfaKCQjrdvdiTzKZZOY875lA5h0BSP5R2p8MP8noW/R9n8lkgpSSJElYr9d9tjbs+z6LxQLf97FtG4A8z/E8jzAMeXp66oc9z+Ph4YHVasXt7S2O4yCEIM9zbm5ucF0XKSXPz89deD6fc3d3x2q1wvM8HMdB0zT2+z3j8RghBHEc98O2bXN9fc1iscDzPCaTCbquk+c5pmmS5zmz2YymFGxZFo7jMJ1Omc1mTKdTDMPgcDioD7dcLrm/v+fx8RFo/CrDMBiNRti2jeM4jMdjNbuui+u6XF1dMZ/Pu8mGYTAYDLAsC8uyGAwGCCEYDofYto1t21xeXjIcDhWskjVNQ9d1TNPEMAyEEABq7eLiAsuyME2zCwsh0DRNjaaaRZt7reS6wHf9rnDLWR+1npvr9WiqE/Pd8NN+b3Kfzkr+G/0fWMpuw2nBfYaf9jvJfQWklK1Rq5P83XAWXFXVb+Gqqjgej8rTgaWUVFXF6XSiqqoOWJYlZVlyOp26cNNUpwCUZcnn5ydFUVAUBWVZKljd5+PxyNfXF0VRcDgcsCwLXdfZ7/ekaUqapmRZRlEU/XBt/Pj4UDcoz3N2ux1xHLPdbnl9fe3CRVGQJAlxHDMajSjLEiEEWZax2WzYbDYEQaD6VwvOsoztdksURWiaRpIkqm9HUUQYhsRxTFMKfnt7IwgCBdRNP01TXl5eWK/XRFHUDwdBAMD7+zu73Q7HcZBSkqYpYRgSRVHnzRL0PLHL5VLBWZa1XommeuFzdfaV7NMvz0pVUbXASlcAAAAASUVORK5CYII="/>
-      </g>
-    </mask>
-    <linearGradient id="linear-gradient-3" x1="131.56" y1="14.27" x2="136.16" y2="14.27" xlink:href="#linear-gradient"/>
-    <mask id="mask-3" x="128.75" y="-1.72" width="10" height="32" maskUnits="userSpaceOnUse">
-      <g class="cls-14">
-        <image width="10" height="32" transform="translate(128.75 -1.72)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAgCAYAAAArBentAAAACXBIWXMAAAsSAAALEgHS3X78AAABU0lEQVQ4T+3UP6vqMBjH8W+apFVEBRE6ODh0EBQH34Ev3c1FnB0cBCtoLVIqojSGnOn0eE71XLnc8f62J/lAyJM/AnC8Ee9P4DPqsRiPx/R6PQCSJGG5XD6Ho9GI4XCIUorD4UAQBMzn8+9wOp0ymUwYDAZorYnjmP1+X4X9fp8oioiiCCklzjk6nU65Wgnb7TbdbpcwDPE8jyzLqNfrVVir1Wg2m7RaLYQQNBoNfN+vQq01vu8TBEFZK/W117KPQgiklDzWQojn8DEv4TP8mLeP8D/8NX8HnXv9zkr4Eznnvo2V0FqLtfYlLC+ctRZjDEVRIITAGMP9fq/C2+3G+Xwmz3M8z+NyuVAURRXmeU6apiRJgpSS0+nE9Xqtws1mw3q9RmuN1prtdsvxeKzC2WxGGIYYY1BKsdvtiOO4CgFWqxVZliGEIE1TFotFOSf417/ZBy7ZhF8aNEzaAAAAAElFTkSuQmCC"/>
-      </g>
-    </mask>
-    <linearGradient id="linear-gradient-4" x1="207.89" y1="14.27" x2="211.93" y2="14.27" xlink:href="#linear-gradient"/>
-    <mask id="mask-4" x="205.75" y="0.28" width="9" height="28" maskUnits="userSpaceOnUse">
-      <g class="cls-14">
-        <image width="9" height="28" transform="translate(205.75 0.28)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAcCAYAAACzipU4AAAACXBIWXMAAAsSAAALEgHS3X78AAABJklEQVQ4T83TP4vCMBzG8W9iY6XQgIMOTg5FEFfx3Yu+ELsapYv/KIEk9qbLeaTicsM90wP55BcIiQA6PkR+AgDZd1mv18znc4bDIcYYdrtdihaLBZvNBq01x+MRKSXb7RZ4OW4ymVBVFavViuVySVVV6aSyLJlOp8xmM0IIjMfjiOKkPM8pyxKtNVpriqJIUZZl5HlOURSMRiOUUimSUqKUYjAYoJRCyp/biU0IEReklAgh+tFrelEf7EXv8u9R13W9PaJ3IEEhBABCCP2TQgg453DO4b2PG34h5xzWWtq2xVqL9z5F1lru9zvX65Xb7UbbthHFl/l4PDifzzyfT4wxXC6XFDVNQ13XNE3D6XSirusUHQ4HvPcopTDGsN/vIxL81Q/+AmLLf1GwXDo1AAAAAElFTkSuQmCC"/>
-      </g>
-    </mask>
-  </defs>
-  <title>Knife</title>
-  <g class="cls-1">
-    <g id="Layer_2" data-name="Layer 2">
-      <g id="Notes">
-        <g>
-          <g>
-            <g>
-              <path class="cls-2" d="M127,18.54l.19-14.85S51.57,3,0,3.69C14.43,18.05,48.91,27.66,121.07,25l.9-6.27Z"/>
-              <path class="cls-3" d="M0,3.69C7.09,34.32,120.23,30.88,120.23,30.88l.84-5.88C58,26.58,15.56,16.94,0,3.69Z"/>
-            </g>
-            <g>
-              <path class="cls-4" d="M129,3.56c3.81-1.44,22.51-2.42,38.33-2.42,19.23,0,40.88,2.41,43.38,3.51,3.1,1.36,3.26,18-.55,19.4-2.71,1-19.23,3.36-41.51,3.36-18.87,0-37.46-1.77-39.41-2.71C125.3,22.82,125.16,5,129,3.56Z"/>
-              <g class="cls-5">
-                <g class="cls-6">
-                  <path d="M129,3.56c3.81-1.44,22.51-2.42,38.33-2.42,19.23,0,40.88,2.41,43.38,3.51,3.1,1.36,3.26,18-.55,19.4-2.71,1-19.23,3.36-41.51,3.36-18.87,0-37.46-1.77-39.41-2.71C125.3,22.82,125.16,5,129,3.56Z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="214px" viewBox="0 0 32 214" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Knife</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="47.4172498%" y1="116.670637%" x2="52.4255051%" y2="-46.9795376%" id="linearGradient-1">
+            <stop stop-color="#697C8A" offset="0%"></stop>
+            <stop stop-color="#637583" offset="13%"></stop>
+            <stop stop-color="#54636E" offset="33%"></stop>
+            <stop stop-color="#3A454D" offset="57%"></stop>
+            <stop stop-color="#171B1E" offset="84%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="47.9805071%" y1="91.7756133%" x2="53.2171471%" y2="-39.8451186%" id="linearGradient-2">
+            <stop stop-color="#E4F1EB" offset="0%"></stop>
+            <stop stop-color="#DDEAE4" offset="9%"></stop>
+            <stop stop-color="#CAD5D0" offset="23%"></stop>
+            <stop stop-color="#AAB3AF" offset="39%"></stop>
+            <stop stop-color="#7E8581" offset="58%"></stop>
+            <stop stop-color="#454947" offset="78%"></stop>
+            <stop stop-color="#010101" offset="100%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="13156%" y1="1427%" x2="13616%" y2="1427%" id="linearGradient-3">
+            <stop stop-color="#697C8A" offset="0%"></stop>
+            <stop stop-color="#637583" offset="13%"></stop>
+            <stop stop-color="#54636E" offset="33%"></stop>
+            <stop stop-color="#3A454D" offset="57%"></stop>
+            <stop stop-color="#171B1E" offset="84%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="20789%" y1="1427%" x2="21193%" y2="1427%" id="linearGradient-4">
+            <stop stop-color="#697C8A" offset="0%"></stop>
+            <stop stop-color="#637583" offset="13%"></stop>
+            <stop stop-color="#54636E" offset="33%"></stop>
+            <stop stop-color="#3A454D" offset="57%"></stop>
+            <stop stop-color="#171B1E" offset="84%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Knife" transform="translate(16.000000, 106.500000) rotate(-90.000000) translate(-16.000000, -106.500000) translate(-91.000000, 91.000000)" fill-rule="nonzero">
+            <g id="Group">
+                <g transform="translate(0.000000, 3.000000)" id="Shape">
+                    <path d="M127,15.54 L127.19,0.69 C127.19,0.69 51.57,-3.33066907e-16 0,0.69 C14.43,15.05 48.91,24.66 121.07,22 L121.97,15.73 L127,15.54 Z" fill="url(#linearGradient-1)"></path>
+                    <path d="M0,0.69 C7.09,31.32 120.23,27.88 120.23,27.88 L121.07,22 C58,23.58 15.56,13.94 0,0.69 Z" fill="url(#linearGradient-2)"></path>
                 </g>
-              </g>
-            </g>
-            <g>
-              <rect class="cls-4" x="121.94" width="9.83" height="28.55" rx="4.92"/>
-              <g class="cls-7">
-                <g class="cls-6">
-                  <rect x="121.94" width="9.83" height="28.55" rx="4.92"/>
+                <g transform="translate(126.000000, 1.000000)" id="Shape">
+                    <path d="M3,2.56 C6.81,1.12 25.51,0.14 41.33,0.14 C60.56,0.14 82.21,2.55 84.71,3.65 C87.81,5.01 87.97,21.65 84.16,23.05 C81.45,24.05 64.93,26.41 42.65,26.41 C23.78,26.41 5.19,24.64 3.24,23.7 C-0.7,21.82 -0.84,4 3,2.56 Z" fill="#EED7B8"></path>
+                    <g opacity="0.25" style="mix-blend-mode: multiply;" fill="#000000">
+                        <path d="M3,2.56 C6.81,1.12 25.51,0.14 41.33,0.14 C60.56,0.14 82.21,2.55 84.71,3.65 C87.81,5.01 87.97,21.65 84.16,23.05 C81.45,24.05 64.93,26.41 42.65,26.41 C23.78,26.41 5.19,24.64 3.24,23.7 C-0.7,21.82 -0.84,4 3,2.56 Z"></path>
+                    </g>
                 </g>
-              </g>
-            </g>
-            <g>
-              <rect class="cls-8" x="131.56" y="0.94" width="4.59" height="26.67" rx="2.3"/>
-              <g class="cls-9">
-                <g class="cls-6">
-                  <rect x="131.56" y="0.94" width="4.59" height="26.67" rx="2.3"/>
+                <g transform="translate(121.000000, 0.000000)" id="Rectangle-path">
+                    <rect fill="#EED7B8" x="0.94" y="0" width="9.83" height="28.55" rx="4.915"></rect>
+                    <g opacity="0.25" style="mix-blend-mode: multiply;" fill="#000000">
+                        <rect x="0.94" y="0" width="9.83" height="28.55" rx="4.915"></rect>
+                    </g>
                 </g>
-              </g>
-            </g>
-            <g>
-              <rect class="cls-10" x="207.89" y="2.55" width="4.04" height="23.45" rx="2.02"/>
-              <g class="cls-11">
-                <g class="cls-6">
-                  <rect x="207.89" y="2.55" width="4.04" height="23.45" rx="2.02"/>
+                <g transform="translate(131.000000, 0.000000)" id="Rectangle-path">
+                    <rect fill="url(#linearGradient-3)" x="0.56" y="0.94" width="4.59" height="26.67" rx="2.295"></rect>
+                    <g opacity="0.25" style="mix-blend-mode: multiply;" fill="#000000">
+                        <rect x="0.56" y="0.94" width="4.59" height="26.67" rx="2.295"></rect>
+                    </g>
                 </g>
-              </g>
+                <g transform="translate(207.000000, 2.000000)" id="Rectangle-path">
+                    <rect fill="url(#linearGradient-4)" x="0.89" y="0.55" width="4.04" height="23.45" rx="2.02"></rect>
+                    <g opacity="0.25" style="mix-blend-mode: multiply;" fill="#000000">
+                        <rect x="0.89" y="0.55" width="4.04" height="23.45" rx="2.02"></rect>
+                    </g>
+                </g>
             </g>
-          </g>
-          <g class="cls-12">
-            <path class="cls-13" d="M17.68,6.46l12.39.27,12.39.21,24.77.28L92,7.56l12.39.26c4.13.12,8.26.23,12.39.41l-12.39.08L92,8.33c-8.27,0-16.53-.06-24.79-.11S50.7,8,42.44,7.71,25.92,7.08,17.68,6.46Z"/>
-          </g>
+            <g id="Group" opacity="0.5" transform="translate(17.000000, 6.000000)" fill="#FFFFFF">
+                <path d="M0.68,0.46 L13.07,0.73 L25.46,0.94 L50.23,1.22 L75,1.56 L87.39,1.82 C91.52,1.94 95.65,2.05 99.78,2.23 L87.39,2.31 L75,2.33 C66.73,2.33 58.47,2.27 50.21,2.22 C41.95,2.17 33.7,2 25.44,1.71 C17.18,1.42 8.92,1.08 0.68,0.46 Z" id="Shape"></path>
+            </g>
         </g>
-      </g>
     </g>
-  </g>
 </svg>
