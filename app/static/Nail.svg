@@ -1,38 +1,44 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18 68" width="18" height="68">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: url(#linear-gradient);
-      }
-
-      .cls-2 {
-        fill: url(#linear-gradient-2);
-      }
-
-      .cls-3 {
-        fill: url(#linear-gradient-3);
-      }
-
-      .cls-4 {
-        fill: url(#linear-gradient-4);
-      }
-    </style>
-    <linearGradient id="linear-gradient" x1="9" y1="64.65" x2="9" y2="67" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#97b4c5"/>
-      <stop offset="0.18" stop-color="#90adbe"/>
-      <stop offset="0.46" stop-color="#7b99ab"/>
-      <stop offset="0.79" stop-color="#5a788d"/>
-      <stop offset="1" stop-color="#416076"/>
-    </linearGradient>
-    <linearGradient id="linear-gradient-2" x1="9" y1="63.74" x2="9" y2="65.56" xlink:href="#linear-gradient"/>
-    <linearGradient id="linear-gradient-3" x1="5.94" y1="32.78" x2="12.06" y2="32.78" xlink:href="#linear-gradient"/>
-    <linearGradient id="linear-gradient-4" x1="7.75" y1="1" x2="7.75" y2="10.13" xlink:href="#linear-gradient"/>
-  </defs>
-  <title>Nail</title>
-  <g>
-    <path class="cls-1" d="M1,64.65v1.44c0,.5,3.58.91,8,.91s8-.41,8-.91V64.65Z"/>
-    <ellipse class="cls-2" cx="9" cy="64.65" rx="8" ry="0.91"/>
-    <path class="cls-3" d="M12.06,64.13c0,.52-6.12.62-6.12,0s.56-56.2.56-56.2L9,1l2.49,6.93S12.06,63.61,12.06,64.13Z"/>
-    <path class="cls-4" d="M9,1V9A1.17,1.17,0,0,1,7.44,10,13,13,0,0,1,6.5,7.93Z"/>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="132px" viewBox="0 0 32 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Nail</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#97B4C5" offset="0%"></stop>
+            <stop stop-color="#90ADBE" offset="18%"></stop>
+            <stop stop-color="#7B99AB" offset="46%"></stop>
+            <stop stop-color="#5A788D" offset="79%"></stop>
+            <stop stop-color="#416076" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="900%" y1="6374%" x2="900%" y2="6556%" id="linearGradient-2">
+            <stop stop-color="#97B4C5" offset="0%"></stop>
+            <stop stop-color="#90ADBE" offset="18%"></stop>
+            <stop stop-color="#7B99AB" offset="46%"></stop>
+            <stop stop-color="#5A788D" offset="79%"></stop>
+            <stop stop-color="#416076" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="594%" y1="3278%" x2="1206%" y2="3278%" id="linearGradient-3">
+            <stop stop-color="#97B4C5" offset="0%"></stop>
+            <stop stop-color="#90ADBE" offset="18%"></stop>
+            <stop stop-color="#7B99AB" offset="46%"></stop>
+            <stop stop-color="#5A788D" offset="79%"></stop>
+            <stop stop-color="#416076" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="775%" y1="100%" x2="775%" y2="1013%" id="linearGradient-4">
+            <stop stop-color="#97B4C5" offset="0%"></stop>
+            <stop stop-color="#90ADBE" offset="18%"></stop>
+            <stop stop-color="#7B99AB" offset="46%"></stop>
+            <stop stop-color="#5A788D" offset="79%"></stop>
+            <stop stop-color="#416076" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Nail" transform="translate(16.000000, 66.000000) rotate(180.000000) translate(-16.000000, -66.000000) " fill-rule="nonzero">
+            <path d="M0,127.3 L0,130.18 C0,131.18 7.16,132 16,132 C24.84,132 32,131.18 32,130.18 L32,127.3 L0,127.3 Z" id="Shape" fill="url(#linearGradient-1)"></path>
+            <ellipse id="Oval" fill="url(#linearGradient-2)" cx="16" cy="127.3" rx="16" ry="1.82"></ellipse>
+            <path d="M22.12,126.26 C22.12,127.3 9.88,127.5 9.88,126.26 C9.88,125.02 11,13.86 11,13.86 L16,0 L20.98,13.86 C20.98,13.86 22.12,125.22 22.12,126.26 Z" id="Shape" fill="url(#linearGradient-3)"></path>
+            <path d="M16,0 L16,16 C15.9370515,16.722758 15.5424219,17.3754394 14.9316436,17.766964 C14.3208653,18.1584885 13.5630288,18.2445674 12.88,18 C12.1336374,16.6775486 11.5045658,15.2922528 11,13.86 L16,0 Z" id="Shape" fill="url(#linearGradient-4)"></path>
+        </g>
+    </g>
 </svg>
