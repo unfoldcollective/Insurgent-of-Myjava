@@ -50,6 +50,10 @@ export const chooseFunFact = () => (dispatch, getState) => {
   }
 };
 
+export const discardFunFact = () => dispatch => {
+  dispatch({ type: CANVAS.FUNFACT_DISCARDED });
+};
+
 export const selectCharacter = index => (dispatch, getState) => {
   const {
     data: {

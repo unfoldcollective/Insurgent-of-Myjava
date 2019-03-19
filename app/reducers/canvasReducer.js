@@ -165,9 +165,9 @@ export default (state = initialState, action) => {
     }
 
     case CANVAS.ACCESSORY_REMOVED: {
-      const extras = state.insurgent.weapon.extras.filter(
-        (extra, index) => index === action.payload
-      );
+      const extras = state.insurgent.weapon.extras.filter((extra, index) => {
+        return index !== Number(action.payload);
+      });
 
       return {
         ...state,

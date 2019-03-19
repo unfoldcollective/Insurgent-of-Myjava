@@ -129,8 +129,43 @@ class Carousel extends Component {
               );
             })}
           </ul>
+          <div className="indicator">
+            <svg width={this.props.items.length * 60} height="100">
+              <g>
+                {this.props.items.map((item, index) => {
+                  return (
+                    <circle
+                      key={`indicator_${index}`}
+                      cx={index * 60 + 30}
+                      cy="50"
+                      r="10"
+                      fill={
+                        this.props.current === index ? 'white' : 'transparent'
+                      }
+                    />
+                  );
+                })}
+              </g>
+            </svg>
+          </div>
 
           <style jsx>{`
+            div.indicator {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: flex-end;
+            }
+
+            circle {
+              stroke: white;
+              stroke-width: 2px;
+            }
+
             div.carousel-tray {
               position: relative;
               overflow: hidden;

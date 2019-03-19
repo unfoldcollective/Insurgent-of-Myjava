@@ -46,13 +46,15 @@ const Main = ({ children }) => {
         }
 
         body {
-          overflow-x: hidden;
+          overflow: hidden;
+
           position: relative;
           width: 100vw;
           height: 100vh;
           font-family: Marlene, serif;
           background: black;
           color: #e6e1dc;
+          touch-action: none;
         }
 
         main {

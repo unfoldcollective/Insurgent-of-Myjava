@@ -43,11 +43,14 @@ class Rack extends React.Component {
             font-size: 2rem;
             text-align: center;
             margin: 3rem;
+            letter-spacing: 0.1rem;
           }
 
           p.sidebar-intro {
             text-align: center;
             margin: 0 3rem;
+            font-size: 1.5rem;
+            letter-spacing: 0.1rem;
           }
         `}</style>
       </Sidebar>

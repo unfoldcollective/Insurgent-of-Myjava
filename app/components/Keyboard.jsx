@@ -1,4 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { _s } from '../utils';
+
+function mapStateToProps(state) {
+  const { data } = state;
+  return {
+    data
+  };
+}
 
 class Keyboard extends Component {
   constructor(props) {
@@ -12,7 +21,7 @@ class Keyboard extends Component {
         '1 2 3 4 5 6 7 8 9 0'.split(' '),
         'q w e r t z u i o p'.split(' '),
         'a s d f g h j k l -'.split(' '),
-        '@ y x c v b n m , .'.split(' ')
+        '@ y x c v b n m _ .'.split(' ')
       ]
     };
   }
@@ -55,9 +64,10 @@ class Keyboard extends Component {
             }`}
           >
             {this.state.content.join('')}
+            <span className="cursor" />
           </div>
-          <button className="keyboard-action" onClick={() => this.send()}>
-            Next
+          <button className="keyboard-action caps" onClick={() => this.send()}>
+            {_s('NEXT_BUTTON', this.props.data)}
           </button>
         </div>
         <div className="keyboard-rows">
@@ -87,7 +97,7 @@ class Keyboard extends Component {
           <ul className="keyboard-row extra">
             <li className="keyboard-keyholder-secondary">
               <button
-                className="keyboard-key secondary"
+                className="keyboard-key secondary caps"
                 style={
                   this.state.caps
                     ? { background: 'white', color: 'black' }
@@ -95,20 +105,23 @@ class Keyboard extends Component {
                 }
                 onClick={() => this.toggleCaps()}
               >
-                CAPS
+                {_s('CAPS_BUTTON', this.props.data)}
               </button>
             </li>
             <li className="keyboard-keyholder">
-              <button className="keyboard-key" onClick={() => this.click(' ')}>
-                SPACE
+              <button
+                className="keyboard-key caps"
+                onClick={() => this.click(' ')}
+              >
+                {_s('SPACE_BUTTON', this.props.data)}
               </button>
             </li>
             <li className="keyboard-keyholder-secondary">
               <button
-                className="keyboard-key secondary"
+                className="keyboard-key secondary caps"
                 onClick={() => this.del()}
               >
-                DEL
+                {_s('DEL_BUTTON', this.props.data)}
               </button>
             </li>
           </ul>
@@ -138,7 +151,6 @@ class Keyboard extends Component {
             }
 
             button.keyboard-action {
-              padding: 0.5rem 1rem;
               background: black;
               color: white;
               border: 2px solid white;
@@ -146,6 +158,10 @@ class Keyboard extends Component {
               font-size: 1.5rem;
               font-weight: bold;
               border-radius: 0.5rem;
+            }
+
+            button.caps {
+              text-transform: uppercase;
             }
 
             ul.keyboard-row {
@@ -196,6 +212,28 @@ class Keyboard extends Component {
               perspective: 1000px;
             }
 
+            span.cursor {
+              border-left: 2px solid black;
+              margin-left: 0.1rem;
+              animation-duration: 1s;
+              animation-name: blink;
+              animation-iteration-count: infinite;
+            }
+
+            @keyframes blink {
+              0% {
+                opacity: 0;
+              }
+
+              50% {
+                opacity: 0.75;
+              }
+
+              100% {
+                opacity: 0;
+              }
+            }
+
             @keyframes shake {
               10%,
               90% {
@@ -225,4 +263,6 @@ class Keyboard extends Component {
   }
 }
 
-export default Keyboard;
+const ConnectedKeyboard = connect(mapStateToProps)(Keyboard);
+
+export default ConnectedKeyboard;

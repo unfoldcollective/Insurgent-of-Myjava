@@ -68,12 +68,12 @@ class Movable extends Component {
     interact(movable)
       .gesturable({
         onstart: startHandler,
-        onmove: debounce(gestureHandler, 8),
+        onmove: debounce(gestureHandler, 1),
         onend: endHandler
       })
       .draggable({
         onstart: startHandler,
-        onmove: debounce(dragHandler, 8),
+        onmove: debounce(dragHandler, 1),
         onend: endHandler
       })
       .on('tap', e => {
@@ -126,13 +126,13 @@ class Movable extends Component {
         <style jsx>{`
           div.movable-item {
             position: absolute;
-            /*filter: drop-shadow(0px 0px 5px rgba(0,0,0,.2));*/
-            touch-action: none;
+            touch-action: manipulation;
             will-change: transform;
           }
 
           img.movable-image {
             display: block;
+            touch-action: none;
           }
 
           img.flipped {

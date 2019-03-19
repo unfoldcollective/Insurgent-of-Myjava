@@ -102,6 +102,21 @@ strings:
   EXIT_CANCEL:
     sk: (sk) Cancel
     en: Cancel
+  NEXT_BUTTON:
+    sk: Ďalej
+    en: Next
+  CAPS_BUTTON:
+    sk: Capsy
+    en: Caps
+  SPACE_BUTTON:
+    sk: Spacy
+    en: Space
+  DEL_BUTTON:
+    sk: Dely
+    en: Del
+  GDPR:
+    sk: (sk) By submitting your email address you agree to it being processed according to our terms and conditions.
+    en: By submitting your email address you agree to it being processed according to our terms and conditions.
 
 funfacts:
   #step 0 is characterselection
@@ -262,7 +277,6 @@ accesories:
   - image: scythe.svg
   - image: plank-1-2.svg
   - image: plank-2-2.svg
-
 
 # List of final backgrounds
 

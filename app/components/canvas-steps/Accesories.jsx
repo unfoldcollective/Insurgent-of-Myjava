@@ -103,7 +103,7 @@ class Accesories extends React.Component {
 
           img.accessories-image {
             width: 100%;
-            max-height: 10em;
+            max-height: 9em;
           }
         `}</style>
       </Sidebar>

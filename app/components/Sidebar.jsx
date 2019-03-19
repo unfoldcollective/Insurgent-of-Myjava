@@ -7,7 +7,7 @@ import {
   activateHelp,
   changeStep,
   saveInsurgent,
-  chooseFunFact,
+  discardFunFact,
   exitRequested
 } from '../actions';
 
@@ -28,7 +28,7 @@ function mapDispatchToProps(dispatch) {
       activateHelp,
       changeStep,
       saveInsurgent,
-      chooseFunFact,
+      discardFunFact,
       exitRequested
     },
     dispatch
@@ -51,7 +51,7 @@ class Sidebar extends React.Component {
             advanceStep={this.props.advanceStep}
             activateHelp={this.props.activateHelp}
             saveInsurgent={this.props.saveInsurgent}
-            chooseFunFact={this.props.chooseFunFact}
+            discardFunFact={this.props.discardFunFact}
             exitRequested={this.props.exitRequested}
           />
         </section>
@@ -66,6 +66,7 @@ class Sidebar extends React.Component {
           section.sidebar-main {
             flex-grow: 1;
             padding: 1rem;
+            letter-spacing: 0.1rem;
           }
 
           section.sidebar-navigation {

@@ -131,6 +131,7 @@ class Outfit extends React.Component {
           nav.outfit-navigation {
             display: flex;
             justify-content: center;
+            margin: 2rem 0;
           }
 
           ul.outfit-list {
@@ -143,7 +144,7 @@ class Outfit extends React.Component {
             flex-basis: 33.333%;
             padding: 0.5rem;
             display: flex;
-            height: 12rem;
+            height: 10rem;
           }
 
           img.outfit-image {

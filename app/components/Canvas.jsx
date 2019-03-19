@@ -117,14 +117,20 @@ class Canvas extends Component {
           {(step === 1) & helpModeOutfit ? (
             <HelpVideo
               file="Clothing.mp4"
-              endAction={() => this.props.deactivateHelp('helpModeOutfit')}
+              endAction={() => {
+                this.props.deactivateHelp('helpModeOutfit');
+                setTimeout(() => this.props.chooseFunFact(), 1000);
+              }}
             />
           ) : null}
 
           {(step === 4) & helpModeAccessories ? (
             <HelpVideo
               file="WeaponComposin.mp4"
-              endAction={() => this.props.deactivateHelp('helpModeAccessories')}
+              endAction={() => {
+                this.props.deactivateHelp('helpModeAccessories');
+                setTimeout(() => this.props.chooseFunFact(), 1000);
+              }}
             />
           ) : null}
 
