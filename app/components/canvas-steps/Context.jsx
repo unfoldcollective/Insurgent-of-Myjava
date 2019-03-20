@@ -34,7 +34,7 @@ class Context extends React.Component {
             </section>
             <aside className="context-navigation">
               <TimeoutCta
-                timeout={20000}
+                timeout={10000}
                 action={() => {
                   this.props.advanceStep();
                   this.props.chooseFunFact();
