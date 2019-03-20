@@ -94,13 +94,13 @@ strings:
     sk: Naspäť do galérie
     en: Back to gallery
   EXIT_TITLE:
-    sk: (sk) Are you sure you want to start over?
+    sk: Určite chceš začať odznova?
     en: Are you sure you want to start over?
   EXIT_OK:
-    sk: (sk) Yes, start over
+    sk: Áno, začať odznova
     en: Yes, start over
   EXIT_CANCEL:
-    sk: (sk) Cancel
+    sk: Zrušiť
     en: Cancel
   NEXT_BUTTON:
     sk: Ďalej
