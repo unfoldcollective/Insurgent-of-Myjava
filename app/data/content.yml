@@ -106,13 +106,13 @@ strings:
     sk: Ďalej
     en: Next
   CAPS_BUTTON:
-    sk: Capsy
+    sk: Caps (sk)
     en: Caps
   SPACE_BUTTON:
-    sk: Spacy
+    sk: Space (sk)
     en: Space
   DEL_BUTTON:
-    sk: Dely
+    sk: Del (sk)
     en: Del
   GDPR:
     sk: (sk) By submitting your email address you agree to it being processed according to our terms and conditions.
