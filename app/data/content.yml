@@ -115,8 +115,8 @@ strings:
     sk: Del (sk)
     en: Del
   GDPR:
-    sk: (sk) By submitting your email address you agree to it being processed according to our terms and conditions.
-    en: By submitting your email address you agree to it being processed according to our terms and conditions.
+    sk: Vložením e-mailu súhlasíte s podmienkami ochrany osobných údajov.
+    en: By entering your email, you agree to our Privacy Policy.
 
 funfacts:
   #step 0 is characterselection
