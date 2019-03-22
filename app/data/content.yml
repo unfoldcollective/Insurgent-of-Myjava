@@ -106,13 +106,13 @@ strings:
     sk: Ďalej
     en: Next
   CAPS_BUTTON:
-    sk: Caps (sk)
+    sk: Caps
     en: Caps
   SPACE_BUTTON:
-    sk: Space (sk)
+    sk: Medzera
     en: Space
   DEL_BUTTON:
-    sk: Del (sk)
+    sk: Del
     en: Del
   GDPR:
     sk: Vložením e-mailu súhlasíte s podmienkami ochrany osobných údajov.
