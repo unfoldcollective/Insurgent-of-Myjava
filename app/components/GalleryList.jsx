@@ -83,6 +83,14 @@ class GalleryList extends Component {
           })}
         </ul>
 
+        <style jsx global>
+          {`
+            body {
+              overflow-y: visible !important;
+            }
+          `}
+        </style>
+
         <style jsx>{`
           div.gallery-overlay {
             position: fixed;

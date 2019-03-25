@@ -55,7 +55,6 @@ class Canvas extends Component {
       step,
       id,
       error,
-      saving,
       exiting,
       funfact,
       helpModeInsurgent,
@@ -63,7 +62,7 @@ class Canvas extends Component {
       helpModeAccessories
     } = this.props.canvas;
 
-    if (id) Router.push(`/finish/${id}`);
+    if (id) setTimeout(() => Router.push(`/finish/${id}`), 3000);
 
     const stepComponents = {
       0: <Insurgent />, //has help video
@@ -84,7 +83,7 @@ class Canvas extends Component {
 
     return (
       <div className="create">
-        {saving && <Loader />}
+        {id && <Loader />}
         {exiting && (
           <div className="exit">
             <div className="exit-dialog">

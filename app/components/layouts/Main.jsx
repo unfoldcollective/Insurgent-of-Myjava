@@ -46,7 +46,7 @@ const Main = ({ children }) => {
         }
 
         body {
-          overflow: hidden;
+          overflow-y: hidden;
 
           position: relative;
           width: 100vw;

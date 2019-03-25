@@ -1,8 +1,19 @@
 email:
-  from: Insurgent of Myjava
-  subject: Your insurgent is ready
+  from: Myjavskí povstalci (Insurgent of Myjava)
+  subject: Tvoja postava je pripravená do boja! Your insurgent is ready!
   #add \n for newlines
-  body: "Fellow revolutionary,\n
+  body: "Milý/á revolucionár/ka\n
+    \n
+    Gratulujeme k tvojmu výkonu! Vďaka tebe pôjdeme do povstania štýlovo a s tou najlepšou výzbrojou!\n
+    \n
+    Tvoja postava_NAME_je pripravená do boja:\n
+    _URL_\n
+    \n
+    Aplikáciu Myjavskí povstalci ti priniesol [Unfold Collective](http://unfold.is/) v spolupráci s [lab.SNG](http://lab.sng.sk/).\n
+    \n
+    \n
+    \n
+    Fellow revolutionary,\n
     \n
     Congratulations on your recent accomplishment! Thanks to your efforts we shall enter the battle fashionably and well equipped!\n
     \n

@@ -9,6 +9,8 @@ services:
       - GMAIL_ADDRESS=${GMAIL_ADDRESS}
       - GMAIL_PASS=${GMAIL_PASS}
       - MAGIC=${MAGIC}
+      - INSTA_LOGIN=${INSTA_LOGIN}
+      - INSTA_PASS=${INSTA_PASS}
     build: ./app
     depends_on:
       - db

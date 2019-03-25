@@ -6,6 +6,7 @@ const jimp = require('jimp');
 const nodemailer = require('nodemailer');
 const yaml = require('js-yaml');
 const snarkdown = require('snarkdown');
+const instagramUpload = require('./instagram.js');
 
 const { promisify } = require('util');
 const readFile = promisify(fs.readFile);
@@ -136,6 +137,13 @@ module.exports = (server, db) => {
         };
 
         transporter.sendMail(mailOptions);
+      }
+
+      if (process.env.INSTA_LOGIN && process.env.INSTA_PASS) {
+        instagramUpload(
+          `/shots/${data.id}.jpg`,
+          'Freshly created at the #SNG exhibition ‘Master of Okoličné and Gothic Art of Spiš around 1500’ @sng_gallery #gothic #art #remix #composition #slovaknationalgallery'
+        );
       }
 
       return res.json({
