@@ -6,3 +6,4 @@
 /shots/*
 !/shots/.keep
 .env
+/app/myjava.json
