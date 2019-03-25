@@ -112,7 +112,11 @@ class Finale extends Component {
         ) : null}
 
         {step === 3 ? (
-          <Input nextAction={this.setEmail} legal={_s('GDPR', this.props.data)}>
+          <Input
+            nextAction={this.setEmail}
+            legal={_s('GDPR', this.props.data)}
+            legalText={this.props.data.content.legal}
+          >
             <h1 className="input-title">
               {_s('INPUT_EMAIL_TITLE', this.props.data)}
             </h1>

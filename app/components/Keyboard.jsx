@@ -158,6 +158,7 @@ class Keyboard extends Component {
               font-size: 1.5rem;
               font-weight: bold;
               border-radius: 0.5rem;
+              padding: 0 1rem;
             }
 
             button.caps {

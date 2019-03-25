@@ -25,6 +25,11 @@ const Cta = ({ href, action, children, className, active }) => {
             outline: none;
           }
 
+          button.reverse {
+            color: black;
+            border-color: black !important;
+          }
+
           button.cta.big {
             border-color: #e6e1dc;
 
