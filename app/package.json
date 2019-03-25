@@ -31,7 +31,7 @@
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
     "react-swipeable": "^4.3.2",
-    "react-transition-group": "^2.5.3",
+    "react-transition-group": "^2.7.0",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.7",
     "redux-thunk": "^2.3.0",
