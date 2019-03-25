@@ -45,8 +45,8 @@ strings:
     sk: Pozri si galériu návrhov
     en: See gallery of insurgents
   CONTINUE:
-    sk: Pokračuj
-    en: Next step
+    sk: Stlač a pokračuj
+    en: Tap to continue
   FINISH:
     sk: Hotovo
     en: Finish insurgent
@@ -123,9 +123,9 @@ funfacts:
   0:
     - sk: Ján Francisci, Ľudovít Štúr a ďalší velitelia výprav boli najmä prozaici a básnici. Ich hlavnými zbraňami boli slová a idey.
       en: Ján Francisci, Ľudovít Štúr and other commanders were primarily writers and poets. Their main weapons were words and ideas.
-    - sk: Johanka Hrebendová-Bóriková cvičila zbor dobrovoľníkov, ošetrovala ranených a robila osvetu. Vyslúžila si titul “slovenská panna orleánska”.
+    - sk: Johanka Hrebendová-Bóriková cvičila zbor dobrovoľníkov, ošetrovala ranených a robila osvetu. Vyslúžila si titul “slovenská Panna Orleánska”.
       en: Johanka Hrebendová-Bóriková trained a troop of volunteers, nursed the wounded and spread education. She earned the title 'Slovak Maid of Orleans'.
-    - sk: Košútovký útlak sa týkal všetkých nemaďarských obyvateľov slovenskej časti Uhorska. Do povstania sa tak zapojili aj Rómovia, Židia či Nemci.
+    - sk: Košútovský útlak sa týkal všetkých nemaďarských obyvateľov slovenskej časti Uhorska. Do povstania sa tak zapojili aj Rómovia, Židia či Nemci.
       en: The Kossuth supression restrained all the non-Hungarian inhabitants of the Slovak part of Great Hungaria. Therefore Roma people, jews and Germans also joined the uprising.
     - sk: Medzi dobrovoľníkmi boli aj zdatní bojovníci, ktorí sa odmietli stať člemi maďarskej domobrany – honvédmi. Jedným z nich bol Ján Kučera, žiak Ľudovíta Štúra.
       en: There were also some talented warriors among the volunteers, who refused to become members of the Hungarian homeland defense (Honvédség in Hungarian). Ján Kučera, Ľudovít Štúr's student, was one of them.
@@ -143,7 +143,7 @@ funfacts:
       en: When fighting for freedom, the Slovak rebel army used the tools of their everyday livelihood - scythes, flails or pitchforks. A proper army gear was a rarity.
     - sk: Hŕstka dobrovoľníkov mala naporúdzi belgické pušky z dreva, ocele a mosadze. Nabíjali sa kapslami a pri hlavni mali držiak na bodák.
       en: Only some volunteers had Belgian rifles made of wood, steal and brass. The rifles were charged by capsules and had a bayonet fixed on their muzzles.
-    - sk: Gro protiuhorských výprav tvorili roľníci bez výzbroje a vojenskej prípravy. Časť zbraní a streliva neoficiálne poskytla Viedenská vláda.
+    - sk: Gro protiuhorských výprav tvorili roľníci bez výzbroje a vojenskej prípravy. Časť zbraní a streliva neoficiálne poskytla viedenská vláda.
       en: Peasants comprised the majority of the anti-Habsburgh crussaides with no gear and army training. The Vienna government unoficially provided some of the weapons and ammunition.
   #step 4 is weaponcomposition
   4:
