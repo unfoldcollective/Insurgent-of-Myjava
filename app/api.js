@@ -142,7 +142,7 @@ module.exports = (server, db) => {
       if (process.env.INSTA_LOGIN && process.env.INSTA_PASS) {
         instagramUpload(
           `/shots/${data.id}.jpg`,
-          'Freshly created at the #SNG exhibition ‘Master of Okoličné and Gothic Art of Spiš around 1500’ @sng_gallery #gothic #art #remix #composition #slovaknationalgallery'
+          'Another Insurgent ready for battle! This brave freedom fighter is dressed and armed by a visitor to the Museum of the Slovak National Councils in Myjava @slovenske_narodne_muzeum_snm #InsurgentsOfMyjava #1848 #insurgent #FreedomFighter #NationalHistory #history #slovakia #myjava #museum #exhibition #remix #fashion #weapon #volunteer #fighter #SlovakUprising #nationalism #nationalist #SlovakHistory #EuropeanHistory'
         );
       }
 

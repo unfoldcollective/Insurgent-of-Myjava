@@ -8,3 +8,8 @@ Install and start Docker and docker-compose on your machine:
 
 - Run `./dev.sh` to start a development environment
 - Run `./prod.sh` to start the app in production mode
+
+### Restart production
+
+- Run `./stop.sh` to stop the app
+- Run `./prod.sh` to start the app in production mode
