@@ -21,7 +21,7 @@
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.19",
     "mongodb": "^3.1.13",
-    "next": "^9.3.2",
+    "next": "^9.5.5",
     "next-page-transitions": "^1.0.0-alpha.6",
     "next-redux-wrapper": "^2.1.0",
     "nodemailer": "^5.1.1",
